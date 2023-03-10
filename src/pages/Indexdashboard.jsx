@@ -4,6 +4,7 @@ import Dashboard from '../component/pages/dashboard';
 const IndexDashboard =() => {
   return (
     <div>
+      
         <Dashboard/>
     </div>
   )

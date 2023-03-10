@@ -1,0 +1,13 @@
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    list-style: none;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  li{
+    list-style: none;
+  }

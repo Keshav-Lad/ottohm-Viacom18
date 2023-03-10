@@ -1,5 +1,4 @@
-import React from 'react'
-import Navbar from '../common/navbar';
+import React from 'react';
 
 const Dashboard =() => {
   return (
