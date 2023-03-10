@@ -1,11 +1,11 @@
 import React from "react";
 
-function location() {
-  return (
+const IndexLocation=()=>{
+  
+  return(
     <div>
-      
+      <h1>IndexLocation</h1>
     </div>
-  );
+  )
 }
-
-export default location;
+export default IndexLocation;
