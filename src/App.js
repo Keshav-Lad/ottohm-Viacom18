@@ -1,4 +1,5 @@
 import './App.css';
+import Sidebar from './component/common/sidebar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import IndexDashboard from './pages/Indexdashboard';
 import Navbar from './component/common/navbar';
