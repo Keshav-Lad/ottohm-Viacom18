@@ -1,12 +1,11 @@
 import React from 'react'
+import Role from '../component/pages/role/role';
 
 
 const IndexRoles =()=>{
 
     return(
-        <div>
-            <h1>IndexRole</h1>
-        </div>
+       <Role></Role>
     )
 }
 export default IndexRoles;
