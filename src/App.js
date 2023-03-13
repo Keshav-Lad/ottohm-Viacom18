@@ -9,6 +9,13 @@ import IndexLocation from './pages/Indexlocation';
 import IndexTeams from './pages/Indexteams';
 import IndexRoles from './pages/Indexroles';
 import IndexUsers from './pages/Indexusers';
+import Addlocation from './component/pages/location/addlocation';
+import Adduser from './component/pages/users/adduser';
+import Addrole from './component/pages/role/addrole';
+import Addteam from './component/pages/teams/addteam';
+import Tournamentname from './component/pages/tournament/tournamentname';
+import Addtournament from './component/pages/tournament/addtournament';
+import Role from './component/pages/role/role';
 
 
 function App() {
@@ -41,6 +48,15 @@ function App() {
       </Routes>
       </Sidebar>
     </BrowserRouter>    
+
+    
+    // <Addlocation/>
+    // <Adduser/>
+    // <Addrole/>
+    // <Addteam/>
+    // <Tournamentname/>
+    // <Addtournament/>
+    // <Role/>
   );
 }
 

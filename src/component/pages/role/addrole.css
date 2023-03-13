@@ -1,0 +1,18 @@
+textarea {
+  resize: none;
+}
+.breadcrumb ::before {
+  content: none !important;
+}
+.breadcrumb-1 {
+  font: normal normal bold 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+}
+.checkbox-input[type="checkbox"] {
+  width: 5mm;
+  height: 5mm;
+}
+.btn-bordered {
+  border: 1px solid black;
+}

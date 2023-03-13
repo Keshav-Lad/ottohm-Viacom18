@@ -3,7 +3,7 @@ import "./Css/button.css";
 const Button = (props) => {
   return (
     <button onClick={props.onClick} className={props.className} type="submit">
-      {props.text}
+      {props.icon && props.icon} {props.text}
     </button>
   );
 };
