@@ -1,9 +1,8 @@
 .sidebar{
-    background: #014296;
+    background: #ffffff;
     color: lightgray;
     min-height: 100vh;
     height: auto;
-    width: 300px;
     border: solid 2px;
     position: relative;
     transition: width 0.2s ease-in-out;
@@ -11,6 +10,7 @@
   .bars{
     display: flex;
     font-size: 25px;
+    
     margin-left: 50px;
   }
   .close-icon{
@@ -27,15 +27,16 @@
     display: flex;
     color: #fff;
     padding: 10px 15px;
+     border: solid 1px gray;
     gap: 15px;  transition: all 0.5s;
   }
   .link:hover{
-    background: skyblue;
+    background: rgb(158, 170, 175);
     color: #014296;
     transition: all 0.5s;
   }
   .active{
-    background: skyblue;
+    background:rgb(158, 170, 175);
     color: #014296;
   }
   .icon{
@@ -48,8 +49,9 @@
     height: 15px;
     text-align: left;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    color: #000000;
     opacity: 1;
+   
   }
 .mobile-submenu {
     bottom: 0;
@@ -65,7 +67,7 @@
     margin-bottom: 10px;
   }
   
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .sidebar {
       width: 80px;
     }
@@ -88,4 +90,4 @@
       padding-left: 7%;
       margin-bottom: 20px;
     }
-  }
+  } */

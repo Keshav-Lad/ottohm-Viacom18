@@ -1,0 +1,22 @@
+.tournament-details{
+    background-color: grey;
+}
+.input-filed-width{
+    min-width: 15vw;
+    height:50%;
+
+}
+.dropdown-input-width{
+    min-width: 15vw;
+    height:50%;
+    
+}
+.edit-button{
+    min-width: 5vw;
+    margin-top: 1vw;
+    margin-right: 2vw;
+    margin-bottom: 0px;
+}
+.view-button{
+    min-width: 7vw;
+}

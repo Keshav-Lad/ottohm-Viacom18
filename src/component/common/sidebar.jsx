@@ -4,10 +4,10 @@ import "./Css/sidebar.css"
 
 
 const Sidebar = ({ children }) => {
-  const[subNav, setSubNav] = useState(false);
-  const showSubNav = () => setSubNav(!subNav);
+ 
+ 
   const [isOpen, setIsOpen] = useState(true);
-  const toggle = () => setIsOpen(!isOpen);
+ 
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,7 +21,7 @@ const Sidebar = ({ children }) => {
 
   const menuItem = [
     {
-      path: "/dashboard",
+      path: "/",
       name: "DashBoard",
       
     },
@@ -58,10 +58,10 @@ const Sidebar = ({ children }) => {
   
   return (
     <div className="container-2">
-      <div className="sidebar" style={{ width: isOpen ? "200px" : "80px" }}>
+      <div className="sidebar" style={{ width: isOpen ? "230px" : "80px" }}>
         <div>
           <h1 className="logo" style={{ display: isOpen ? "block" : "none" }}>
-            {/* <img className="w-100" src={Logo} alt="Logo" /> */}
+            <img className="w-100" src={""} alt="Logo" />
           </h1>
         </div>
         {menuItem.map((item, index) => (
