@@ -3,19 +3,12 @@ import Sidebar from './component/common/sidebar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import IndexDashboard from './pages/Indexdashboard';
 import Navbar from './component/common/navbar';
-import IndexTournaments from './pages/Indextournament';
-import IndexGames from './pages/Indexgames';
+import IndexTournaments from './pages/IndexTournaments';
+import IndexGames from './pages/IndexGames';
 import IndexLocation from './pages/Indexlocation';
-import IndexTeams from './pages/Indexteams';
+import IndexTeams from './pages/IndexTeams';
 import IndexRoles from './pages/Indexroles';
-import IndexUsers from './pages/Indexusers';
-import Addlocation from './component/pages/location/addlocation';
-import Adduser from './component/pages/users/adduser';
-import Addrole from './component/pages/role/addrole';
-import Addteam from './component/pages/teams/addteam';
-import Tournamentname from './component/pages/tournament/tournamentname';
-import Addtournament from './component/pages/tournament/addtournament';
-import Role from './component/pages/role/role';
+import IndexUsers from './pages/IndexUsers';
 
 
 function App() {
