@@ -24,7 +24,7 @@ function App() {
       <Sidebar>
       <Navbar></Navbar>
       <Routes>
-      <Route path="/dashboard" element={<IndexDashboard/>}/>
+      <Route path="/" element={<IndexDashboard/>}/>
       <Route path="/tournaments" element={<IndexTournaments/>}/>
       <Route path="/games" element={<IndexGames/>}/>
       <Route path="/location" element={<IndexLocation/>}/>
