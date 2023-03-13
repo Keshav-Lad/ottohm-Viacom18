@@ -2,6 +2,10 @@ import { BellFilled } from '@ant-design/icons';
 import { Badge, Space } from 'antd';
 import React from 'react';
 import "./Css/navbar.css";
+import Notification from "../../utils/icons/Notification.svg";
+import User from "../../utils/images/User.png";
+import Newuser from "../../utils/images/Newuser.png";
+import arrow from "../../utils/icons/arrow.svg";
 
 const Navbar=()=>{
   return (
@@ -14,23 +18,32 @@ const Navbar=()=>{
           <div className="collapse navbar-collapse " id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             </ul>
-            <form className="d-flex p-2 m-2 bg-light" >
-                <Space>
-                <Badge count={20} dot>
-                    <BellFilled style={{fontSize : 24}}/>
-                </Badge>
-            </Space>
-            </form>
-            <li className="nav-item dropdown bg-light m-2 p-2">
-                <a className="nav-link dropdown-toggle dropdown:hover" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-                </a>
+            <img src={Notification} alt="Bellicon"></img>
+            <li className="btn-group nav-item dropdown bg-light m-2 p-2 ">
+                <button className="btn nav-link dropdown-toggle dropdown:hover " href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <img className='userimage pe-2' src={Newuser} alt="userimage"></img>
+                {/* {props.name}
+                {props.role} */}
+                <l className='name ps-4'>John Doe</l><br/>
+                <l className='role'>Admin</l> 
+                <img className='arrow' src={arrow} alt="arrow"></img>
+                </button>
                 <ul className="dropdown-menu dropdown:hover">
                 <li><a className="dropdown-item" href="#">Change Password</a></li>
                 <li><a className="dropdown-item" href="#">Logout</a></li>
                 </ul>
             </li> 
           </div>
+{/* <div className="btn-group">
+        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </button>
+        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a className="dropdown-item" href="#">Menu item</a></li>
+          <li><a className="dropdown-item" href="#">Menu item</a></li>
+          <li><a className="dropdown-item" href="#">Menu item</a></li>
+        </ul>
+      </div> */}
         </div>
       </nav>
   )
