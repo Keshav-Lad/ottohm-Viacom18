@@ -3,12 +3,18 @@ import Textarea from "../../common/textbox";
 import Button from "../../common/button";
 import { ArrowLeft } from 'react-bootstrap-icons';
 import "./addrole.css";
+import { useNavigate } from "react-router";
 const Addrole = () => {
+  const navigate=useNavigate();
   return (
-    <div className="container">
+    <div className="container mt-3">
       <div className="breadcrumb">
-        <span className="breadcrumb-item"><ArrowLeft size={30}/></span>
-        <span className="breadcrumb-item">Back</span>
+        <button className=" btn btn-style fs-6 fw-bold" onClick={() => navigate("/roles")}>
+          <ArrowLeft size={25}  width={20} /><span className="mt-5 ms-2">Back</span>
+          </button>
+    
+        {/* <span className="breadcrumb-item"><ArrowLeft size={30}/></span>
+        <span className="breadcrumb-item">Back</span> */}
       </div>
       <form>
         <div>

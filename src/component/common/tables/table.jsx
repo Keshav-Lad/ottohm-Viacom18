@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DataTable,{defaultThemes} from "react-data-table-component";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import { FormCheck } from "react-bootstrap";
 
 

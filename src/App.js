@@ -4,11 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import IndexDashboard from './pages/Indexdashboard';
 import Navbar from './component/common/navbar';
 import IndexTournaments from './pages/IndexTournaments';
-import IndexGames from './pages/IndexGames';
 import IndexLocation from './pages/Indexlocation';
-import IndexTeams from './pages/IndexTeams';
-import IndexRoles from './pages/Indexroles';
-import IndexUsers from './pages/IndexUsers';
+import IndexTeams from './pages/Indexteams';
+import IndexRole from './pages/Indexroles';
+import IndexUsers from './pages/Indexusers';
+import IndexGames from './pages/Indexgames';
+import Addrole from './component/pages/role/addrole';
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
       <Route path="/games" element={<IndexGames/>}/>
       <Route path="/location" element={<IndexLocation/>}/>
       <Route path="/teams" element={<IndexTeams/>}/>
-      <Route path="/roles" element={<IndexRoles/>}/>
+      <Route path="/roles" element={<IndexRole/>}/>
+      <Route path="/roles/AddRole" element={<Addrole/>}/>
       <Route path="/users" element={<IndexUsers/>}/>
 
       {/* <Route path="/login" element={<Login />}/>        
