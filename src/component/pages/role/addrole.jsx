@@ -45,10 +45,10 @@ const Addrole = () => {
             rows="4"
             placeholder="Enter Role Description"
           ></textarea>
-          <div className="mt-5">
+          {/* <div className="mt-5">
             <label htmlFor="accesstable">Access</label>
-            <table className="table table-bordered mt-2 mb-4" id="accesstable">
-              <thead className="table-dark">
+            <table className="table table-bordered  mt-2 mb-4  " id="accesstable">
+              <thead className="table-primary">
                 <tr>
                   <th scope="col">Content</th>
                   <th scope="col">Add</th>
@@ -90,19 +90,20 @@ const Addrole = () => {
                 </tr>
               </tbody>
             </table>
-          </div>
+          </div> */}
         </div>
-        <div className="row">
+        <div className="row mt-5">
           <div className="col-md-2">
             <Button
               text="Cancel"
-              className="btn btn-bordered btn-outline-dark mt-5 button-add-location"
+              className="btn btn-bordered btn-outline-dark  form-control mb-2"
+              onClick={() => navigate("/roles")}
             />
           </div>
           <div className="col-md-2">
             <Button
               text="Create Role"
-              className="btn btn-primary mt-5 button-add-location"
+              className="btn btn-primary form-control"
             />
           </div>
         </div>
