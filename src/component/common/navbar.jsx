@@ -1,11 +1,7 @@
-import { BellFilled } from '@ant-design/icons';
-import { Badge, Space } from 'antd';
 import React from 'react';
 import "./Css/navbar.css";
 import Notification from "../../utils/icons/Notification.svg";
-import User from "../../utils/images/User.png";
 import Newuser from "../../utils/images/Newuser.png";
-import arrow from "../../utils/icons/arrow.svg";
 
 const Navbar=()=>{
   return (
@@ -24,9 +20,8 @@ const Navbar=()=>{
                 <img className='userimage pe-2' src={Newuser} alt="userimage"></img>
                 {/* {props.name}
                 {props.role} */}
-                <l className='name ps-4'>John Doe</l><br/>
-                <l className='role'>Admin</l> 
-                <img className='arrow' src={arrow} alt="arrow"></img>
+                <a className='name ps-4'>John Doe</a><br/>
+                <a className='role'>Admin</a> 
                 </button>
                 <ul className="dropdown-menu dropdown:hover">
                 <li><a className="dropdown-item" href="#">Change Password</a></li>

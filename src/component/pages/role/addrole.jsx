@@ -38,7 +38,7 @@ const Addrole = () => {
               ></Textarea>
             </div>
           </div>
-          <label for="description">Description</label>
+          <label htmlFor="description">Description</label>
           <textarea
             className="form-control mt-2 mb-4"
             id="description"
@@ -93,17 +93,17 @@ const Addrole = () => {
           </div> */}
         </div>
         <div className="row mt-5">
-          <div className="col-md-2">
+          <div className="col-md-2 ">
             <Button
               text="Cancel"
-              className="btn btn-bordered btn-outline-dark  form-control mb-2"
+              className="btn btn-bordered btn-outline-dark  form-control mb-2 btn-sizing"
               onClick={() => navigate("/roles")}
             />
           </div>
-          <div className="col-md-2">
+          <div className="col-md-2 ">
             <Button
               text="Create Role"
-              className="btn btn-primary form-control"
+              className="btn btn-primary form-control btn-sizing "
             />
           </div>
         </div>

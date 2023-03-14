@@ -1,10 +1,9 @@
 import React from 'react'
+import Tournament from '../component/pages/tournament/tournament';
 
 const IndexTournaments=()=>{
     return(
-        <div>
-            <h1>Tournaments</h1>
-        </div>
+       <Tournament/>
     )
 }
 export default IndexTournaments;

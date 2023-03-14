@@ -1,11 +1,12 @@
 import React from 'react'
+import Teams from '../component/pages/teams/teams';
 
 
 const IndexTeams =()=>{
 
     return(
         <div>
-            <h1>IndexTeams</h1>
+          <Teams/>
         </div>
     )
 }

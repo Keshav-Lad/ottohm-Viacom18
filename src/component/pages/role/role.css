@@ -1,10 +1,10 @@
 
 
 .btn-manage{
-  min-width:123px;
-  min-height: 38px;;
+  min-width:150px;
+  height: 38px;;
   background-color: #707070;
   color:#ffffff;
-  border-radius: 3px;
+  
 opacity: 1;
 }

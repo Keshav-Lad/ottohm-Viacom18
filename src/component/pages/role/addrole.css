@@ -20,3 +20,8 @@ textarea {
   border: none;
   background-color:#ffffff;
 }
+.btn-sizing{
+  
+  min-width:160px;
+
+}
