@@ -1,7 +1,10 @@
 import React from "react";
 import Table from "../../common/tables/table";
-const Location = () => {
+import Button from "../../common/button";
+import { useNavigate } from "react-router";
 
+const Location = () => {
+  const navigate=useNavigate();
   const columns = [
     {
       name: "Location ID",
@@ -65,9 +68,20 @@ const Location = () => {
     },
   ];
   return (
-    <div>
-        <Table columns={columns}/>
+    <div className="container rounded-3 mt-3">
+    <div className="row ms-2 me-2 ">
+      
+      <div className="col-md-6  ps-3">
+        <h5>Tournaments</h5>
+      </div>
+      <div className="col-md-4 "></div>
+      <div className="col-md-2 pe-4">
+      <Button text="Add Location"className="form-control btn btn-secondary" onClick={() => navigate("/location/addlocation")}></Button>
+        
+      </div>
     </div>
+    <Table columns={columns}/>
+  </div>
   );
 };
 

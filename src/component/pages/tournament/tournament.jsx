@@ -1,9 +1,11 @@
 
 import React from "react";
+import { useNavigate } from "react-router";
 import Table from "../../common/tables/table";
 import Button from "../../common/button";
 
 const Tournament=()=>{
+  const navigate=useNavigate();
     const columns = [
         {
           name: "Sr.No",
@@ -68,7 +70,7 @@ const Tournament=()=>{
         </div>
         <div className="col-md-4 "></div>
         <div className="col-md-2 pe-4">
-        <Button text="Create Tournament"className="form-control btn btn-secondary" ></Button>
+        <Button text="Create Tournament"className="form-control btn btn-secondary" onClick={() => navigate("/tournaments/createtournament")}></Button>
           
         </div>
       </div>

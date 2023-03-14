@@ -1,9 +1,9 @@
 import React from "react";
 import Table from "../../common/tables/table";
-
-
+import Button from "../../common/button";
+import { useNavigate } from "react-router";
 const Teams=()=>{
-
+  const navigate=useNavigate();
 
     const columns = [
         {
@@ -68,9 +68,21 @@ const Teams=()=>{
         },
       ];
     return(
-        <div>
-            <Table columns={columns}/>
+      <div className="container rounded-3 mt-3">
+      <div className="row ms-2 me-2 ">
+        
+        <div className="col-md-6  ps-3">
+          <h5>Teams</h5>
         </div>
+        <div className="col-md-4 "></div>
+        <div className="col-sm-2 pe-4">
+        <Button text="Add Teams"className="form-control btn btn-secondary" onClick={() => navigate("/teams/addteams")}></Button>
+     
+          
+        </div>
+      </div>
+      <Table columns={columns}/>
+    </div>
     )
 }
 export default Teams;
