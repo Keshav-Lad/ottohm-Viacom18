@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DataTable,{defaultThemes} from "react-data-table-component";
+
 import { FormCheck } from "react-bootstrap";
 
 
@@ -14,7 +15,7 @@ const DashBoardTable = () => {
   }, []);
 
   const getData = () => {
-    axios.get("https://60f505a8-495f-478a-b065-99e0d4968ede.mock.pstmn.io/table").then((res) => {
+    axios.get("https://63fabe77-51b3-41bf-99ad-caedb5e69cff.mock.pstmn.io/tabledata").then((res) => {
       setData(res.data.Tabledata);
       console.log(res.data.Tabledata);
     });

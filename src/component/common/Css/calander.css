@@ -54,5 +54,7 @@
 .fc-unthemed .fc-divider {
   border: none !important;
 }
-
+a{
+  text-decoration: none !important;
+}
     

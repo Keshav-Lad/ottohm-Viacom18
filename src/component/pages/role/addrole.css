@@ -16,3 +16,7 @@ textarea {
 .btn-bordered {
   border: 1px solid black;
 }
+.btn-style{
+  border: none;
+  background-color:#ffffff;
+}

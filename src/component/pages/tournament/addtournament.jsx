@@ -2,6 +2,12 @@ import React from "react";
 import Button from "../../common/button";
 import Dropdown from "../../common/dropdown";
 import Textarea from "../../common/textbox";
+import Dropzone from "../../common/Dropzone";
+import DashBoardTable from "../../common/tables/table";
+import "./addtournament.css"
+import Calander from "../../common/calander";
+import FormCard from "../../common/formCard";
+import download from "../../../utils/icons/download.svg"
 const Addtournament = () => {
   return (
     <div className="container">
@@ -96,26 +102,50 @@ const Addtournament = () => {
             </div>
           </div>
         </div>
-        <div className="row mt-5">
-          <div className="con-md-12">
-            <label htmlFor="locationID">Tournament Name</label>
+        <div className="row mt-4">
+          <div className="col-md-12">
+            <div className="row">
+                <div className="col-md-3">
+                  <p>Upload Team Details</p>
+                </div>
+                
+                <div className="col-md-9 d-flex justify-content-end">
+                  <Button text="Sample Information Details" className="btn  sample-download-button"/><span><img src={download} className="download-img mt-2" alt="download img" /></span>
+                </div>
+            </div>
+            {/* <label htmlFor="locationID">Upload Team Details</label> */}
+            <Dropzone />
 
-            {/* Space for file upload menu */}
+            <div className="col-md-2">
+              <Button
+                text="Create Schedule"
+                className="btn btn-primary mt-4 mb-4 form-control"
+              />
+            </div>
 
-            <Textarea
-              text="text"
-              className="form-control mt-2 mb-4"
-              id="locationID"
-              placeholder="Space for file upload"
-            ></Textarea>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-4">
-            <Button
-              text="Create Schedule"
-              className="btn btn-primary mt-5 button-add-location"
-            />
+            <DashBoardTable />
+            <div className="container">
+            <div className="row mt-5 mb-1">
+            <div className="col-md-6 scrollable-div">
+             
+              <FormCard/>
+              <FormCard/>
+              <FormCard/>
+              <FormCard/>
+             
+            </div>
+
+            <div className="col-md-6">
+              <Calander/>
+            </div>
+            <div className="col-md-2 mt-2">
+              <Button
+                text="Create Tournament"
+                className="btn btn-primary mt-4 mb-4 form-control"
+              />
+            </div>
+            </div>
+            </div>
           </div>
         </div>
       </form>

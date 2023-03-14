@@ -5,7 +5,7 @@ const Textbox = (props) => {
     <div>
       <input
         className={props.className}
-        type={props.text}
+        type={props.type}
         onChange={props.onChange}
         id={props.id}
         placeholder={props.placeholder}

@@ -1,0 +1,18 @@
+.scrollable-div{
+    background-color: #f1f1f1;
+    max-height: 550px;
+    overflow: auto;
+    /* margin: 20px; */
+    text-align: justify;
+    padding: 20px;
+}
+.sample-info-title{
+    margin-left : auto;
+}
+.sample-download-button{
+    text-decoration: underline;
+}
+.download-img{
+    width: 17px;
+    height: 17px;
+}
