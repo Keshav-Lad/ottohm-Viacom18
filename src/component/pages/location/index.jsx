@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router";
+import Button from "../../common/button";
 import Table from "../../common/tables/table";
 import "./location.css";
 
 const Index = () => {
 
+
+  const navigate=useNavigate();
   const columns = [
     {
       name: "Location ID",
@@ -67,9 +71,20 @@ const Index = () => {
     },
   ];
   return (
-    <div>
-        <Table columns={columns}/>
+    <div className="container rounded-3 mt-3">
+    <div className="row ms-2 me-2 ">
+      
+      <div className="col-md-6  ps-3">
+        <h5>Location</h5>
+      </div>
+      <div className="col-md-4 "></div>
+      <div className="col-md-2 pe-4">
+      <Button text="Add Location"className="form-control btn btn-secondary" onClick={() => navigate("/location/addlocation")}/>
+        
+      </div>
     </div>
+    <Table columns={columns}/>
+  </div>
   );
 };
 

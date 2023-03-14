@@ -11,7 +11,11 @@ import Games from './pages/games';
 import Addrole from './component/pages/role/addrole';
 import Navbar from './component/common/navbar';
 import Addtournament from './component/pages/tournament/addtournament';
-import Tournamentname from './component/pages/tournament/tournamentname';
+import AddLocation from './component/pages/location/addlocation'
+
+import Addteam from './component/pages/teams/addteam';
+import Adduser from './component/pages/users/adduser';
+
 function App() {
   return (
     <BrowserRouter>
@@ -20,12 +24,16 @@ function App() {
       <Routes>
       <Route path="/" element={<Dashboard/>}/>
       <Route path="/tournaments" element={<Tournaments/>}/>
+      <Route path="/tournaments/createtournament" element={<Addtournament/>}/>
       <Route path="/games" element={<Games/>}/>
       <Route path="/location" element={<Location/>}/>
+      <Route path='/location/addlocation' element={<AddLocation/>}/>
       <Route path="/teams" element={<Teams/>}/>
+      <Route path='/teams/addteams' element={<Addteam/>}/>
       <Route path="/roles" element={<Role/>}/>
       <Route path="/roles/AddRole" element={<Addrole/>}/>
       <Route path="/users" element={<Users/>}/>
+      <Route path="/users/adduser" element={<Adduser/>}/>
 
       {/* <Route path="/login" element={<Login />}/>        
       <Route exact element={<PrivateRoute/>}>          

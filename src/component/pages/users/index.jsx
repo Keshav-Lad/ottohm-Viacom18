@@ -1,9 +1,10 @@
 import React from "react";
 import Table from "../../common/tables/table";
 import "./users.css";
-
+import { useNavigate } from "react-router";
+import Button from "../../common/button";
 const Index=()=>{
-
+  const navigate=useNavigate();
     const columns = [
         {
           name: "User ID",
@@ -59,9 +60,21 @@ const Index=()=>{
         },
       ];
     return(
-        <div>
-            <Table columns={columns}/>
+      <div className="container rounded-3 mt-3">
+      <div className="row ms-2 me-2 ">
+        
+        <div className="col-md-6  ps-3">
+          <h5>User</h5>
         </div>
+        <div className="col-md-4 "></div>
+        <div className="col-sm-2 pe-4">
+        <Button text="Add User"className="form-control btn btn-secondary" onClick={() => navigate("/users/adduser")}></Button>
+     
+          
+        </div>
+      </div>
+      <Table columns={columns}/>
+    </div>
     )
 }
 export default Index;

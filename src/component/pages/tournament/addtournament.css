@@ -1,10 +1,13 @@
 .scrollable-div{
     background-color: #f1f1f1;
     max-height: 550px;
-    overflow: auto;
-    /* margin: 20px; */
-    text-align: justify;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */    -ms-overflow-style: none;  /* Internet Explorer 10+ */    /* margin: 20px; */    text-align: justify;
     padding: 20px;
+}
+.scrollable-div::-webkit-scrollbar{
+    width: 0;
+    height: 0;
 }
 .sample-info-title{
     margin-left : auto;
@@ -16,3 +19,22 @@
     width: 17px;
     height: 17px;
 }
+.bcrum{
+    /* font: font-style font-variant font-weight font-size/line-height font-family; */
+    font-family: Montserrat;
+    font-variant: normal;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #193256;
+  }
+  .active-item{
+    font-family: Montserrat;
+    font-variant: normal;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0px;
+    color: #193256;
+  }
