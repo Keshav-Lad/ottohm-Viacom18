@@ -5,9 +5,8 @@ import Newuser from "../../utils/images/Newuser.png";
 
 const Navbar=()=>{
   return (
-    <nav className="navbar navbar-expand-lg sticky-top border-bottom 1px solid shadow-sm">
+    <nav className="navbar navbar-expand-lg bg-white border-bottom 1px solid shadow-sm">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">Navbar</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
@@ -17,11 +16,12 @@ const Navbar=()=>{
             <img src={Notification} alt="Bellicon"></img>
             <li className="btn-group nav-item dropdown bg-light m-2 p-2 ">
                 <button className="btn nav-link dropdown-toggle dropdown:hover " href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                
                 <img className='userimage pe-2' src={Newuser} alt="userimage"></img>
                 {/* {props.name}
                 {props.role} */}
                 <a className='name ps-4'>John Doe</a><br/>
-                <a className='role'>Admin</a> 
+                <a className='role ps-2'>Admin</a> 
                 </button>
                 <ul className="dropdown-menu dropdown:hover">
                 <li><a className="dropdown-item" href="#">Change Password</a></li>

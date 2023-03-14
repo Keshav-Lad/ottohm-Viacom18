@@ -1,8 +1,9 @@
 import React from 'react';
-import Card from '../common/card';
-import Table from '../common/tables/table';
+import Card from '../../common/card';
+import Table from '../../common/tables/table';
+import "./dashboard.css";
 
-const Dashboard =() => {
+const Index =() => {
   
   const columns = [
     {
@@ -69,29 +70,29 @@ const Dashboard =() => {
   return (
     <div className='container mt-3'>
 
-      <p className='fs-6'>DashBoard</p>
+      <p className='fs-6 textbold'>DashBoard</p>
       <div className='row'>
-        <div className="col-md-3 mb-2">
+        <div className="col-md-3 mb-2 ">
           <Card title="Total Tournament" subtitle="80,000"/>
         </div>
-        <div className="col-md-3 mb-2">
+        <div className="col-md-3 mb-2 ">
         <Card title="Total No of Teams" subtitle="80,000"/>
         </div>
-        <div className="col-md-3 mb-2">
+        <div className="col-md-3 mb-2 ">
         <Card title="Ongoing Tournament" subtitle="80,000"/>
         </div>
-        <div className="col-md-3 mb-2">
+        <div className="col-md-3 mb-2 ">
         <Card title="Tournament Relocated" subtitle="80,000"/>
         </div>
       </div>
-      <div className='container  border border-dark border-1 rounded-3 text-center mt-4'>
-        <h1 className='mt-5 mb-5 pt-5 pb-5'>Analytics</h1>
+      <div className='container border border-dark border-1 rounded-3 text-center mt-4'>
+        <h1 className='mt-5 mb-5 pt-5 pb-5 textnormal'>Analytics</h1>
       </div>
       <div className="mt-4 rounded-top ">
-        <h5 className='pb-3'>Ongoing Tournament</h5>
+        <h5 className='pb-3 textbold'>Ongoing Tournament</h5>
         <Table columns={columns}/>
       </div>
     </div>
   )
 }
-export default Dashboard;
+export default Index;

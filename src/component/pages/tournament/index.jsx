@@ -1,13 +1,14 @@
 import React from "react";
-import Table from "../../common/tables/table";
-import Button from "../../common/button";
 import { useNavigate } from "react-router";
-const Teams=()=>{
-  const navigate=useNavigate();
+import Table from "../../common/tables/table";
+import "./tournament.css";
+import Button from "../../common/button";
 
+const Index=()=>{
+  const navigate=useNavigate();
     const columns = [
         {
-          name: "Team ID",
+          name: "Sr.No",
           selector: row => row.TournamentID,
           sortable: true,
           style: {
@@ -15,7 +16,7 @@ const Teams=()=>{
           },
         },
         {
-          name: "Team Name",
+          name: "Tournament ID",
           selector: row => row.TournamentID,
           sortable: true,
           style: {
@@ -23,7 +24,7 @@ const Teams=()=>{
           },
         },
         {
-          name: "Team Manager",
+          name: "Tournament Name",
           selector: row => row.TournamentDate,
           sortable: true,
           style: {
@@ -39,21 +40,13 @@ const Teams=()=>{
           },
         },
         {
-          name: "Created On",
+          name: "Created on",
           selector: row => row.CreatedBy,
           sortable: true,
           style: {
             width: "90px",
           },
         },
-        {
-            name: "Team Members",
-            selector: row => row.CreatedBy,
-            sortable: true,
-            style: {
-              width: "90px",
-            },
-          },
         {
           name: "Action",
           cell: () => (
@@ -67,22 +60,23 @@ const Teams=()=>{
           },
         },
       ];
+
     return(
       <div className="container rounded-3 mt-3">
       <div className="row ms-2 me-2 ">
         
         <div className="col-md-6  ps-3">
-          <h5>Teams</h5>
+          <h5 className="textbold" >Tournaments</h5>
         </div>
         <div className="col-md-4 "></div>
-        <div className="col-sm-2 pe-4">
-        <Button text="Add Teams"className="form-control btn btn-secondary" onClick={() => navigate("/teams/addteams")}></Button>
-     
+        <div className="col-md-2 pe-4">
+        <Button text="Create Tournament"className="form-control btn btn-secondary" onClick={() => navigate("/tournaments/createtournament")}></Button>
           
         </div>
       </div>
       <Table columns={columns}/>
     </div>
-    )
+    );
+
 }
-export default Teams;
+export default Index;

@@ -1,8 +1,9 @@
 import React from "react";
 import Table from "../../common/tables/table";
+import "./users.css";
 import { useNavigate } from "react-router";
 import Button from "../../common/button";
-const User=()=>{
+const Index=()=>{
   const navigate=useNavigate();
     const columns = [
         {
@@ -76,4 +77,4 @@ const User=()=>{
     </div>
     )
 }
-export default User;
+export default Index;
