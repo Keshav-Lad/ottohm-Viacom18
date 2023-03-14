@@ -1,3 +1,7 @@
 .card-style{
     min-height: 125px;
 }
+.textmedium{
+    font: normal normal medium 16px Gotham;
+    color: #000000; 
+}

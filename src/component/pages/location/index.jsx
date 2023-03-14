@@ -1,15 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router";
-import Button from "../../common/button";
 import Table from "../../common/tables/table";
-import './role.css'
+import "./location.css";
 
-const Role = () => {
-  
-  const navigate=useNavigate();
+const Index = () => {
+
   const columns = [
     {
-      name: "Role ID",
+      name: "Location ID",
       selector: row => row.TournamentID,
       sortable: true,
       style: {
@@ -17,7 +14,7 @@ const Role = () => {
       },
     },
     {
-      name: "Role Name",
+      name: "Location Name",
       selector: row => row.TournamentID,
       sortable: true,
       style: {
@@ -25,7 +22,7 @@ const Role = () => {
       },
     },
     {
-      name: "Created By",
+      name: "Location City",
       selector: row => row.TournamentDate,
       sortable: true,
       style: {
@@ -33,7 +30,7 @@ const Role = () => {
       },
     },
     {
-      name: "Created On",
+      name: "Stadium Name",
       selector: row => row.TournamentName,
       sortable: true,
       style: {
@@ -41,7 +38,15 @@ const Role = () => {
       },
     },
     {
-      name: "Description",
+      name: "Contact Person",
+      selector: row => row.CreatedBy,
+      sortable: true,
+      style: {
+        width: "90px",
+      },
+    },
+    {
+      name: "Contact No",
       selector: row => row.CreatedBy,
       sortable: true,
       style: {
@@ -61,23 +66,11 @@ const Role = () => {
       },
     },
   ];
-  return(
-    <div className="container rounded-3 mt-3">
-      <div className="row ms-2 me-2 ">
-        
-        <div className="col-md-6  ps-3">
-          <h5>Role</h5>
-        </div>
-        <div className="col-md-4 "></div>
-        <div className="col-sm-2 pe-4">
-        <Button text="Add Role"className="form-control btn btn-secondary" onClick={() => navigate("/roles/AddRole")}></Button>
-     
-          
-        </div>
-      </div>
-      <Table columns={columns}/>
+  return (
+    <div>
+        <Table columns={columns}/>
     </div>
-  )
+  );
 };
 
-export default Role;
+export default Index;

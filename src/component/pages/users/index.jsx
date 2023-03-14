@@ -1,7 +1,8 @@
 import React from "react";
 import Table from "../../common/tables/table";
+import "./users.css";
 
-const User=()=>{
+const index=()=>{
 
     const columns = [
         {
@@ -63,4 +64,4 @@ const User=()=>{
         </div>
     )
 }
-export default User;
+export default index;

@@ -66,12 +66,11 @@ const Sidebar = ({ children }) => {
           <div key={index}>
             <NavLink
               to={item.path}
-              className="link"
+              className="link textnormal"
               activeclassname="active"
-          
             >
               <div className="icon">{item.icon}</div>
-              <div className="link_text" style={{ display: isOpen ? "block" : "none" }}>{item.name}</div>
+              <div className="link_text textnormal" style={{ display: isOpen ? "block" : "none" }}>{item.name}</div>
             </NavLink>
           </div>
         ))}

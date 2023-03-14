@@ -1,0 +1,12 @@
+.textbold{
+    font: normal normal bold 16px Gotham;
+    color: #000000; 
+}
+.textnormal{
+    font: normal normal normal 16px/19px Gotham !important;
+    color: #000000; 
+}
+.textmedium{
+    font: normal normal medium 16px/19px Gotham !important;
+    color: #000000; 
+}

@@ -45,7 +45,6 @@
   }
   .link_text{
     margin-top: 5px;
-    font: normal normal normal 12px/15px Montserrat;
     height: 15px;
     text-align: left;
     letter-spacing: 0px;
@@ -66,7 +65,10 @@
     margin-left: 25%;
     margin-bottom: 10px;
   }
-  
+  .textnormal{
+    font: normal normal normal 15px/15px Gotham;
+    color: #000000;
+  }
   /* @media (max-width: 768px) {
     .sidebar {
       width: 80px;

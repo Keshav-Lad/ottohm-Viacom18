@@ -21,10 +21,10 @@ const DashBoardTable = (props) => {
     });
   };
 
-  
+
     const customStyles = {
       table: {
-        fontFamily: "Montserrat, sans-serif",
+        fontFamily: "Gotham",
       },
       headRow: {
         style: {
@@ -33,6 +33,7 @@ const DashBoardTable = (props) => {
           borderTopStyle: "solid",
           borderTopWidth: "1px",
           borderTopColor: defaultThemes.default.divider.default,
+          font: "normal normal bold 14px Gotham",
         },
       },
       headCells: {
@@ -41,6 +42,7 @@ const DashBoardTable = (props) => {
             borderRightStyle: "solid",
             borderRightWidth: "1px",
             borderRightColor: defaultThemes.default.divider.default,
+            font: "normal normal bold 14px Gotham",
           },
         },
       },
@@ -50,6 +52,7 @@ const DashBoardTable = (props) => {
             borderRightStyle: "solid",
             borderRightWidth: "1px",
             borderRightColor: defaultThemes.default.divider.default,
+            font: "normal normal normal 12px Gotham",
           },
         },
       },
@@ -60,6 +63,7 @@ const DashBoardTable = (props) => {
         when: (row) => row.id % 2 !== 0,
         style: {
           backgroundColor: "#F8FEFF",
+          font: "normal normal normal 12px Gotham",
         },
       },
     ];
@@ -79,7 +83,7 @@ const DashBoardTable = (props) => {
               
               <input
                   type="text"
-                  className="form-control"
+                  className="form-control textnormal"
                   placeholder="Search"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

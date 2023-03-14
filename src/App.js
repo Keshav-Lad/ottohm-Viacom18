@@ -1,48 +1,48 @@
 import './App.css';
 import Sidebar from './component/common/sidebar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import IndexDashboard from './pages/Indexdashboard';
-import IndexTournaments from './pages/IndexTournaments';
-import IndexLocation from './pages/Indexlocation';
-import IndexTeams from './pages/Indexteams';
-import IndexRole from './pages/Indexroles';
-import IndexUsers from './pages/Indexusers';
-import IndexGames from './pages/Indexgames';
+import Dashboard from './pages/dashboard';
+import Tournaments from './pages/tournaments';
+import Location from './pages/location';
+import Teams from './pages/teams';
+import Role from './pages/roles';
+import Users from './pages/users';
+import Games from './pages/games';
 import Addrole from './component/pages/role/addrole';
 import Navbar from './component/common/navbar';
 import Addtournament from './component/pages/tournament/addtournament';
 import Tournamentname from './component/pages/tournament/tournamentname';
 function App() {
   return (
-    // <BrowserRouter>
-    //   <Sidebar>
-    //   <Navbar></Navbar>
-    //   <Routes>
-    //   <Route path="/" element={<IndexDashboard/>}/>
-    //   <Route path="/tournaments" element={<IndexTournaments/>}/>
-    //   <Route path="/games" element={<IndexGames/>}/>
-    //   <Route path="/location" element={<IndexLocation/>}/>
-    //   <Route path="/teams" element={<IndexTeams/>}/>
-    //   <Route path="/roles" element={<IndexRole/>}/>
-    //   <Route path="/roles/AddRole" element={<Addrole/>}/>
-    //   <Route path="/users" element={<IndexUsers/>}/>
+    <BrowserRouter>
+      <Sidebar>
+      <Navbar></Navbar>
+      <Routes>
+      <Route path="/" element={<Dashboard/>}/>
+      <Route path="/tournaments" element={<Tournaments/>}/>
+      <Route path="/games" element={<Games/>}/>
+      <Route path="/location" element={<Location/>}/>
+      <Route path="/teams" element={<Teams/>}/>
+      <Route path="/roles" element={<Role/>}/>
+      <Route path="/roles/AddRole" element={<Addrole/>}/>
+      <Route path="/users" element={<Users/>}/>
 
-    //   {/* <Route path="/login" element={<Login />}/>        
-    //   <Route exact element={<PrivateRoute/>}>          
-    //   <Route path="/*" element={
-    //     <Fragment>                
-    //       <Sidebar>                  
-    //       <Navbar/>                  
-    //       <Routes>                    
-    //       <Route path="/" element={<IndexDashboard/>} />
-    //       </Routes>                
-    //       </Sidebar>              
-    //       </Fragment>
-    //         }/>       
-    //   </Route> */}
-    //   </Routes>
-    //   </Sidebar>
-    // </BrowserRouter>    
+      {/* <Route path="/login" element={<Login />}/>        
+      <Route exact element={<PrivateRoute/>}>          
+      <Route path="/*" element={
+        <Fragment>                
+          <Sidebar>                  
+          <Navbar/>                  
+          <Routes>                    
+          <Route path="/" element={<IndexDashboard/>} />
+          </Routes>                
+          </Sidebar>              
+          </Fragment>
+            }/>       
+      </Route> */}
+      </Routes>
+      </Sidebar>
+    </BrowserRouter>    
 
     
     // <Addlocation/>
@@ -50,7 +50,7 @@ function App() {
     // <Addrole/>
     // <Addteam/>
     // <Tournamentname/>
-    <Addtournament/>
+    // <Addtournament/>
     // <Role/>
   );
 }
