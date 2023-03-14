@@ -8,7 +8,7 @@ const Adduser = () => {
   return (
     <div className="container mt-3  ps-3">
      <Breadcrumb>
-          <Breadcrumb.Item href="/location">
+          <Breadcrumb.Item href="/users">
             <span className="bcrum  text-nowrap">User</span>
           </Breadcrumb.Item>
           <span className="active-item  me-2">&gt;&gt;</span>
