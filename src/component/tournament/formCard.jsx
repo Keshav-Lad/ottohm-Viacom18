@@ -8,6 +8,17 @@ const FormCard = () => {
     <div className="card mt-2">
       <div className="card-body">
         <div className="container">
+        <div className="row">
+            <div className="col-4 text-wrap">
+              <p>Team 1 (Grp A)</p>
+            </div>
+            <div className="col-4 text-wrap">
+              <p>Team 10 (Grp D)</p>
+            </div>
+            <div className="col-4 text-wrap">
+              <p>Match 1</p>
+            </div>
+          </div>
           <div className="row">
             <div className="col">
               <label htmlFor="date-input">Date</label>
