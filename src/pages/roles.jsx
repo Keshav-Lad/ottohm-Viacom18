@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../component/pages/role/index';
+import Index from '../component/role/index';
 
 const Roles =()=>{
 

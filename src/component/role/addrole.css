@@ -1,0 +1,45 @@
+textarea {
+  resize: none;
+}
+.breadcrumb ::before {
+  content: none !important;
+}
+.breadcrumb-1 {
+  font: normal normal bold 16px/19px Montserrat;
+  letter-spacing: 0px;
+  color: #000000;
+}
+.checkbox-input[type="checkbox"] {
+  width: 5mm;
+  height: 5mm;
+}
+.btn-bordered {
+  border: 1px solid black;
+}
+.btn-style{
+  border: none;
+  background-color:#ffffff;
+}
+.btn-sizing{
+  min-width:160px;
+}
+.textnormal{
+  font: normal normal normal 14px/18px Gotham !important;
+  letter-spacing: 0px;
+  color: #000000; 
+}
+.textboldbtn{
+  font: normal normal bold 16px/19px Gotham !important;
+  letter-spacing: 0px;
+  color: #FFFFFF; 
+}
+.textbold{
+  font: normal normal bold 16px/19px Gotham !important;
+  letter-spacing: 0px;
+  color: #000000; 
+}
+.textmedium{
+  font: normal normal medium 16px/19px Gotham !important;
+  letter-spacing: 0px;
+  color: #000000; 
+}

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DataTable,{defaultThemes} from "react-data-table-component";
-
 import { FormCheck } from "react-bootstrap";
-
+import "./Css/table.css";
 
 const DashBoardTable = (props) => {
 
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+
 
   useEffect(() => {
       getData();
@@ -19,6 +19,7 @@ const DashBoardTable = (props) => {
       setData(res.data.Tabledata);
       console.log(res.data.Tabledata);
     });
+    
   };
 
 
@@ -52,7 +53,7 @@ const DashBoardTable = (props) => {
             borderRightStyle: "solid",
             borderRightWidth: "1px",
             borderRightColor: defaultThemes.default.divider.default,
-            font: "normal normal normal 12px Gotham",
+            font: "normal normal normal 14px Gotham",
           },
         },
       },
@@ -73,6 +74,7 @@ const DashBoardTable = (props) => {
         .toLowerCase()
         .includes(searchQuery.toLowerCase())
     );
+ 
   return (
        
     <div className="container">
@@ -103,7 +105,7 @@ const DashBoardTable = (props) => {
             pointerOnHover
             noDataComponent="Table is Empty"
             customStyles={customStyles}
-         
+            onRowClicked={props.componentCall}
             selectableRowsVisibleOnly
             selectableRowsHighlight
             conditionalRowStyles={conditionalRowStyles}

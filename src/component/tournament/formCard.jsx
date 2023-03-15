@@ -1,6 +1,8 @@
 import React from "react";
 import Textarea from "../common/textbox";
-import Dropdown from "./dropdown";
+import Dropdown from "../common/dropdown";
+import "./formcard.css";
+
 const FormCard = () => {
   return (
     <div className="card mt-2">
@@ -20,12 +22,12 @@ const FormCard = () => {
           <div className="row">
             <div className="col">
               <label htmlFor="date-input">Date</label>
-              <Textarea className="form-control" type="date" id="date-input" />
+              <Textarea className="form-control textnormal" type="date" id="date-input" />
             </div>
             <div className="col">
               <label htmlFor="city-input">City</label>
               <Dropdown
-                className="form-control form-select"
+                className="form-control form-select textnormal"
                 id="city-input"
               ></Dropdown>
             </div>
@@ -33,12 +35,12 @@ const FormCard = () => {
           <div className="row">
             <div className="col">
               <label htmlFor="time-input">Time</label>
-              <Textarea className="form-control" type="time" id="time-input" />
+              <Textarea className="form-control textnormal" type="time" id="time-input" />
             </div>
             <div className="col">
               <label htmlFor="stadium-input">Stadium</label>
               <Dropdown
-                className="form-control form-select"
+                className="form-control form-select textnormal"
                 id="stadium-input"
               ></Dropdown>
             </div>
@@ -47,7 +49,7 @@ const FormCard = () => {
             <div className="">
               <label for="description-input">Description</label>
               <textarea
-                className="form-control"
+                className="form-control textnormal"
                 id="description-input"
                 rows="2"
                 placeholder="Enter Description"

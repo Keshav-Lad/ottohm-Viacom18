@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import Button from "../../common/button";
-import Table from "../../common/tables/table";
+import Button from "../common/button";
+import Table from "../common/table";
 import "./location.css";
 
 const Index = () => {
@@ -75,11 +75,11 @@ const Index = () => {
     <div className="row ms-2 me-2 ">
       
       <div className="col-md-6  ps-3">
-        <h5>Location</h5>
+        <h5 className="textbold">Location</h5>
       </div>
       <div className="col-md-4 "></div>
       <div className="col-md-2 pe-4">
-      <Button text="Add Location"className="form-control btn btn-secondary" onClick={() => navigate("/location/addlocation")}/>
+      <Button text="Add Location"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate("/location/addlocation")}/>
         
       </div>
     </div>

@@ -1,13 +1,14 @@
 import React from "react";
-import Table from "../../common/tables/table";
-import "./users.css";
 import { useNavigate } from "react-router";
-import Button from "../../common/button";
+import Table from "../common/table";
+import "./tournament.css";
+import Button from "../common/button";
+
 const Index=()=>{
   const navigate=useNavigate();
     const columns = [
         {
-          name: "User ID",
+          name: "Sr.No",
           selector: row => row.TournamentID,
           sortable: true,
           style: {
@@ -15,7 +16,7 @@ const Index=()=>{
           },
         },
         {
-          name: "User Name",
+          name: "Tournament ID",
           selector: row => row.TournamentID,
           sortable: true,
           style: {
@@ -23,7 +24,7 @@ const Index=()=>{
           },
         },
         {
-          name: "Added On",
+          name: "Tournament Name",
           selector: row => row.TournamentDate,
           sortable: true,
           style: {
@@ -31,11 +32,11 @@ const Index=()=>{
           },
         },
         {
-          name: "User Role",
+          name: "Created By",
           selector: row => row.TournamentName,
           sortable: true,
           style: {
-            width: "120px",
+            width: "90px",
           },
         },
         {
@@ -59,22 +60,27 @@ const Index=()=>{
           },
         },
       ];
+
+      const TournamentComponentLoad=()=>{
+        navigate('/tournaments/tournamentname')
+      }
+
     return(
       <div className="container rounded-3 mt-3">
       <div className="row ms-2 me-2 ">
         
         <div className="col-md-6  ps-3">
-          <h5>User</h5>
+          <h5 className="textbold" >Tournaments</h5>
         </div>
         <div className="col-md-4 "></div>
-        <div className="col-sm-2 pe-4">
-        <Button text="Add User"className="form-control btn btn-secondary" onClick={() => navigate("/users/adduser")}></Button>
-     
+        <div className="col-md-2 pe-4">
+        <Button text="Create Tournament"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate("/tournaments/createtournament")}></Button>
           
         </div>
       </div>
-      <Table columns={columns}/>
+      <Table columns={columns} componentCall={TournamentComponentLoad}/>
     </div>
-    )
+    );
+
 }
 export default Index;

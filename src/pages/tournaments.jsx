@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../component/pages/tournament/index';
+import Index from '../component/tournament/index';
 
 const Tournaments=()=>{
     return(

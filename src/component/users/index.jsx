@@ -1,14 +1,13 @@
 import React from "react";
+import Table from "../common/table";
+import "./users.css";
 import { useNavigate } from "react-router";
-import Table from "../../common/tables/table";
-import "./tournament.css";
-import Button from "../../common/button";
-
+import Button from "../common/button";
 const Index=()=>{
   const navigate=useNavigate();
     const columns = [
         {
-          name: "Sr.No",
+          name: "User ID",
           selector: row => row.TournamentID,
           sortable: true,
           style: {
@@ -16,7 +15,7 @@ const Index=()=>{
           },
         },
         {
-          name: "Tournament ID",
+          name: "User Name",
           selector: row => row.TournamentID,
           sortable: true,
           style: {
@@ -24,7 +23,7 @@ const Index=()=>{
           },
         },
         {
-          name: "Tournament Name",
+          name: "Added On",
           selector: row => row.TournamentDate,
           sortable: true,
           style: {
@@ -32,11 +31,11 @@ const Index=()=>{
           },
         },
         {
-          name: "Created By",
+          name: "User Role",
           selector: row => row.TournamentName,
           sortable: true,
           style: {
-            width: "90px",
+            width: "120px",
           },
         },
         {
@@ -60,23 +59,22 @@ const Index=()=>{
           },
         },
       ];
-
     return(
       <div className="container rounded-3 mt-3">
       <div className="row ms-2 me-2 ">
         
         <div className="col-md-6  ps-3">
-          <h5 className="textbold" >Tournaments</h5>
+          <h5 className="textbold">User</h5>
         </div>
         <div className="col-md-4 "></div>
-        <div className="col-md-2 pe-4">
-        <Button text="Create Tournament"className="form-control btn btn-secondary" onClick={() => navigate("/tournaments/createtournament")}></Button>
+        <div className="col-sm-2 pe-4">
+        <Button text="Add User"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate("/users/adduser")}></Button>
+     
           
         </div>
       </div>
       <Table columns={columns}/>
     </div>
-    );
-
+    )
 }
 export default Index;

@@ -1,16 +1,17 @@
 import React from "react";
-import Textarea from "../../common/textbox";
-import Button from "../../common/button";
+import Textarea from "../common/textbox";
+import Button from "../common/button";
 import { ArrowLeft } from 'react-bootstrap-icons';
 import "./addrole.css";
 import { useNavigate } from "react-router";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 const Addrole = () => {
   const navigate=useNavigate();
   return (
     <div className="container mt-3">
       <div className="breadcrumb">
-        <button className=" btn btn-style fs-6 fw-bold" onClick={() => navigate("/roles")}>
-          <ArrowLeft size={25}  width={20} /><span className="mt-5 ms-2">Back</span>
+        <button className=" btn btn-style fs-6 fw-bold " onClick={() => navigate("/roles")}>
+          <ArrowLeft size={25}  width={20} /><span className="mt-5 ms-2 textbold">Back</span>
           </button>
     
         {/* <span className="breadcrumb-item"><ArrowLeft size={30}/></span>
@@ -19,32 +20,36 @@ const Addrole = () => {
       <form>
         <div>
           <div className="row mt-4">
-            <div className="col-md-6">
+            <div className="col-md-4">
               <label htmlFor="locationID">Role Id</label>
               <Textarea
                 text="text"
-                className="form-control mt-2 mb-4"
+                className="form-control mt-2 mb-4 textnormal"
                 placeholder="101"
                 id="locationID"
               ></Textarea>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-4">
               <label htmlFor="locationName">Role Name</label>
               <Textarea
                 text="text"
-                className="form-control mt-2 mb-4"
+                className="form-control mt-2 mb-4 textnormal"
                 placeholder="Enter Role Name"
                 id="locationName"
               ></Textarea>
             </div>
           </div>
-          <label htmlFor="description">Description</label>
+          <div className="row">
+            <div className="col-md-8">
+            <label htmlFor="description">Description</label>
           <textarea
-            className="form-control mt-2 mb-4"
+            className="form-control mt-2 mb-4 textnormal"
             id="description"
             rows="4"
             placeholder="Enter Role Description"
           ></textarea>
+            </div>
+          </div>
           {/* <div className="mt-5">
             <label htmlFor="accesstable">Access</label>
             <table className="table table-bordered  mt-2 mb-4  " id="accesstable">
@@ -92,18 +97,18 @@ const Addrole = () => {
             </table>
           </div> */}
         </div>
-        <div className="row mt-5">
+        <div className="row mt-2">
           <div className="col-md-2 ">
             <Button
               text="Cancel"
-              className="btn btn-bordered btn-outline-dark  form-control mb-2 btn-sizing"
+              className="btn btn-bordered btn-outline-dark  form-control mb-2 btn-sizing textbold"
               onClick={() => navigate("/roles")}
             />
           </div>
           <div className="col-md-2 ">
             <Button
               text="Create Role"
-              className="btn btn-primary form-control btn-sizing "
+              className="btn btn-primary form-control btn-sizing textboldbtn "
             />
           </div>
         </div>
