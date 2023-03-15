@@ -7,6 +7,7 @@ const Sidebar = ({ children }) => {
  
  
   const [isOpen, setIsOpen] = useState(true);
+  
   useEffect(() => {
     const handleResize = () => {
       setIsOpen(window.innerWidth >= 768);

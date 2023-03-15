@@ -6,7 +6,6 @@ import Newuser from "../../utils/images/Newuser.png";
 
 const Navbar=()=>{
 
-
   
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm ">
