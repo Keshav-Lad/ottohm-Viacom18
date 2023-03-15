@@ -1,7 +1,6 @@
 import React from "react";
 import Textarea from "../common/textbox";
 import Button from "../common/button";
-import { ArrowLeft } from 'react-bootstrap-icons';
 import "./addrole.css";
 import { useNavigate } from "react-router";
 import Breadcrumbs from "../common/breadcrumb";

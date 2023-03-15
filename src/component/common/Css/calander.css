@@ -34,7 +34,10 @@
   content: none;
 }
 .fc-toolbar-title {
-  font-size: 20px !important;
+  /* font-size: 20px !important; */
+  font: normal normal bold 16px/19px Gotham !important;
+  letter-spacing: 0px;
+  color: #000000; 
 }
 /* .fc-day-grid-event {
   height: 60px;
@@ -58,5 +61,10 @@ a{
   text-decoration: none !important;
 }
 .fc .fc-toolbar.fc-header-toolbar{
-  margin-bottom: 0px !important;
+  margin-bottom: 5px !important;
+}
+.fc .fc-col-header-cell-cushion{
+  font: normal normal medium 16px/19px Gotham !important;
+  letter-spacing: 0px;
+  color: #000000; 
 }
