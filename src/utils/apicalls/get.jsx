@@ -1,13 +1,23 @@
 import React from "react";
 import axios from "axios";
+import constants from "../constants.json";
 
-const GetData = () => {
+const GetData=()=> {
     axios
-    .get("https://jsonplaceholder.typicode.com/customers")
-    .then(data => console.log(data.data))
-    .catch(error => console.log(error));
+    .get(constants.baseUrl.toString()+constants.suffix.toString())
+    console.log("BaseUrl------>  " + constants.baseUrl.toString());
+    console.log("Suffix------>   " + constants.suffix.toString());
+    // .then((res) => {
+    //     console.log(res);
+    //     return res;
+    // })
+    // .catch(error => {
+    //     console.log(error)
+    //     return error;    
+    // });  
+
     };
-export default GetData;
+export default GetData();
 
 // const Getclient=()=>{
 //     const defaultOptions={
