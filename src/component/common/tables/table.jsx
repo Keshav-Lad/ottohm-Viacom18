@@ -83,7 +83,7 @@ const DashBoardTable = (props) => {
               
               <input
                   type="text"
-                  className="form-control textnormal"
+                  className="form-control textnormal rounded-5"
                   placeholder="Search"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

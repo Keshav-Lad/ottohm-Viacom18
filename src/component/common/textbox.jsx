@@ -4,7 +4,7 @@ const Textbox = (props) => {
   return (
     <div>
       <input
-        className={props.className}
+        className={`rounded-5 ${props.className}`}
         type={props.type}
         onChange={props.onChange}
         id={props.id}

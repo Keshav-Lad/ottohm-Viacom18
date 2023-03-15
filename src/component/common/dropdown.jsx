@@ -3,7 +3,7 @@ import "./Css/dropdown.css";
 
 const Dropdown = (props) => {
   return (
-      <select className={props.className} id={props.id}>
+      <select className={`rounded-5 ${props.className}`} id={props.id}>
         <option>1</option>
         <option>2</option>
         <option>3</option>
