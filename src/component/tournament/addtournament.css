@@ -1,11 +1,11 @@
 .scrollable-div{
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     max-height: 550px;
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */    
     -ms-overflow-style: none;  /* Internet Explorer 10+ */    /* margin: 20px; */    
     text-align: justify;
-    padding: 20px;
+    /* padding: 20px; */
 }
 .scrollable-div::-webkit-scrollbar{
     width: 0;

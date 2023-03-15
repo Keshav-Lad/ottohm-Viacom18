@@ -12,11 +12,11 @@ import constants from "../../utils/constants.json"
 const Tournamentname = () => {
   const navigate= useNavigate();
   return (
-    <div className="container">
+    <div className="container ">
       
       <Breadcrumbs title="Tournaments" subtitle="Tournament Name" onClick={()=> navigate(constants.tournaments)}/>
       
-      <div className="row mt-4 ">
+      <div className="row mt-4">
         <div className="col-md-6">
           <div className="row">
             <div className="col">
@@ -29,7 +29,7 @@ const Tournamentname = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-5">
               <label htmlFor="locationName">Date</label>
               <Textarea
                 text="Date"
@@ -39,35 +39,35 @@ const Tournamentname = () => {
             </div>
           </div>
 
-          <div className="row tournament-details mt-4">
-            <div className="col-md-5">
-              <div className="row mt-3">
-                <div className="col ">
+          {/* <div className="row-md-5 tournament-details ">
+            <div className="col">
+              <div className="row">
+                <div className="col-md-2">
                   <h6>Team 1</h6>
                 </div>
-                <div className="col">
+                <div className="col-md-2">
                   <Button
                     className="btn btn-sm btn-primary view-button"
                     text="View Team"
                   />
                 </div>
               </div>
-              <div className="row mt-3 mb-3">
-                <div className="col ">
+              <div className="row">
+                <div className="col-md-2">
                   <h6>Team 2</h6>
                 </div>
-                <div className="col">
+                <div className="col-md-2">
                   <Button
                     className="btn btn-sm btn-primary view-button"
                     text="View Team"
                   />
                 </div>
               </div>
-              <div className="row mt-3 mb-3">
-                <div className="col ">
+              <div className="row">
+                <div className="col-md-2">
                   <h6>Match 1</h6>
                 </div>
-                <div className="col">
+                <div className="col-md-2">
                   <Button
                     className="btn btn-sm btn-primary view-button"
                     text="Details"
@@ -76,33 +76,89 @@ const Tournamentname = () => {
               </div>
             </div>
 
-            <div className="col">
+            <div className="col-md-2">
               <div className="row mt-3">
-                <div className="col">
+                <div className="col-md-2">
                   <h6>Group A</h6>
                 </div>
               </div>
               <div className="row mt-3 mb-3">
-                <div className="col">
+                <div className="col-md-4">
                   <h6>Group B</h6>
                 </div>
               </div>
               <div className="row mt-4 mb-3">
-                <div className="col">
+                <div className="col-md-4">
                   <h6>Score</h6>
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="row mt-5">
-                <div className="col">
+                <div className="col-md-4">
                   <h6>Note</h6>
                 </div>
               </div>
             </div>
+          </div> */}
+
+          <div className="row-md-5 bg-info">
+              <div className="row">
+                <div className="col-md-6 ps-4">
+                    <div className="row mt-2">
+                      <div className="col-md-4">
+                      <h6>Team 1</h6>
+                      </div>
+                      <div className="col-md-6">
+                      <Button
+                      className="btn btn-sm btn-primary view-button"
+                      text="View Team"
+                      />
+                      </div>
+                    </div>
+                    <div className="row mt-2">
+                      <div className="col-md-4">
+                      <h6>Team 2</h6>
+                      </div>
+                      <div className="col-md-6">
+                      <Button
+                    className="btn btn-sm btn-primary view-button"
+                    text="View Team"
+                  />
+                      </div>
+                    </div>
+                    <div className="row mt-2 mb-2">
+                      <div className="col-md-4">
+                      <h6>Team 3</h6>
+                      </div>
+                      <div className="col-md-6">
+                      <Button
+                    className="btn btn-sm btn-primary view-button"
+                    text="View Team"
+                  />
+                      </div>
+                    </div>
+                </div>
+                <div className="col-md-6 ps-4">
+                  <div className="row mt-2">
+                    <h6>Group A</h6>
+                  </div>
+                  <div className="row mt-3">
+                    <h6>Group B</h6>
+                  </div>
+                  <div className="row mt-3">
+                    <div className="col-md-6">
+                      <h6>Score</h6>
+                    </div>
+                    <div className="col-md-6">
+                    <h6>Note</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
 
-          <div className="row tournament-details mt-4">
+          <div className="row-md-5 bg-info mt-3 ">
             <form>
               <div className="d-flex justify-content-end">
                 <Button
@@ -111,16 +167,16 @@ const Tournamentname = () => {
                   icon={<PencilSquare />}
                 />
               </div>
-              <div className="row">
-                <div className="col px-5 py-3">
+              <div className="row p-3">
+                <div className="col-md-6">
                   <label htmlFor="forDate">Date</label>
                   <Textarea
-                    text="date"
-                    className="form-control input-filed-width"
+                    type="date"
+                    className="form-control form-control-sm"
                     id="forDate"
                   />
                 </div>
-                <div className="col px-5 py-3">
+                <div className="col-md-6">
                   <label htmlFor="city">City</label>
                   <Dropdown
                     className="form-control form-select dropdown-input-width"
@@ -128,16 +184,16 @@ const Tournamentname = () => {
                   />
                 </div>
               </div>
-              <div className="row">
-                <div className="col px-5 py-3">
+              <div className="row p-3">
+                <div className="col-md-6">
                   <label htmlFor="forTime">Time</label>
                   <Textarea
-                    text="time"
-                    className="form-control input-filed-width"
+                    type="time"
+                    className="form-control form-control-sm"
                     id="forTime"
                   />
                 </div>
-                <div className="col px-5 py-3">
+                <div className="col-md-6">
                   <label htmlFor="forStadium">Stadium</label>
                   <Dropdown
                     className="form-control form-select dropdown-input-width"
@@ -145,8 +201,8 @@ const Tournamentname = () => {
                   />
                 </div>
               </div>
-              <div className="row">
-                <div className=" px-5 py-3">
+              <div className="row mb-4 p-3">
+                <div className="col-md-12  mb-4">
                   <label for="description">Description</label>
                   <textarea
                     className="form-control"
@@ -159,8 +215,9 @@ const Tournamentname = () => {
             </form>
           </div>
         </div>
-        <div className="col-md-6 mt-4 calander">
-          <Calander />
+
+        <div className="col-md-6 mt-3 p-2 rounded-4  border mb-4 scrollable-calander">
+          <Calander height="50"/>
         </div>
       </div>
     </div>

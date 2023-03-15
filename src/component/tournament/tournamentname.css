@@ -7,8 +7,10 @@
 
 }
 .dropdown-input-width{
-    min-width: 15vw;
-    height:50%;
+    min-height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: .875rem;
+    border-radius: 0.25rem;
     
 }
 .edit-button{
@@ -19,4 +21,19 @@
 }
 .view-button{
     min-width: 7vw;
+}
+.scrollable-calander{
+    overflow-x: hidden;
+}
+
+@media screen and (width<=850px) {
+    .scrollable-calander{
+        overflow-x: scroll;
+    }
+    .scrollable-calander .fc-view > table {
+        width: 500px;
+    }
+    .scrollable-calander .fc-header-toolbar  {
+        width: 500px;
+    }
 }

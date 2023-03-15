@@ -15,7 +15,7 @@ import constants from "../../utils/constants.json";
 const Addtournament = () => {
   const navigate=useNavigate();
   return (
-  <div className="container ps-3 mt-3">
+  <div className="container ps-4  mt-3">
           
       
       <Breadcrumbs title="Tournaments" subtitle="Add Tournamenet" onClick={() => navigate(constants.tournaments)}/>

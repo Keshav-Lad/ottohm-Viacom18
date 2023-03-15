@@ -2,7 +2,7 @@ import React from "react";
 import Fullcalander from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import "./Css/calander.css";
-const Calander = () => {
+const Calander = (props) => {
   const headerToolbarOptions = {
     left: "prev",
     center: "title",
@@ -30,7 +30,7 @@ const Calander = () => {
     <Fullcalander
       plugins={[dayGridPlugin]}
       initialView="dayGridMonth"
-      height={window.innerHeight - 200}
+      height={window.innerHeight - props.height}
       headerToolbar={headerToolbarOptions}
       headerToolbarClassNames="my-header-toolbar"
       events={[
