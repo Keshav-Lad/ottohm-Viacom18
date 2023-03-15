@@ -63,7 +63,7 @@ const Index=()=>{
       ];
 
       const TournamentComponentLoad=()=>{
-        navigate('/tournaments/tournamentname')
+        navigate(constants.tournamentname)
       }
 
     return(

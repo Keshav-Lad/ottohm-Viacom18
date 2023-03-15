@@ -5,11 +5,13 @@ import Textarea from "../common/textbox";
 import "./adduser.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
+import constants from "../../utils/constants.json";
+
 const Adduser = () => {
   const navigate = useNavigate()
   return (
-    <div className="container mt-3  ps-3">
-       <Breadcrumbs title="User" subtitle="AddUser" onClick={() => navigate("/user")}/>
+    <div className="container mt-3 ps-3">
+       <Breadcrumbs title="User" subtitle="AddUser" onClick={() => navigate(constants.users)}/>
       <form>
         <div>
           <div className="row mt-4">

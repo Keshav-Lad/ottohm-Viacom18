@@ -5,12 +5,14 @@ import Textarea from "../common/textbox";
 import "./addteam.css"
 import Breadcrumbs from '../common/breadcrumb';
 import { useNavigate } from 'react-router-dom';
+import constants from "../../utils/constants.json";
+
 const Addteam = () => {
   const navigate=useNavigate()
   return (
     <div className="container mt-3">
        
-        <Breadcrumbs  title="Teams" subtitle="AddTeam" onClick={() => navigate("/teams")}/>
+        <Breadcrumbs  title="Teams" subtitle="AddTeam" onClick={() => navigate(constants.teams)}/>
       <form>
         <div>
           <div className="row mt-4">

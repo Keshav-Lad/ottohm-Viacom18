@@ -4,7 +4,7 @@ import Navbar from '../component/common/navbar';
 
 const Index=({children})=> {
   return (
-    <div className='container-fluid '>
+    <div>
             <Sidebar>
             <Navbar/>
             <main>{children}</main>

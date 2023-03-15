@@ -5,7 +5,7 @@ import Newuser from "../../utils/images/Newuser.png";
 
 const Navbar=()=>{
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow ">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm ">
       <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>

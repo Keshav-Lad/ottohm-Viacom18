@@ -5,11 +5,13 @@ import { ArrowLeft } from 'react-bootstrap-icons';
 import "./addrole.css";
 import { useNavigate } from "react-router";
 import Breadcrumbs from "../common/breadcrumb";
+import constants from "../../utils/constants.json";
+
 const Addrole = () => {
   const navigate=useNavigate();
   return (
     <div className="container mt-3">
-      <Breadcrumbs title="Role" subtitle="AddRole" onClick={() => navigate("/role")}/>
+      <Breadcrumbs title="Role" subtitle="AddRole" onClick={() => navigate(constants.roles)}/>
       <form>
         <div>
           <div className="row mt-4">
