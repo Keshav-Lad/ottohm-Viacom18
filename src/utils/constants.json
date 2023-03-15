@@ -1,0 +1,15 @@
+{
+    "dashboard":"/",
+    "tournaments":"/tournaments",
+    "addtournament":"/tournaments/createtournament",
+    "tournamentname":"/tournaments/tournamentname",
+    "games":"/games",
+    "location":"/location",
+    "addlocation":"/location/addlocation",
+    "teams":"/teams",
+    "addteam":"/teams/addteams",
+    "roles":"/roles",
+    "addrole":"/role/addrole",
+    "users":"/users",
+    "adduser":"/users/adduser"
+}

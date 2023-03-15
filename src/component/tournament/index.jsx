@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import Table from "../common/table";
 import "./tournament.css";
 import Button from "../common/button";
+import constants from "../../utils/constants.json";
 
 const Index=()=>{
   const navigate=useNavigate();
@@ -74,7 +75,7 @@ const Index=()=>{
         </div>
         <div className="col-md-4 "></div>
         <div className="col-md-2 pe-4">
-        <Button text="Create Tournament"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate("/tournaments/createtournament")}></Button>
+        <Button text="Create Tournament"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate(constants.addtournament)}></Button>
           
         </div>
       </div>

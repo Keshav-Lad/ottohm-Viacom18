@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import Button from "../common/button";
 import Table from "../common/table";
 import './role.css';
+import constants from "../../utils/constants.json";
 
 const Index = () => {
   
@@ -70,7 +71,7 @@ const Index = () => {
         </div>
         <div className="col-md-4 "></div>
         <div className="col-sm-2 pe-4">
-        <Button text="Add Role"className="form-control btn btn-secondary textboldbtn rounded-5" onClick={() => navigate("/roles/AddRole")}></Button>
+        <Button text="Add Role"className="form-control btn btn-secondary textboldbtn rounded-5" onClick={() => navigate(constants.addrole)}></Button>
      
           
         </div>
