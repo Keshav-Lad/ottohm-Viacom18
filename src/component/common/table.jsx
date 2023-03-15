@@ -4,6 +4,10 @@ import DataTable,{defaultThemes} from "react-data-table-component";
 import { FormCheck } from "react-bootstrap";
 import "./Css/table.css";
 import GetData from "../../utils/apicalls/get";
+import PostData from "../../utils/apicalls/post";
+import PutData from "../../utils/apicalls/put";
+import PatchData from "../../utils/apicalls/patch";
+import DeleteData from "../../utils/apicalls/delete";
 import constants from "../../utils/constants.json";
 
 const DashBoardTable = (props) => {
@@ -14,7 +18,10 @@ const DashBoardTable = (props) => {
 
   useEffect(() => {
     getData();
-  
+    // putData();
+    // postData();
+    // patchData();
+    // deleteData();
     }, []);
 
     const getData=()=>{
@@ -28,9 +35,54 @@ const DashBoardTable = (props) => {
           console.error(error);
         });
         };
-    
 
-     
+    // const putData=()=>{
+    //     console.log("In Table Componenet")
+    //     PutData()
+    //     .then((res) => {
+    //       console.log(res.data.Tabledata);
+    //       setData(res.data.Tabledata)
+    //     })
+    //     .catch((error) => {
+    //       console.error(error);
+    //     });
+    //     };            
+  
+    // const postData=()=>{
+    //     console.log("In Table Componenet")
+    //     PostData()
+    //     .then((res) => {
+    //       console.log(res.data.Tabledata);
+    //       setData(res.data.Tabledata)
+    //     })
+    //     .catch((error) => {
+    //       console.error(error);
+    //     });
+    //     };
+
+    // const patchData=()=>{
+    //     console.log("In Table Componenet")
+    //     PatchData()
+    //     .then((res) => {
+    //       console.log(res.data.Tabledata);
+    //       setData(res.data.Tabledata)
+    //     })
+    //     .catch((error) => {
+    //       console.error(error);
+    //     });
+    //     };        
+
+    // const deleteData=()=>{
+    //     console.log("In Table Componenet")
+    //     DeleteData()
+    //     .then((res) => {
+    //       console.log(res.data.Tabledata);
+    //       setData(res.data.Tabledata)
+    //     })
+    //     .catch((error) => {
+    //       console.error(error);
+    //     });
+    //     };
   
 
 

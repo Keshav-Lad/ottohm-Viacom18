@@ -2,10 +2,10 @@ import React from "react";
 import axios from "axios";
 import constants from "../constants.json";
 
-const PatchData=()=> {
+const PutData=()=> {
     
    return axios
-    .post(constants.baseUrl.toString()+constants.patchsuffix.toString())
+    .post(constants.baseUrl.toString()+constants.putsuffix.toString())
     .then((res) => {
         // console.log("Response",res);
         return res;
@@ -14,4 +14,4 @@ const PatchData=()=> {
         return error;  
     });  
 };
-export default PatchData;
+export default PutData;
