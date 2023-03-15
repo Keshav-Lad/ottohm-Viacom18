@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../../common/button";
-import Dropdown from "../../common/dropdown";
-import Textarea from "../../common/textbox";
-import Calander from "../../common/calander";
+import Button from "../common/button";
+import Dropdown from "../common/dropdown";
+import Textarea from "../common/textbox";
+import Calander from "../common/calander";
 import { PencilSquare } from "react-bootstrap-icons";
 import "./tournamentname.css";
 const Tournamentname = () => {

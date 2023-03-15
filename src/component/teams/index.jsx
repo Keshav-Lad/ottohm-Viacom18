@@ -3,6 +3,8 @@ import Table from "../common/table";
 import "./teams.css";
 import { useNavigate } from "react-router";
 import Button from "../common/button";
+import constants from "../../utils/constants.json";
+
 const Index=()=>{
 
   const navigate=useNavigate();
@@ -77,7 +79,7 @@ const Index=()=>{
         </div>
         <div className="col-md-4 "></div>
         <div className="col-sm-2 pe-4">
-        <Button text="Add Teams"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate("/teams/addteams")}></Button>
+        <Button text="Add Teams"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate(constants.addteam)}></Button>
      
           
         </div>
