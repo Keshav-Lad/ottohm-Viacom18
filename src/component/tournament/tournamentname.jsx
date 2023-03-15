@@ -5,17 +5,17 @@ import Textarea from "../common/textbox";
 import Calander from "../common/calander";
 import { PencilSquare } from "react-bootstrap-icons";
 import "./tournamentname.css";
+import Breadcrumbs from "../common/breadcrumb";
+import { useNavigate } from "react-router-dom";
+import constants from "../../utils/constants.json"
+
 const Tournamentname = () => {
+  const navigate= useNavigate();
   return (
     <div className="container">
-      <div className="breadcrumb">
-        <span className="breadcrumb-item">Tournaments</span>
-        <span className="breadcrumb-item ">&gt;&gt;</span>
-        <span className="breadcrumb-item breadcrumb-1 pt-1">
-          Tournament Name
-        </span>
-      </div>
-21
+      
+      <Breadcrumbs title="Tournaments" subtitle="Tournament Name" onClick={()=> navigate(constants.tournaments)}/>
+      
       <div className="row mt-4 ">
         <div className="col-md-6">
           <div className="row">

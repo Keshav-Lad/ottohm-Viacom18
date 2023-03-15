@@ -10,6 +10,7 @@ import FormCard from "./formCard";
 import download from "../../utils/icons/download.svg";
 import Breadcrumbs from "../common/breadcrumb"
 import { useNavigate } from "react-router-dom";
+import constants from "../../utils/constants.json";
 
 const Addtournament = () => {
   const navigate=useNavigate();
@@ -17,7 +18,7 @@ const Addtournament = () => {
   <div className="container ps-3 mt-3">
           
       
-      <Breadcrumbs title="Tournament" subtitle="AddTournamenet" onClick={() => navigate("/tournaments")}/>
+      <Breadcrumbs title="Tournaments" subtitle="Add Tournamenet" onClick={() => navigate(constants.tournaments)}/>
       
       <form action="">
         <div>

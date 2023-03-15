@@ -11,5 +11,10 @@
     "roles":"/roles",
     "addrole":"/role/addrole",
     "users":"/users",
-    "adduser":"/users/adduser"
+    "adduser":"/users/adduser",
+    "getUrl":"",
+    "postUrl":"",
+    "putUrl":"",
+    "patchUrl":"",
+    "deleteUrl":""
 }

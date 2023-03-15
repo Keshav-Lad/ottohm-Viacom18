@@ -5,11 +5,13 @@ import Textarea from "../common/textbox";
 import "./addlocation.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
+import constants from "../../utils/constants.json";
+
 const Addlocation = () => {
   const navigate=useNavigate();
   return (
     <div className="container mt-4 ps-3">
-      <Breadcrumbs title="Location" subtitle="AddLocation" onClick={() => navigate("/location")}/>
+      <Breadcrumbs title="Location" subtitle="AddLocation" onClick={() => navigate(constants.location)}/>
       <form>
         <div>
           <div className="row mt-4">
