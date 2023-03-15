@@ -3,6 +3,8 @@ import axios from "axios";
 import DataTable,{defaultThemes} from "react-data-table-component";
 import { FormCheck } from "react-bootstrap";
 import "./Css/table.css";
+import GetData from "../../utils/apicalls/get";
+import constants from "../../utils/constants.json";
 
 const DashBoardTable = (props) => {
 
@@ -11,11 +13,17 @@ const DashBoardTable = (props) => {
 
 
   useEffect(() => {
-      getData();
+     getData();
     }, []);
 
+    // const getData=()=>{
+    //     setData(GetData().data.Tabledata);
+    //     };
+    
+
+     
   const getData = () => {
-    axios.get("https://63fabe77-51b3-41bf-99ad-caedb5e69cff.mock.pstmn.io/tabledata").then((res) => {
+    axios.get(constants.baseUrl/constants.suffix).then((res) => {
       setData(res.data.Tabledata);
       console.log(res.data.Tabledata);
     });
