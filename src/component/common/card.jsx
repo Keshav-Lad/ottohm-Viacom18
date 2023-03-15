@@ -1,5 +1,4 @@
 import React from "react";
-import Textarea from "./textbox";
 import "./Css/card.css"
 const Card = (props) => {
   return (

@@ -1,25 +1,27 @@
 import React from "react";
 import Textarea from "../../common/textbox";
 import Button from "../../common/button";
-import { ArrowLeft } from 'react-bootstrap-icons';
+
 import "./addrole.css";
 import { useNavigate } from "react-router";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
 const Addrole = () => {
   const navigate=useNavigate();
   return (
     <div className="container mt-3">
-      <div className="breadcrumb">
-        <button className=" btn btn-style fs-6 fw-bold" onClick={() => navigate("/roles")}>
-          <ArrowLeft size={25}  width={20} /><span className="mt-5 ms-2">Back</span>
-          </button>
-    
-        {/* <span className="breadcrumb-item"><ArrowLeft size={30}/></span>
-        <span className="breadcrumb-item">Back</span> */}
-      </div>
+     <Breadcrumb>
+          <Breadcrumb.Item href="/roles">
+            <span className="bcrum  text-nowrap">Role</span>
+          </Breadcrumb.Item>
+          <span className="active-item  me-2">&gt;&gt;</span>
+          <Breadcrumb.Item className="active-item">
+            Add Role
+          </Breadcrumb.Item>
+        </Breadcrumb>
       <form>
         <div>
           <div className="row mt-4">
-            <div className="col-md-6">
+            <div className="col-md-4">
               <label htmlFor="locationID">Role Id</label>
               <Textarea
                 text="text"
@@ -28,7 +30,7 @@ const Addrole = () => {
                 id="locationID"
               ></Textarea>
             </div>
-            <div className="col-md-6">
+            <div className="col-md-4">
               <label htmlFor="locationName">Role Name</label>
               <Textarea
                 text="text"
@@ -38,13 +40,17 @@ const Addrole = () => {
               ></Textarea>
             </div>
           </div>
-          <label htmlFor="description">Description</label>
+          <div className="row">
+            <div className="col-md-8">
+            <label htmlFor="description">Description</label>
           <textarea
             className="form-control mt-2 mb-4"
             id="description"
             rows="4"
             placeholder="Enter Role Description"
           ></textarea>
+            </div>
+          </div>
           {/* <div className="mt-5">
             <label htmlFor="accesstable">Access</label>
             <table className="table table-bordered  mt-2 mb-4  " id="accesstable">
@@ -92,7 +98,7 @@ const Addrole = () => {
             </table>
           </div> */}
         </div>
-        <div className="row mt-5">
+        <div className="row mt-2">
           <div className="col-md-2 ">
             <Button
               text="Cancel"

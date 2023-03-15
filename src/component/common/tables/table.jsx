@@ -3,12 +3,14 @@ import axios from "axios";
 import DataTable,{defaultThemes} from "react-data-table-component";
 
 import { FormCheck } from "react-bootstrap";
+import Tournamentname from "../../pages/tournament/tournamentname";
 
 
 const DashBoardTable = (props) => {
 
   const [data, setData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+
 
   useEffect(() => {
       getData();
@@ -73,6 +75,7 @@ const DashBoardTable = (props) => {
         .toLowerCase()
         .includes(searchQuery.toLowerCase())
     );
+ 
   return (
        
     <div className="container">
@@ -103,7 +106,7 @@ const DashBoardTable = (props) => {
             pointerOnHover
             noDataComponent="Table is Empty"
             customStyles={customStyles}
-         
+            onRowClicked={props.componentCall}
             selectableRowsVisibleOnly
             selectableRowsHighlight
             conditionalRowStyles={conditionalRowStyles}

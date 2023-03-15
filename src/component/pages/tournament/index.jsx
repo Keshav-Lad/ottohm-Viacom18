@@ -61,6 +61,10 @@ const Index=()=>{
         },
       ];
 
+      const TournamentComponentLoad=()=>{
+        navigate('/tournaments/tournamentname')
+      }
+
     return(
       <div className="container rounded-3 mt-3">
       <div className="row ms-2 me-2 ">
@@ -74,7 +78,7 @@ const Index=()=>{
           
         </div>
       </div>
-      <Table columns={columns}/>
+      <Table columns={columns} componentCall={TournamentComponentLoad}/>
     </div>
     );
 

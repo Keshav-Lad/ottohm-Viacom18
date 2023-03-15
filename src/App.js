@@ -15,6 +15,7 @@ import AddLocation from './component/pages/location/addlocation'
 
 import Addteam from './component/pages/teams/addteam';
 import Adduser from './component/pages/users/adduser';
+import Tournamentname from './component/pages/tournament/tournamentname';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Route path="/" element={<Dashboard/>}/>
       <Route path="/tournaments" element={<Tournaments/>}/>
       <Route path="/tournaments/createtournament" element={<Addtournament/>}/>
+      <Route path="/tournaments/tournamentname" element={<Tournamentname/>}/>
       <Route path="/games" element={<Games/>}/>
       <Route path="/location" element={<Location/>}/>
       <Route path='/location/addlocation' element={<AddLocation/>}/>

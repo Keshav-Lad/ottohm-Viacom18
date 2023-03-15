@@ -15,7 +15,7 @@ const Tournamentname = () => {
           Tournament Name
         </span>
       </div>
-
+21
       <div className="row mt-4 ">
         <div className="col-md-6">
           <div className="row">

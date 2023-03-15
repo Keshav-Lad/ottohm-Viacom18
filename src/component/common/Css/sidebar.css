@@ -93,3 +93,9 @@
       margin-bottom: 20px;
     }
   } */
+
+  @media screen and (max-width: 799px) {
+    .sidebar {
+        display:none;
+    }
+ }
