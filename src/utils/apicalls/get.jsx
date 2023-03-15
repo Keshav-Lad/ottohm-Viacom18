@@ -3,21 +3,18 @@ import axios from "axios";
 import constants from "../constants.json";
 
 const GetData=()=> {
-    axios
+    
+   return axios
     .get(constants.baseUrl.toString()+constants.suffix.toString())
-    console.log("BaseUrl------>  " + constants.baseUrl.toString());
-    console.log("Suffix------>   " + constants.suffix.toString());
-    // .then((res) => {
-    //     console.log(res);
-    //     return res;
-    // })
-    // .catch(error => {
-    //     console.log(error)
-    //     return error;    
-    // });  
-
-    };
-export default GetData();
+    .then((res) => {
+        // console.log("Response",res);
+        return res;
+    })
+    .catch(error => {
+        return error;  
+    });  
+};
+export default GetData;
 
 // const Getclient=()=>{
 //     const defaultOptions={

@@ -13,22 +13,25 @@ const DashBoardTable = (props) => {
 
 
   useEffect(() => {
-     getData();
+    getData();
+  
     }, []);
 
-    // const getData=()=>{
-    //     setData(GetData().data.Tabledata);
-    //     };
+    const getData=()=>{
+        console.log("In Table Componenet")
+        GetData()
+        .then((res) => {
+          console.log(res.data.Tabledata);
+          setData(res.data.Tabledata)
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+        };
     
 
      
-  const getData = () => {
-    axios.get(constants.baseUrl/constants.suffix).then((res) => {
-      setData(res.data.Tabledata);
-      console.log(res.data.Tabledata);
-    });
-    
-  };
+  
 
 
     const customStyles = {
