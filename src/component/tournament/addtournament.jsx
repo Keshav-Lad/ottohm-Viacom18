@@ -8,22 +8,16 @@ import "./addtournament.css";
 import Calander from "../common/calander";
 import FormCard from "./formCard";
 import download from "../../utils/icons/download.svg";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
+import Breadcrumbs from "../common/breadcrumb"
+import { useNavigate } from "react-router-dom";
 
 const Addtournament = () => {
+  const navigate=useNavigate();
   return (
   <div className="container ps-3 mt-3">
           
-          <Breadcrumb>
-          <Breadcrumb.Item href="/tournaments">
-            <span className="textmedium">Tournaments</span>
-          </Breadcrumb.Item>
-          <span className="active-item me-2 ms-1 textbold mt-1">&gt;&gt;</span>
-          <Breadcrumb.Item className="active-item textbold mt-1">
-            Create Tournament
-          </Breadcrumb.Item>
-        </Breadcrumb>
-          
+      
+      <Breadcrumbs title="Tournament" subtitle="AddTournamenet" onClick={() => navigate("/tournaments")}/>
       
       <form action="">
         <div>

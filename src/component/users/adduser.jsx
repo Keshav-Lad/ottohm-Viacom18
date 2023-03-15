@@ -3,19 +3,13 @@ import Button from "../common/button";
 import Dropdown from "../common/dropdown";
 import Textarea from "../common/textbox";
 import "./adduser.css";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
+import Breadcrumbs from "../common/breadcrumb";
+import { useNavigate } from "react-router-dom";
 const Adduser = () => {
+  const navigate = useNavigate()
   return (
     <div className="container mt-3  ps-3">
-     <Breadcrumb>
-          <Breadcrumb.Item href="/us">
-            <span className="bcrum  text-nowrap">User</span>
-          </Breadcrumb.Item>
-          <span className="active-item  me-2 textbold">&gt;&gt;</span>
-          <Breadcrumb.Item className="active-item textbold">
-            Add User
-          </Breadcrumb.Item>
-        </Breadcrumb>
+       <Breadcrumbs title="User" subtitle="AddUser" onClick={() => navigate("/user")}/>
       <form>
         <div>
           <div className="row mt-4">
