@@ -1,5 +1,4 @@
 import './App.css';
-import Sidebar from './component/common/sidebar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/dashboard';
 import Tournaments from './pages/tournaments';
@@ -9,32 +8,34 @@ import Role from './pages/roles';
 import Users from './pages/users';
 import Games from './pages/games';
 import Addrole from './component/role/addrole';
-import Navbar from './component/common/navbar';
 import Addtournament from './component/tournament/addtournament';
 import AddLocation from './component/location/addlocation';
 import Addteam from './component/teams/addteam';
 import Adduser from './component/users/adduser';
+import Layout from "./Layout/index";
+import Tournamentname from "./component/tournament/tournamentname";
+import constants from "./utils/constants.json";
 
 function App() {
   return (
     <BrowserRouter>
-      <Sidebar>
-      <Navbar></Navbar>
+      <Layout>
       <Routes>
-      <Route path="/" element={<Dashboard/>}/>
-      <Route path="/tournaments" element={<Tournaments/>}/>
-      <Route path="/tournaments/createtournament" element={<Addtournament/>}/>
-      <Route path="/tournaments/tournamentname" element={<Tournaments/>}/>
-      <Route path="/games" element={<Games/>}/>
-      <Route path="/location" element={<Location/>}/>
-      <Route path='/location/addlocation' element={<AddLocation/>}/>
-      <Route path="/teams" element={<Teams/>}/>
-      <Route path='/teams/addteams' element={<Addteam/>}/>
-      <Route path="/roles" element={<Role/>}/>
-      <Route path="/roles/AddRole" element={<Addrole/>}/>
-      <Route path="/users" element={<Users/>}/>
-      <Route path="/users/adduser" element={<Adduser/>}/>
-
+      <Route path={constants.dashboard} element={<Dashboard/>}/>
+      <Route path={constants.tournaments} element={<Tournaments/>}/>
+      <Route path={constants.addtournament} element={<Addtournament/>}/>
+      <Route path={constants.tournamentname} element={<Tournamentname/>}/>
+      <Route path={constants.games} element={<Games/>}/>
+      <Route path={constants.location} element={<Location/>}/>
+      <Route path={constants.addlocation} element={<AddLocation/>}/>
+      <Route path={constants.teams} element={<Teams/>}/>
+      <Route path={constants.addteam} element={<Addteam/>}/>
+      <Route path={constants.roles} element={<Role/>}/>
+      <Route path={constants.addrole} element={<Addrole/>}/>
+      <Route path={constants.users} element={<Users/>}/>
+      <Route path={constants.adduser} element={<Adduser/>}/>
+      </Routes>
+      </Layout>
       {/* <Route path="/login" element={<Login />}/>        
       <Route exact element={<PrivateRoute/>}>          
       <Route path="/*" element={
@@ -48,8 +49,6 @@ function App() {
           </Fragment>
             }/>       
       </Route> */}
-      </Routes>
-      </Sidebar>
     </BrowserRouter>    
 
     

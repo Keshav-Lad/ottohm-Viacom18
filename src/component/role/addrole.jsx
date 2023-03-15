@@ -4,19 +4,12 @@ import Button from "../common/button";
 import { ArrowLeft } from 'react-bootstrap-icons';
 import "./addrole.css";
 import { useNavigate } from "react-router";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
+import Breadcrumbs from "../common/breadcrumb";
 const Addrole = () => {
   const navigate=useNavigate();
   return (
     <div className="container mt-3">
-      <div className="breadcrumb">
-        <button className=" btn btn-style fs-6 fw-bold " onClick={() => navigate("/roles")}>
-          <ArrowLeft size={25}  width={20} /><span className="mt-5 ms-2 textbold">Back</span>
-          </button>
-    
-        {/* <span className="breadcrumb-item"><ArrowLeft size={30}/></span>
-        <span className="breadcrumb-item">Back</span> */}
-      </div>
+      <Breadcrumbs title="Role" subtitle="AddRole" onClick={() => navigate("/role")}/>
       <form>
         <div>
           <div className="row mt-4">

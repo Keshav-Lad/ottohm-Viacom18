@@ -6,8 +6,7 @@ const Location=()=>{
   
   return(
     <div >
-      <Index/>
-      
+      <Index/>  
     </div>
   )
 }

@@ -3,19 +3,13 @@ import Button from "../common/button";
 import Dropdown from "../common/dropdown";
 import Textarea from "../common/textbox";
 import "./addlocation.css";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
+import Breadcrumbs from "../common/breadcrumb";
+import { useNavigate } from "react-router-dom";
 const Addlocation = () => {
+  const navigate=useNavigate();
   return (
     <div className="container mt-4 ps-3">
-       <Breadcrumb>
-          <Breadcrumb.Item href="/location">
-            <span className="bcrum text-nowrap textmedium">Location</span>
-          </Breadcrumb.Item>
-          <span className="active-item me-2 textbold">&gt;&gt;</span>
-          <Breadcrumb.Item className="active-item textbold">
-            Add Location
-          </Breadcrumb.Item>
-        </Breadcrumb>
+      <Breadcrumbs title="Location" subtitle="AddLocation" onClick={() => navigate("/location")}/>
       <form>
         <div>
           <div className="row mt-4">
