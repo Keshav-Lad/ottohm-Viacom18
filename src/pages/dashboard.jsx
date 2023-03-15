@@ -1,5 +1,5 @@
 import React from 'react';
-import Index from '../component/pages/dashboard/index';
+import Index from '../component/dashboard/index';
 
 const Dashboard =() => {
   return (

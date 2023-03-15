@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import Button from "../../common/button";
-import Table from "../../common/tables/table";
+import Button from "../common/button";
+import Table from "../common/table";
 import './role.css';
 
 const Index = () => {

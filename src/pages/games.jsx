@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../component/pages/games/index';
+import Index from '../component/games/index';
 
 const Games=()=>{
     return(

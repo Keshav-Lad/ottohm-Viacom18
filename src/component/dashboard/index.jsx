@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../../common/card';
-import Table from '../../common/tables/table';
+import Card from './card';
+import Table from '../common/table';
 import "./dashboard.css";
 
 const Index =() => {

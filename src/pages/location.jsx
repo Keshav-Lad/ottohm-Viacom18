@@ -1,5 +1,5 @@
 import React from "react";
-import Index from "../component/pages/location/index";
+import Index from "../component/location/index";
 
 
 const Location=()=>{

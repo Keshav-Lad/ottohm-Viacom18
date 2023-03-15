@@ -1,7 +1,7 @@
 import React from "react";
-import Textarea from "../../common/textbox";
-import Button from "../../common/button";
-
+import Textarea from "../common/textbox";
+import Button from "../common/button";
+import { ArrowLeft } from 'react-bootstrap-icons';
 import "./addrole.css";
 import { useNavigate } from "react-router";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
@@ -9,15 +9,14 @@ const Addrole = () => {
   const navigate=useNavigate();
   return (
     <div className="container mt-3">
-     <Breadcrumb>
-          <Breadcrumb.Item href="/roles">
-            <span className="bcrum  text-nowrap">Role</span>
-          </Breadcrumb.Item>
-          <span className="active-item  me-2">&gt;&gt;</span>
-          <Breadcrumb.Item className="active-item">
-            Add Role
-          </Breadcrumb.Item>
-        </Breadcrumb>
+      <div className="breadcrumb">
+        <button className=" btn btn-style fs-6 fw-bold " onClick={() => navigate("/roles")}>
+          <ArrowLeft size={25}  width={20} /><span className="mt-5 ms-2 textbold">Back</span>
+          </button>
+    
+        {/* <span className="breadcrumb-item"><ArrowLeft size={30}/></span>
+        <span className="breadcrumb-item">Back</span> */}
+      </div>
       <form>
         <div>
           <div className="row mt-4">
@@ -25,7 +24,7 @@ const Addrole = () => {
               <label htmlFor="locationID">Role Id</label>
               <Textarea
                 text="text"
-                className="form-control mt-2 mb-4"
+                className="form-control mt-2 mb-4 textnormal"
                 placeholder="101"
                 id="locationID"
               ></Textarea>
@@ -34,7 +33,7 @@ const Addrole = () => {
               <label htmlFor="locationName">Role Name</label>
               <Textarea
                 text="text"
-                className="form-control mt-2 mb-4"
+                className="form-control mt-2 mb-4 textnormal"
                 placeholder="Enter Role Name"
                 id="locationName"
               ></Textarea>
@@ -44,7 +43,7 @@ const Addrole = () => {
             <div className="col-md-8">
             <label htmlFor="description">Description</label>
           <textarea
-            className="form-control mt-2 mb-4"
+            className="form-control mt-2 mb-4 textnormal"
             id="description"
             rows="4"
             placeholder="Enter Role Description"
@@ -102,14 +101,14 @@ const Addrole = () => {
           <div className="col-md-2 ">
             <Button
               text="Cancel"
-              className="btn btn-bordered btn-outline-dark  form-control mb-2 btn-sizing"
+              className="btn btn-bordered btn-outline-dark  form-control mb-2 btn-sizing textbold"
               onClick={() => navigate("/roles")}
             />
           </div>
           <div className="col-md-2 ">
             <Button
               text="Create Role"
-              className="btn btn-primary form-control btn-sizing "
+              className="btn btn-primary form-control btn-sizing textboldbtn "
             />
           </div>
         </div>

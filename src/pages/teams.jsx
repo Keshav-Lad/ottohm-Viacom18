@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../component/pages/teams/index';
+import Index from '../component/teams/index';
 
 
 const Teams =()=>{

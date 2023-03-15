@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DataTable,{defaultThemes} from "react-data-table-component";
-
 import { FormCheck } from "react-bootstrap";
-import Tournamentname from "../../pages/tournament/tournamentname";
-
+import "./Css/table.css";
 
 const DashBoardTable = (props) => {
 
@@ -21,6 +19,7 @@ const DashBoardTable = (props) => {
       setData(res.data.Tabledata);
       console.log(res.data.Tabledata);
     });
+    
   };
 
 
@@ -54,7 +53,7 @@ const DashBoardTable = (props) => {
             borderRightStyle: "solid",
             borderRightWidth: "1px",
             borderRightColor: defaultThemes.default.divider.default,
-            font: "normal normal normal 12px Gotham",
+            font: "normal normal normal 14px Gotham",
           },
         },
       },
