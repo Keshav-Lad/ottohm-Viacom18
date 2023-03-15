@@ -22,3 +22,18 @@
 .view-button{
     min-width: 7vw;
 }
+.scrollable-calander{
+    overflow-x: hidden;
+}
+
+@media screen and (width<=850px) {
+    .scrollable-calander{
+        overflow-x: scroll;
+    }
+    .scrollable-calander .fc-view > table {
+        width: 500px;
+    }
+    .scrollable-calander .fc-header-toolbar  {
+        width: 500px;
+    }
+}
