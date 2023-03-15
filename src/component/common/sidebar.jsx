@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom"
-import "./Css/sidebar.css"
-
+import { NavLink } from "react-router-dom";
+import "./Css/sidebar.css";
+import logo from "../../utils/images/logo.png";
 
 const Sidebar = ({ children }) => {
  
@@ -59,7 +59,7 @@ const Sidebar = ({ children }) => {
       <div className="sidebar" style={{ width: isOpen ? "230px" : "80px" }}>
         <div>
           <h1 className="logo" style={{ display: isOpen ? "block" : "none" }}>
-            <img className="w-100" src={""} alt="Logo" />
+            <img className="w-100" src={logo} alt="Logo" />
           </h1>
         </div>
         {menuItem.map((item, index) => (

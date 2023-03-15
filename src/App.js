@@ -8,13 +8,12 @@ import Teams from './pages/teams';
 import Role from './pages/roles';
 import Users from './pages/users';
 import Games from './pages/games';
-import Addrole from './component/pages/role/addrole';
+import Addrole from './component/role/addrole';
 import Navbar from './component/common/navbar';
-import Addtournament from './component/pages/tournament/addtournament';
-import AddLocation from './component/pages/location/addlocation'
-
-import Addteam from './component/pages/teams/addteam';
-import Adduser from './component/pages/users/adduser';
+import Addtournament from './component/tournament/addtournament';
+import AddLocation from './component/location/addlocation';
+import Addteam from './component/teams/addteam';
+import Adduser from './component/users/adduser';
 
 function App() {
   return (

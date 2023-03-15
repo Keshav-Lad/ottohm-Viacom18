@@ -1,0 +1,48 @@
+.scrollable-div{
+    background-color: #f1f1f1;
+    max-height: 550px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */    
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */    /* margin: 20px; */    
+    text-align: justify;
+    padding: 20px;
+}
+.scrollable-div::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.sample-info-title{
+    margin-left : auto;
+}
+.sample-download-button{
+    text-decoration: underline;
+}
+.download-img{
+    width: 17px;
+    height: 17px;
+}
+.textbold{
+    font: normal normal bold 16px/19px Gotham !important;
+    letter-spacing: 0px;
+    color: #000000; 
+}
+.textbtnbold{
+    font: normal normal bold 16px/19px Gotham !important;
+    letter-spacing: 0px;
+    color: #FFFFFF; 
+}
+.textmedium{
+    font: normal normal medium 16px/19px Gotham !important;
+    letter-spacing: 0px;
+    color: #000000; 
+}
+#inttextmedium{
+    font: normal normal medium 14px/18px Gotham !important;
+    letter-spacing: 0px;
+    color: #000000; 
+}
+.textnormal{
+    font: normal normal normal 14px/18px Gotham !important;
+    letter-spacing: 0px;
+    color: #000000; 
+}

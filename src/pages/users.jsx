@@ -1,5 +1,5 @@
 import React from 'react'
-import Index from '../component/pages/users/index';
+import Index from '../component/users/index';
 
 
 const Users =()=>{
