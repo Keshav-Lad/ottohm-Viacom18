@@ -40,6 +40,7 @@ const Calander = () => {
       ]}
       editable={true}
       selectable={true}
+      
     />
   );
 };

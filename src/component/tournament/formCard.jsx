@@ -47,7 +47,7 @@ const FormCard = () => {
           </div>
           <div className="row">
             <div className="">
-              <label for="description-input">Description</label>
+              <label htmlFor="description-input">Description</label>
               <textarea
                 className="form-control textnormal"
                 id="description-input"

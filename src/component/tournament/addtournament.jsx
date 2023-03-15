@@ -110,13 +110,13 @@ const Addtournament = () => {
           <div className="col-md-10">
             <div className="row">
               <div className="col-md-4">
-                <p>Upload Team Details</p>
+                <p className="textbold">Upload Team Details</p>
               </div>
 
               <div className="col-md-7 d-flex justify-content-end">
                 <Button
                   text="Sample Information Files "
-                  className="btn sample-download-button inttextmedium"
+                  className="btn sample-download-button textbold"
                 />
                 <span>
                   <img
@@ -157,10 +157,10 @@ const Addtournament = () => {
                   <FormCard />
                 </div>
 
-                <div className="col-md-5 ms-2  border rounded-4">
+                <div className="col-md-5 border rounded-4 scrollable-calander" id="calander-padding">
                   <Calander />
                 </div>
-                <div className="col-md-2 mt-2">
+                <div className="col-md-3 mt-2">
                   <Button
                     text="Create Tournament"
                     className="btn btn-primary mt-4 mb-4 form-control textboldbtn"
