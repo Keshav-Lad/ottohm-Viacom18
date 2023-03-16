@@ -44,10 +44,12 @@ const Addrole = () => {
           ></textarea>
             </div>
           </div>
-          {/* <div className="mt-5">
+
+          <div className="mt-5 row">
+            <div className="col-md-8 ">
             <label htmlFor="accesstable">Access</label>
-            <table className="table table-bordered  mt-2 mb-4  " id="accesstable">
-              <thead className="table-primary">
+            <table className="table  mt-2 mb-4  " id="accesstable">
+              <thead className="table-style">
                 <tr>
                   <th scope="col">Content</th>
                   <th scope="col">Add</th>
@@ -89,7 +91,8 @@ const Addrole = () => {
                 </tr>
               </tbody>
             </table>
-          </div> */}
+          </div>
+          </div>
         </div>
         <div className="row mt-2">
           <div className="col-md-2 ">

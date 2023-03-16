@@ -84,3 +84,17 @@
         padding-left: 22px;
     }
 }
+.btn-for-tablet-view{
+    white-space: nowrap;
+}
+@media screen and (width <= 768px) and (width >=415px) {
+    .btn-for-tablet-view{
+        width: 250px;
+    }
+}
+/* @media screen and (width >= 415px) {
+    .btn-for-tablet-view{
+       width: auto;
+    }
+} */
+
