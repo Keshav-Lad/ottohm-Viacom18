@@ -22,7 +22,7 @@ const DashBoardTable = (props) => {
     // postData();
     // patchData();
     // deleteData();
-    }, []);
+    },[]);
 
     const getData=()=>{
         console.log("In Table Componenet")
