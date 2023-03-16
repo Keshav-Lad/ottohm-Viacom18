@@ -5,7 +5,7 @@ import constants from "../constants.json";
 const GetData=()=> {
     
    return axios
-    .get(constants.baseUrl.toString()+constants.suffix.toString())
+    .get(constants.baseUrl.toString()+constants.getsuffix.toString())
     .then((res) => {
         // console.log("Response",res);
         return res;

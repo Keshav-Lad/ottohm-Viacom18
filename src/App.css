@@ -10,8 +10,18 @@ label{
   font: normal normal normal 14px/18px Gotham;
   color: #000000;
 }
-a{
+a1{
   color: #000000;
+  font: normal normal normal 16px/19px Gotham;
+  font-weight: 600;
+  /* text-align: left;
+  justify-content: left; */
+}
+a2{
+  color: #000000;
+  font: normal normal normal 12px/16px Gotham;
+  /* text-align: left;
+  justify-content: left; */
 }
 /* for breadcrumb */
 span{
