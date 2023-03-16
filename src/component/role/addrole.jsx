@@ -7,10 +7,14 @@ import Breadcrumbs from "../common/breadcrumb";
 import constants from "../../utils/constants.json";
 
 const Addrole = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="container mt-3">
-      <Breadcrumbs title="Role" subtitle="AddRole" onClick={() => navigate(constants.roles)}/>
+      <Breadcrumbs
+        title="Role"
+        subtitle="AddRole"
+        onClick={() => navigate(constants.roles)}
+      />
       <form>
         <div>
           <div className="row mt-4">
@@ -35,63 +39,68 @@ const Addrole = () => {
           </div>
           <div className="row">
             <div className="col-md-8">
-            <label htmlFor="description">Description</label>
-          <textarea
-            className="form-control mt-2 mb-4 textnormal"
-            id="description"
-            rows="4"
-            placeholder="Enter Role Description"
-          ></textarea>
+              <label htmlFor="description">Description</label>
+              <textarea
+                className="form-control mt-2 mb-4 textnormal"
+                id="description"
+                rows="4"
+                placeholder="Enter Role Description"
+              ></textarea>
             </div>
           </div>
 
           <div className="mt-5 row">
             <div className="col-md-8 ">
-            <label htmlFor="accesstable">Access</label>
-            <table className="table table-bordered rounded-4 mt-2 mb-4  " id="accesstable">
-              <thead className="table-primary">
-                <tr>
-                  <th scope="col">Content</th>
-                  <th scope="col">Add</th>
-                  <th scope="col">Modify</th>
-                  <th scope="col">Delete</th>
-                  <th scope="col">Delete</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row ">User</th>
-                  <td className="col-sm-2">
-                    <input type="checkbox" className="checkbox-input" />
-                  </td>
-                  <td className="col-sm-2">
-                    <input type="checkbox" className="checkbox-input" />
-                  </td>
-                  <td className="col-sm-2">
-                    <input type="checkbox" className="checkbox-input" />
-                  </td>
-                  <td className="col-sm-2">
-                    <input type="checkbox" className="checkbox-input" />
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">Admin</th>
-                  <td className="col-sm-2">
-                    <input type="checkbox" className="checkbox-input" />
-                  </td>
-                  <td className="col-sm-2">
-                    <input type="checkbox" className="checkbox-input" />
-                  </td>
-                  <td className="col-sm-2">
-                    <input type="checkbox" className="checkbox-input" />
-                  </td>
-                  <td className="col-sm-2">
-                    <input type="checkbox" className="checkbox-input" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <label htmlFor="accesstable">Access</label>
+              <div className="table-responsive">
+                <table
+                  className="table table-bordered rounded-4 mt-2 mb-4  "
+                  id="accesstable"
+                >
+                  <thead className="table-dark">
+                    <tr>
+                      <th scope="col">Content</th>
+                      <th scope="col">Add</th>
+                      <th scope="col">Modify</th>
+                      <th scope="col">Delete</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row ">User</th>
+                      <td className="col-sm-2">
+                        <input type="checkbox" className="checkbox-input" />
+                      </td>
+                      <td className="col-sm-2">
+                        <input type="checkbox" className="checkbox-input" />
+                      </td>
+                      <td className="col-sm-2">
+                        <input type="checkbox" className="checkbox-input" />
+                      </td>
+                      <td className="col-sm-2">
+                        <input type="checkbox" className="checkbox-input" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Admin</th>
+                      <td className="col-sm-2">
+                        <input type="checkbox" className="checkbox-input" />
+                      </td>
+                      <td className="col-sm-2">
+                        <input type="checkbox" className="checkbox-input" />
+                      </td>
+                      <td className="col-sm-2">
+                        <input type="checkbox" className="checkbox-input" />
+                      </td>
+                      <td className="col-sm-2">
+                        <input type="checkbox" className="checkbox-input" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
         <div className="row mt-2">

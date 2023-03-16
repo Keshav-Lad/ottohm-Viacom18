@@ -49,3 +49,7 @@ textarea {
  border-top: 1px black solid;
  border-radius: 100px;
 }
+.table-bordered{
+  border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
