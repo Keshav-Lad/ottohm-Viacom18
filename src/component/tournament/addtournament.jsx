@@ -109,11 +109,11 @@ const Addtournament = () => {
         <div className="row mt-4 ">
           <div className="col-md-10">
             <div className="row">
-              <div className="col-md-4">
+              <div className="col-md-4" id="upload-team-text">
                 <p className="textbold">Upload Team Details</p>
               </div>
 
-              <div className="col-md-7 d-flex justify-content-end">
+              <div className="col-md-7 sample-info-file-btn">
                 <Button
                   text="Sample Information Files "
                   className="btn sample-download-button textbold"
@@ -158,7 +158,7 @@ const Addtournament = () => {
                 </div>
 
                 <div className="col-md-5 border rounded-4 scrollable-calander" id="calander-padding">
-                  <Calander />
+                  <Calander height="544px"/>
                 </div>
                 <div className="col-md-3 mt-2">
                   <Button

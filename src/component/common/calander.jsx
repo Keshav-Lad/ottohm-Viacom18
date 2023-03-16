@@ -30,7 +30,7 @@ const Calander = (props) => {
     <Fullcalander
       plugins={[dayGridPlugin]}
       initialView="dayGridMonth"
-      height={window.innerHeight - props.height}
+      height={props.height}
       headerToolbar={headerToolbarOptions}
       headerToolbarClassNames="my-header-toolbar"
       events={[
