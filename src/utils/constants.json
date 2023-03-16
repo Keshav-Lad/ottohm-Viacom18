@@ -1,5 +1,8 @@
 {
-    "dashboard":"/",
+    "token":"token",
+    "home":"/*",
+    "login":"/",
+    "dashboard":"/dashboard",
     "tournaments":"/tournaments",
     "addtournament":"/tournaments/createtournament",
     "tournamentname":"/tournaments/tournamentname",

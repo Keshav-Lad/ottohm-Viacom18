@@ -27,13 +27,13 @@ const Navbar = () => {
             <label className="bg-body me-2 ">
               <div className="row ">
                 <div className="col-sm-12">
-                  <img className="bg-body" src={Notification} alt="Notification" />
+                  <img className="me" src={Notification} alt="Notification" />
                   <span className="ms-2">
                     <img className="icon " src={Newuser} alt="User" />
                   </span>
-                  <a className="ps-2 navbar-brand fs-6">John Doe</a>
+                  <a className="ps-2 navbar-brand fs-5">John Doe</a>
                   <br />
-                  <span className="ms-4">
+                  <span className="ms-5">
                     <a className="navbar-brand ps-5 fs-6">Admin</a>
                   </span>
                   <div className="btn-group">

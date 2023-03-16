@@ -48,7 +48,7 @@ const Addrole = () => {
 
           <div className="mt-5 row">
             <div className="col-md-8 ">
-            <label htmlFor="accesstable">Access</label>
+            <label htmlFor="accesstable" className="fs-5">Access</label>
             <table className="table table-bordered rounded-4 mt-2 mb-4  " id="accesstable">
               <thead className="table-primary">
                 <tr>

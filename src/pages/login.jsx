@@ -1,10 +1,10 @@
 import React from 'react';
-import Index from '../component/pages/login/Index';
+import Index from '../component/login/index';
 
-const login=()=>{
+const Login=()=>{
   return (
     <Index/>
   );
 };
 
-export default login;
+export default Login;
