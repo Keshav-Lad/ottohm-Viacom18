@@ -14,8 +14,11 @@ const DashBoardTable = (props) => {
 
   useEffect(() => {
     getData();
-  
-    }, []);
+    // putData();
+    // postData();
+    // patchData();
+    // deleteData();
+    },[]);
 
     const getData=()=>{
         console.log("In Table Componenet")

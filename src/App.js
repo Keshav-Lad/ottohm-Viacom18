@@ -14,51 +14,43 @@ import Addteam from './component/teams/addteam';
 import Adduser from './component/users/adduser';
 import Layout from "./Layout/index";
 import Tournamentname from "./component/tournament/tournamentname";
+import Login from './pages/login';
 import constants from "./utils/constants.json";
+import { Fragment } from 'react';
+import PrivateRoute from './utils/privateroutes';
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
-      <Routes>
-      <Route path={constants.dashboard} element={<Dashboard/>}/>
-      <Route path={constants.tournaments} element={<Tournaments/>}/>
-      <Route path={constants.addtournament} element={<Addtournament/>}/>
-      <Route path={constants.tournamentname} element={<Tournamentname/>}/>
-      <Route path={constants.games} element={<Games/>}/>
-      <Route path={constants.location} element={<Location/>}/>
-      <Route path={constants.addlocation} element={<AddLocation/>}/>
-      <Route path={constants.teams} element={<Teams/>}/>
-      <Route path={constants.addteam} element={<Addteam/>}/>
-      <Route path={constants.roles} element={<Role/>}/>
-      <Route path={constants.addrole} element={<Addrole/>}/>
-      <Route path={constants.users} element={<Users/>}/>
-      <Route path={constants.adduser} element={<Adduser/>}/>
-      </Routes>
-      </Layout>
-      {/* <Route path="/login" element={<Login />}/>        
-      <Route exact element={<PrivateRoute/>}>          
-      <Route path="/*" element={
-        <Fragment>                
-          <Sidebar>                  
-          <Navbar/>                  
-          <Routes>                    
-          <Route path="/" element={<IndexDashboard/>} />
-          </Routes>                
-          </Sidebar>              
-          </Fragment>
-            }/>       
-      </Route> */}
-    </BrowserRouter>    
-
-    
-    // <Addlocation/>
-    // <Adduser/>
-    // <Addrole/>
-    // <Addteam/>
-    // <Tournamentname/>
-    // <Addtournament/>
-    // <Role/>
+    <Routes>
+      <Route path={constants.login} element={<Login />} />
+      <Route exact element={<PrivateRoute/>}>
+        <Route path={constants.home}
+          element={
+            <Fragment>
+                <Layout>
+                <Routes>
+                <Route path={constants.dashboard} element={<Dashboard />} />
+                <Route path={constants.tournaments} element={<Tournaments />} />
+                <Route path={constants.addtournament} element={<Addtournament />} />
+                <Route path={constants.tournamentname} element={<Tournamentname />} />
+                <Route path={constants.games} element={<Games />} />
+                <Route path={constants.location} element={<Location />} />
+                <Route path={constants.addlocation} element={<AddLocation />} />
+                <Route path={constants.teams} element={<Teams />} />
+                <Route path={constants.addteam} element={<Addteam />} />
+                <Route path={constants.roles} element={<Role />} />
+                <Route path={constants.addrole} element={<Addrole />} />
+                <Route path={constants.users} element={<Users />} />
+                <Route path={constants.adduser} element={<Adduser />} />
+                </Routes>
+                </Layout>
+            </Fragment>
+          }
+        />
+      </Route>
+    </Routes>
+  </BrowserRouter>      
   );
 }
 

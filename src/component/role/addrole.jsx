@@ -5,6 +5,7 @@ import "./addrole.css";
 import { useNavigate } from "react-router";
 import Breadcrumbs from "../common/breadcrumb";
 import constants from "../../utils/constants.json";
+import Table from '../common/table';
 
 const Addrole = () => {
   const navigate = useNavigate();

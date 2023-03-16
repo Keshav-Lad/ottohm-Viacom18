@@ -1,5 +1,8 @@
 {
-    "dashboard":"/",
+    "token":"token",
+    "home":"/*",
+    "login":"/",
+    "dashboard":"/dashboard",
     "tournaments":"/tournaments",
     "addtournament":"/tournaments/createtournament",
     "tournamentname":"/tournaments/tournamentname",
@@ -12,7 +15,7 @@
     "addrole":"/role/addrole",
     "users":"/users",
     "adduser":"/users/adduser",
-    "baseUrl":"baseUrl",
+    "baseUrl":"https://3b145429-91eb-4fe0-8734-de5b0c7abbde.mock.pstmn.io/",
     "getsuffix":"getdata",
     "postsuffix":"posttdata",
     "putsuffix":"putdata",

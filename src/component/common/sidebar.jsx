@@ -8,15 +8,15 @@ const Sidebar = ({ children }) => {
  
   const [isOpen, setIsOpen] = useState(true);
   
-  useEffect(() => {
-    const handleResize = () => {
-      setIsOpen(window.innerWidth >= 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsOpen(window.innerWidth >= 768);
+  //   };
+  //   window.addEventListener('resize', handleResize);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   const menuItem = [
     {
@@ -59,7 +59,7 @@ const Sidebar = ({ children }) => {
     <div className="container-2">
       <div className="sidebar" style={{ width: isOpen ? "230px" : "80px" }}>
         <div>
-          <h1 className="logo" style={{ display: isOpen ? "block" : "none" }}>
+          <h1 className="logo">
             <img className="w-100" src={logo} alt="Logo" />
           </h1>
         </div>
