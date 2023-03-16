@@ -22,7 +22,7 @@ const Tournamentname = () => {
             <div className="col">
               <label htmlFor="locationID">Tournament ID</label>
               <Textarea
-                text="text"
+                type="text"
                 className="form-control mt-2 mb-4"
                 id="locationID"
               ></Textarea>
@@ -32,7 +32,7 @@ const Tournamentname = () => {
             <div className="col-md-5">
               <label htmlFor="locationName">Date</label>
               <Textarea
-                text="Date"
+                type="Date"
                 className="form-control mt-2 mb-4"
                 id="locationName"
               ></Textarea>
@@ -184,7 +184,7 @@ const Tournamentname = () => {
                   />
                 </div>
               </div>
-              <div className="row p-3">
+              <div className="row p-3 py-0">
                 <div className="col-md-6">
                   <label htmlFor="forTime">Time</label>
                   <Textarea
@@ -217,7 +217,7 @@ const Tournamentname = () => {
         </div>
 
         <div className="col-md-6 mt-3 p-2 rounded-4  border mb-4 scrollable-calander">
-          <Calander height="50"/>
+          <Calander height="650px"/>
         </div>
       </div>
     </div>

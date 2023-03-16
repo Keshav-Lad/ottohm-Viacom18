@@ -64,3 +64,23 @@
         width: 500px;
     }
 }
+.sample-info-file-btn{
+    display: flex;
+    justify-content: end;
+}
+
+@media screen and (width<768px) {
+    .sample-info-file-btn{
+        justify-content: start;
+    }
+}
+
+#upload-team-text{
+    justify-content: start;
+}
+
+@media screen and (width<768px){
+    #upload-team-text{
+        padding-left: 22px;
+    }
+}
