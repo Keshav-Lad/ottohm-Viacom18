@@ -6,23 +6,25 @@ import "./adduser.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
-import { useState,useEffect } from "react";
+import { useState,useEffect,useMemo } from "react";
 
 const Adduser = () => {
   const navigate = useNavigate()
   //Created By
   const[createdByData, setCreatedByData]=useState([])
-  const createdByDataDropdown = ['option 1','option 2','option 3','option 4']
+  // const createdByDataDropdown = ['option 1','option 2','option 3','option 4']
 
  //user role
   const[userRole, setUserRole]=useState([])
-  const userRoleDropdownData = ['Role 1','Role 2','Role 3','Role 4']
+  // const userRoleDropdownData = ['Role 1','Role 2','Role 3','Role 4']
 
- 
+  const createdByDataDropdown = useMemo(() => ['option 1','option 2','option 3','option 4'], []);
+  const userRoleDropdownData = useMemo(() => ['Role 1','Role 2','Role 3','Role 4'], []);
+
   useEffect(()=>{
     setCreatedByData(createdByDataDropdown);
     setUserRole(userRoleDropdownData);
-  },[])
+  },[createdByDataDropdown,userRoleDropdownData])
 
   
   return (
@@ -86,10 +88,10 @@ const Adduser = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-2">
             <Button
               text="Add User"
-              className="btn  btn-outline-dark mt-5 button-add-location "
+              className="btn form-control secondary-btn mt-5"
             />
           </div>
         </div>

@@ -6,16 +6,16 @@ import "./addteam.css"
 import Breadcrumbs from '../common/breadcrumb';
 import { useNavigate } from 'react-router-dom';
 import constants from "../../utils/constants.json";
-import { useState,useEffect } from 'react';
+import { useState,useEffect,useMemo } from 'react';
 
 const Addteam = () => {
   const navigate=useNavigate()
   //Created By
   const[createdByData, setCreatedByData]=useState([])
-  const createdByDataDropdown = ['option 1','option 2','option 3','option 4']
+  const createdByDataDropdown = useMemo(() => ['option 1','option 2','option 3','option 4'], [])
   useEffect(()=>{
     setCreatedByData(createdByDataDropdown);
-  },[])
+  },[createdByDataDropdown])
   return (
     <div className="container mt-3">
        
@@ -78,10 +78,10 @@ const Addteam = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-2">
             <Button
               text="Add Team"
-              className="btn btn-primary mt-3 button-add-location textboldbtn"
+              className="btn form-control secondary-btn  mt-3 textboldbtn"
             />
           </div>
         </div>

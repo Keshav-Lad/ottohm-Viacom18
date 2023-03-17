@@ -8,3 +8,6 @@
     letter-spacing: 0px;
     color: #000000; 
 }
+.primary-btn:hover{
+    border-color: #2e3192 !important; 
+}
