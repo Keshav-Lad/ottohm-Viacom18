@@ -2,13 +2,13 @@ import React from "react";
 import "./Css/dropdown.css"; 
 
 const Dropdown = (props) => {
+  console.log(props.options);
   return (
       <select className={`rounded-5 ${props.className}`} id={props.id}>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
+        {console.log(props.options)}
+          {props.options.map((option) => (
+        <option>{option}</option>
+      ))}
       </select>
   );
 };

@@ -11,9 +11,36 @@ import download from "../../utils/icons/download.svg";
 import Breadcrumbs from "../common/breadcrumb"
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
+import { useState, useEffect } from "react";
 
 const Addtournament = () => {
   const navigate=useNavigate();
+
+  const[noOfTeams, setnoOfTeams]=useState([])
+  const[noOfGroup, setnoOfGroup]=useState([])
+  const[country, setCountry]=useState([])
+  const[schedule, setSchedule]=useState([])
+  const[startDate, setStartDate]=useState([])
+  const[endDate, setEndDate]=useState([])
+  const[city, setCity]=useState([])
+
+  const noOfTeamsDropdownData = ['team 1','team 2','team 3','team 4','team 5']
+  const noOfGroupDropdownData = ['group 1','group 2','group 3','group 4','group 5']
+  const countryDropdownData = ['India','USA','Japan','Germany','Brazil']
+  const scheduleDropdownData = ['schedule 1','schedule 2','schedule 3','schedule 4','schedule 5']
+  const startDateDropdownData = ['startdate 1','startdate 2','startdate 3','startdate 4','startdate 5']
+  const endDateDropdownData = ['enddate 1','enddate 2','enddate 3','enddate 4','enddate 5']
+  const cityDropdownData = ['city 1','city 2','city 3','city 4','city 5']
+  
+  useEffect(()=>{
+    setnoOfTeams(noOfTeamsDropdownData)
+    setnoOfGroup(noOfGroupDropdownData)
+    setCountry(countryDropdownData)
+    setSchedule(scheduleDropdownData)
+    setStartDate(startDateDropdownData)
+    setEndDate(endDateDropdownData)
+    setCity(cityDropdownData)
+  },[])
   return (
   <div className="container ps-4  mt-3">
           
@@ -40,6 +67,7 @@ const Addtournament = () => {
                 <Dropdown
                   className="form-control form-select mt-2 mb-4 textnormal"
                   id="noOfTeams"
+                  options={noOfTeams}
                 />
               </div>
               <div className="col-md-5">
@@ -47,6 +75,7 @@ const Addtournament = () => {
                 <Dropdown
                   className="form-control form-select mt-2 mb-4 textnormal"
                   id="noOfGroup"
+                  options={noOfGroup}
                 />
               </div>
             </div>
@@ -56,6 +85,7 @@ const Addtournament = () => {
                 <Dropdown
                   className="form-control form-select mt-2 mb-4 textnormal"
                   id="country"
+                  options={country}
                 />
               </div>
             </div>
@@ -65,6 +95,7 @@ const Addtournament = () => {
                 <Dropdown
                   className="form-control form-select mt-2 mb-4 textnormal"
                   id="typeOfLeagues"
+                  options={schedule}
                 />
               </div>
             </div>
@@ -86,6 +117,7 @@ const Addtournament = () => {
                 <Dropdown
                   className="form-control form-select mt-2 mb-4 textnormal"
                   id="startDate"
+                  options={startDate}
                 />
               </div>
               <div className="col-md-5">
@@ -93,6 +125,7 @@ const Addtournament = () => {
                 <Dropdown
                   className="form-control form-select mt-2 mb-4 textnormal"
                   id="endDate"
+                  options={endDate}
                 />
               </div>
             </div>
@@ -101,6 +134,7 @@ const Addtournament = () => {
               <Dropdown
                 className="form-control form-select mt-2 mb-4 textnormal"
                 id="city"
+                options={city}
               />
             </div>
           </div>
@@ -151,10 +185,10 @@ const Addtournament = () => {
             <div className="container">
               <div className="row mt-5 mb-1">
                 <div className="col-md-6  scrollable-div">
-                  <FormCard />
-                  <FormCard />
-                  <FormCard />
-                  <FormCard />
+                  <FormCard options={city}/>
+                  <FormCard options={city}/>
+                  <FormCard options={city}/>
+                  <FormCard options={city}/>
                 </div>
 
                 <div className="col-md-5 border rounded-4 scrollable-calander" id="calander-padding">

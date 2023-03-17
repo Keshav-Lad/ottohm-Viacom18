@@ -2,8 +2,16 @@ import React from "react";
 import Textarea from "../common/textbox";
 import Dropdown from "../common/dropdown";
 import "./formcard.css";
+import { useState,useEffect } from "react";
 
-const FormCard = () => {
+
+const FormCard = (props) => {
+  const[stadium,setStadium]=useState([])
+  const stadiumData = ['stadium 1','stadium 2','stadium 3','stadium 4']
+  useEffect(()=>{
+    setStadium(stadiumData)
+  },[])
+  
   return (
     <div className="card mt-2">
       <div className="card-body bg-info">
@@ -29,6 +37,7 @@ const FormCard = () => {
               <Dropdown
                 className="form-control dropdown-input-sm form-select textnormal"
                 id="city-input"
+                options={props.options}
               ></Dropdown>
             </div>
           </div>
@@ -42,6 +51,7 @@ const FormCard = () => {
               <Dropdown
                 className="form-control dropdown-input-sm form-select textnormal"
                 id="stadium-input"
+                options={stadium}
               ></Dropdown>
             </div>
           </div>
