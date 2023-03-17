@@ -1,67 +1,66 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router";
 import "./Css/sidebar.css";
 import logo from "../../utils/images/logo.png";
+import constants from "../../utils/constants.json"
 
 const Sidebar = ({ children }) => {
  
+  const navigate=useNavigate();
  
   const [isOpen, setIsOpen] = useState(true);
   
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setIsOpen(window.innerWidth >= 768);
-  //   };
-  //   window.addEventListener('resize', handleResize);
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsOpen(window.innerWidth >= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const menuItem = [
     {
-      path: "/",
+      path: constants.dashboard,
       name: "DashBoard",
       
     },
     {
-      path: "/tournaments",
+      path: constants.tournaments,
       name: "Tournaments",
     
     },
     {
-      path: "/games",
+      path: constants.games,
       name: "Games",
     },
     {
-      path: "/location",
+      path: constants.location,
       name: "Location",
     },
     {
-      path: "/teams",
+      path: constants.teams,
       name: "Teams",
     },
     {
-      path: "/roles",
+      path: constants.roles,
       name: "Roles",
     },
     {
-      path: "/users",
+      path: constants.users,
       name: "Users",
     },
-    
-    
-    
+   
   ]
-
-  
   return (
     <div className="container-2">
       <div className="sidebar" style={{ width: isOpen ? "230px" : "80px" }}>
-        <div>
-          <h1 className="logo">
-            <img className="w-100" src={logo} alt="Logo" />
-          </h1>
+        <div className="bg-body">
+         
+            <img className="w-100 mt-2 mb-2" src={logo} alt="Logo" onClick={() => navigate(constants.dashboard)} />
+          
         </div>
         {menuItem.map((item, index) => (
           <div key={index}>

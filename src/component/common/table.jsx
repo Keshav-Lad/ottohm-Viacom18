@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import DataTable,{defaultThemes} from "react-data-table-component";
 import { FormCheck } from "react-bootstrap";
 import "./Css/table.css";
 import GetData from "../../utils/apicalls/get";
-import PostData from "../../utils/apicalls/post";
-import PutData from "../../utils/apicalls/put";
-import PatchData from "../../utils/apicalls/patch";
-import DeleteData from "../../utils/apicalls/delete";
-import constants from "../../utils/constants.json";
+// import PostData from "../../utils/apicalls/post";
+// import PutData from "../../utils/apicalls/put";
+// import PatchData from "../../utils/apicalls/patch";
+// import DeleteData from "../../utils/apicalls/delete";
+// import constants from "../../utils/constants.json";
 
 const DashBoardTable = (props) => {
 
@@ -92,7 +91,7 @@ const DashBoardTable = (props) => {
       },
       headRow: {
         style: {
-          backgroundColor: "hsl(0deg 1% 26%)",
+          backgroundColor: "#2e3192",
           color: "#FFFFFF",
           borderTopStyle: "solid",
           borderTopWidth: "1px",

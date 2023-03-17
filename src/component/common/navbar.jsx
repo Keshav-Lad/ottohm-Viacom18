@@ -23,20 +23,21 @@ const Navbar = () => {
       >
         <ul className="navbar-nav me-auto  mb-2 mb-lg-0"></ul>
         <form className="d-flex">
+        <img className="" src={Notification} alt="Notification" />
           <div className="icon ms-auto me-auto">
             <label className="bg-body me-2 ">
               <div className="row ">
                 <div className="col-sm-12">
-                  <img className="me" src={Notification} alt="Notification" />
+
                   <span className="ms-2">
                     <img className="icon " src={Newuser} alt="User" />
                   </span>
                   <a className="ps-2 navbar-brand fs-5">John Doe</a>
                   <br />
                   <span className="ms-5">
-                    <a className="navbar-brand ps-5 fs-6">Admin</a>
+                    <a className="navbar-brand  fs-6">Admin</a>
                   </span>
-                  <div className="btn-group">
+                  <div className="btn-group ps-2">
                     <button
                       className="border-0 dropdown-toggle"
                       type="button"
@@ -50,12 +51,12 @@ const Navbar = () => {
                       aria-labelledby="dropdownMenu2"
                     >
                       <li>
-                        <a className="dropdown-item" href="/">
+                        <a className="dropdown-item">
                           Change Password
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="/">
+                        <a className="dropdown-item" >
                           Logout
                         </a>
                       </li>

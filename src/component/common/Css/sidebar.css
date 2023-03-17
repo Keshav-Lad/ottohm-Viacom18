@@ -1,11 +1,12 @@
 .sidebar{
-    background: #ffffff;
+    background: #2e3192;
     color: lightgray;
     min-height: 100vh;
     height: auto;
     border: solid 2px;
     position: relative;
     transition: width 0.2s ease-in-out;
+    z-index:5;
   }
   .bars{
     display: flex;
@@ -27,17 +28,15 @@
     display: flex;
     color: #fff;
     padding: 10px 15px;
-     border: solid 1px gray;
+     border: solid 1px #ffffff;
     gap: 15px;  transition: all 0.5s;
   }
   .link:hover{
-    background: rgb(158, 170, 175);
-    color: #014296;
+    background-color:#ec1c24;
     transition: all 0.5s;
   }
   .active{
-    background:rgb(158, 170, 175);
-    color: #014296;
+    background-color:#ec1c24;
   }
   .icon{
     size: 15px;
@@ -67,7 +66,7 @@
   }
   .textnormal{
     font: normal normal normal 15px/15px Gotham;
-    color: #000000;
+    color: #ffffff;
   }
   /* @media (max-width: 768px) {
     .sidebar {

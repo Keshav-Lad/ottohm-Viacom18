@@ -89,7 +89,7 @@ const Index =() => {
         <h1 className='mt-5 mb-5 pt-5 pb-5 textnormal'>Analytics</h1>
       </div>
       <div className="mt-4 rounded-top ">
-        <h5 className='pb-3 textbold'>Ongoing Tournament</h5>
+        <h5 className='pb-3 ms-4 textbold'>Ongoing Tournament</h5>
         <Table columns={columns}/>
       </div>
     </div>

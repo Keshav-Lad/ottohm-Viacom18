@@ -71,7 +71,7 @@ const Adduser = () => {
           <div className="col-md-4">
             <Button
               text="Add User"
-              className="btn btn-primary mt-5 button-add-location textboldbtn"
+              className="btn  btn-outline-dark mt-5 button-add-location "
             />
           </div>
         </div>

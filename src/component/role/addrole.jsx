@@ -5,7 +5,7 @@ import "./addrole.css";
 import { useNavigate } from "react-router";
 import Breadcrumbs from "../common/breadcrumb";
 import constants from "../../utils/constants.json";
-import Table from '../common/table';
+
 
 const Addrole = () => {
   const navigate=useNavigate();
@@ -50,18 +50,18 @@ const Addrole = () => {
             <div className="col-md-8 ">
             <label htmlFor="accesstable" className="fs-5">Access</label>
             <table className="table table-bordered rounded-4 mt-2 mb-4  " id="accesstable">
-              <thead className="table-primary">
+              <thead className="table-header">
                 <tr>
-                  <th scope="col">Content</th>
+                  <th scope="col th-t">Content</th>
                   <th scope="col">Add</th>
                   <th scope="col">Modify</th>
                   <th scope="col">Delete</th>
                   <th scope="col">Delete</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody >
                 <tr>
-                  <th scope="row ">User</th>
+                  <th scope="row">User</th>
                   <td className="col-sm-2">
                     <input type="checkbox" className="checkbox-input" />
                   </td>
