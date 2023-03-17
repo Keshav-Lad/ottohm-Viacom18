@@ -4,10 +4,19 @@ import Notification from "../../utils/icons/Notification.svg";
 import Newuser from "../../utils/images/Newuser.png";
 import { useDispatch, useSelector } from "react-redux";
 import { showSidebar, hideSidebar } from "../../utils/reducer/sidebarreducer"
-
+import constants from "../../utils/constants.json";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const dispatch = useDispatch();
+  const navigate=useNavigate();
   const sidebarStatus = useSelector((state) => state.sidebar.isOpen);
+
+  const logout=()=>{
+    localStorage.setItem(constants.token,"");
+    alert("Logout Successfully");
+    navigate(constants.login);
+
+  }
   
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm ">
@@ -62,7 +71,8 @@ const Navbar = () => {
                         </button>
                       </li>
                       <li>
-                        <button className="dropdown-item" >
+                        <button className="dropdown-item" onClick={logout}
+                         >
                           Logout
                         </button>
                       </li>
