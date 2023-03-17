@@ -8,9 +8,22 @@ import "./tournamentname.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json"
+import { useState,useEffect } from "react";
 
 const Tournamentname = () => {
+
   const navigate= useNavigate();
+
+  const[stadium,setStadium]=useState([])
+  const[city, setCity]=useState([])
+
+  const stadiumData = ['stadium 1','stadium 2','stadium 3','stadium 4']
+  const cityDropdownData = ['city 1','city 2','city 3','city 4','city 5']
+
+  useEffect(()=>{
+    setStadium(stadiumData)
+    setCity(cityDropdownData)
+  },[])
   return (
     <div className="container ">
       
@@ -181,6 +194,7 @@ const Tournamentname = () => {
                   <Dropdown
                     className="form-control form-select dropdown-input-width"
                     id="city"
+                    options={city}
                   />
                 </div>
               </div>
@@ -198,6 +212,7 @@ const Tournamentname = () => {
                   <Dropdown
                     className="form-control form-select dropdown-input-width"
                     id="forStadium"
+                    options={stadium}
                   />
                 </div>
               </div>

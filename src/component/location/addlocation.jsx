@@ -6,9 +6,27 @@ import "./addlocation.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
+import { useState, useEffect} from "react";
+
 
 const Addlocation = () => {
   const navigate=useNavigate();
+
+  //location Id dropdown Data
+  const[locationData,setLocationData] = useState([]);
+  console.log(locationData);
+  const locationDropdownData = ["101",'102','103','104','105'] //axios data fetched logic here
+  useEffect(()=>{
+    setLocationData(locationDropdownData)
+  },[])
+  
+  //stadium Data
+  const[stadiumData, setStadiumData]=useState([])
+  const stadiumDropdownData =['mumbai','pune','gujrat','nashik']
+  useEffect(()=>{
+    setStadiumData(stadiumDropdownData)
+  },[])
+
   return (
     <div className="container mt-4 ps-3">
       <Breadcrumbs title="Location" subtitle="AddLocation" onClick={() => navigate(constants.location)}/>
@@ -20,6 +38,7 @@ const Addlocation = () => {
               <Dropdown
                 className="form-control form-select mt-2 mb-4 textnormal"
                 id="locationID"
+                options={locationData}
               />
             </div>
             <div className="col-md-4">
@@ -45,7 +64,8 @@ const Addlocation = () => {
               <Dropdown
                 className="form-control form-select mt-2 mb-4 textnormal"
                 id="locationName"
-              ></Dropdown>
+                options={stadiumData}
+              />
             </div>
           </div>
           <div className="row mt-2">

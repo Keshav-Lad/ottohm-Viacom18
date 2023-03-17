@@ -6,9 +6,25 @@ import "./adduser.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
+import { useState,useEffect } from "react";
 
 const Adduser = () => {
   const navigate = useNavigate()
+  //Created By
+  const[createdByData, setCreatedByData]=useState([])
+  const createdByDataDropdown = ['option 1','option 2','option 3','option 4']
+
+ //user role
+  const[userRole, setUserRole]=useState([])
+  const userRoleDropdownData = ['Role 1','Role 2','Role 3','Role 4']
+
+ 
+  useEffect(()=>{
+    setCreatedByData(createdByDataDropdown);
+    setUserRole(userRoleDropdownData);
+  },[])
+
+  
   return (
     <div className="container mt-3 ps-3">
        <Breadcrumbs title="User" subtitle="AddUser" onClick={() => navigate(constants.users)}/>
@@ -46,6 +62,7 @@ const Adduser = () => {
               <Dropdown
                 className="form-control form-select mt-2 mb-4 textnormal"
                 id="locationName"
+                options={createdByData}
               ></Dropdown>
             </div>
           </div>
@@ -55,6 +72,7 @@ const Adduser = () => {
               <Dropdown
                 className="form-control form-select mt-2 mb-4 textnormal"
                 id="locationName"
+                options={userRole}
               />
             </div>
             {/* <div className="col-md-6">
