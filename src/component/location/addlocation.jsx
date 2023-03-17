@@ -6,7 +6,7 @@ import "./addlocation.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
-import { useState, useEffect} from "react";
+import { useState, useEffect,useMemo} from "react";
 
 
 const Addlocation = () => {
@@ -15,17 +15,16 @@ const Addlocation = () => {
   //location Id dropdown Data
   const[locationData,setLocationData] = useState([]);
   console.log(locationData);
-  const locationDropdownData = ["101",'102','103','104','105'] //axios data fetched logic here
-  useEffect(()=>{
-    setLocationData(locationDropdownData)
-  },[])
-  
+  const locationDropdownData = useMemo(() => ["101",'102','103','104','105'], []) //axios data fetched logic here
+
   //stadium Data
   const[stadiumData, setStadiumData]=useState([])
-  const stadiumDropdownData =['mumbai','pune','gujrat','nashik']
+  const stadiumDropdownData =useMemo(() => ['mumbai','pune','gujrat','nashik'], [])
+  
   useEffect(()=>{
+    setLocationData(locationDropdownData)
     setStadiumData(stadiumDropdownData)
-  },[])
+  },[stadiumDropdownData,locationDropdownData])
 
   return (
     <div className="container mt-4 ps-3">
@@ -88,10 +87,10 @@ const Addlocation = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-2">
             <Button
               text="Add Location"
-              className="btn btn-primary mt-3 button-add-location textboldbtn"
+              className="btn secondary-btn mt-3 form-control textboldbtn"
             />
           </div>
         </div>

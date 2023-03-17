@@ -11,7 +11,7 @@ import download from "../../utils/icons/download.svg";
 import Breadcrumbs from "../common/breadcrumb"
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
-import { useState, useEffect } from "react";
+import { useState, useEffect , useMemo} from "react";
 
 const Addtournament = () => {
   const navigate=useNavigate();
@@ -24,13 +24,13 @@ const Addtournament = () => {
   const[endDate, setEndDate]=useState([])
   const[city, setCity]=useState([])
 
-  const noOfTeamsDropdownData = ['team 1','team 2','team 3','team 4','team 5']
-  const noOfGroupDropdownData = ['group 1','group 2','group 3','group 4','group 5']
-  const countryDropdownData = ['India','USA','Japan','Germany','Brazil']
-  const scheduleDropdownData = ['schedule 1','schedule 2','schedule 3','schedule 4','schedule 5']
-  const startDateDropdownData = ['startdate 1','startdate 2','startdate 3','startdate 4','startdate 5']
-  const endDateDropdownData = ['enddate 1','enddate 2','enddate 3','enddate 4','enddate 5']
-  const cityDropdownData = ['city 1','city 2','city 3','city 4','city 5']
+  const noOfTeamsDropdownData = useMemo(() => ['team 1','team 2','team 3','team 4','team 5'], [])
+  const noOfGroupDropdownData = useMemo(() => ['group 1','group 2','group 3','group 4','group 5'], [])
+  const countryDropdownData = useMemo(() => ['India','USA','Japan','Germany','Brazil'], [])
+  const scheduleDropdownData = useMemo(() => ['schedule 1','schedule 2','schedule 3','schedule 4','schedule 5'], [])
+  const startDateDropdownData = useMemo(() => ['startdate 1','startdate 2','startdate 3','startdate 4','startdate 5'], [])
+  const endDateDropdownData = useMemo(() => ['enddate 1','enddate 2','enddate 3','enddate 4','enddate 5'], [])
+  const cityDropdownData = useMemo(() => ['city 1','city 2','city 3','city 4','city 5'], [])
   
   useEffect(()=>{
     setnoOfTeams(noOfTeamsDropdownData)
@@ -40,7 +40,7 @@ const Addtournament = () => {
     setStartDate(startDateDropdownData)
     setEndDate(endDateDropdownData)
     setCity(cityDropdownData)
-  },[])
+  },[noOfTeamsDropdownData,noOfGroupDropdownData,countryDropdownData,scheduleDropdownData,startDateDropdownData,endDateDropdownData,cityDropdownData])
   return (
   <div className="container ps-4  mt-3">
           
@@ -172,7 +172,7 @@ const Addtournament = () => {
             <div className="col-md-2">
               <Button
                 text="Create Schedule"
-                className="btn btn-primary mt-4 mb-4 form-control textboldbtn btn-for-tablet-view"
+                className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-for-tablet-view"
               />
             </div>
             <div className="row">
@@ -197,7 +197,7 @@ const Addtournament = () => {
                 <div className="col-md-3 mt-2">
                   <Button
                     text="Create Tournament"
-                    className="btn btn-primary mt-4 mb-4 form-control btn-for-tablet-view textboldbtn"
+                    className="btn secondary-btn mt-4 mb-4 form-control btn-for-tablet-view textboldbtn"
                   />
                 </div>
               </div>

@@ -75,7 +75,7 @@ const Index=()=>{
         </div>
         <div className="col-md-4 "></div>
         <div className="col-md-2 pe-4">
-        <Button text="Create Tournament"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate(constants.addtournament)}></Button>
+        <Button text="Create Tournament"className="form-control btn primary-btn textboldbtn" onClick={() => navigate(constants.addtournament)}></Button>
           
         </div>
       </div>

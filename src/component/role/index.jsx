@@ -71,7 +71,7 @@ const Index = () => {
         </div>
         <div className="col-md-4 "></div>
         <div className="col-sm-2 pe-4">
-        <Button text="Add Role"className="form-control btn btn-secondary textboldbtn rounded-5" onClick={() => navigate(constants.addrole)}></Button>
+        <Button text="Add Role"className="form-control primary-btn btn textboldbtn rounded-5" onClick={() => navigate(constants.addrole)}></Button>
      
           
         </div>

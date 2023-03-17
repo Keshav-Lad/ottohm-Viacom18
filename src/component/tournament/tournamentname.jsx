@@ -8,7 +8,7 @@ import "./tournamentname.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json"
-import { useState,useEffect } from "react";
+import { useState,useEffect, useMemo } from "react";
 
 const Tournamentname = () => {
 
@@ -17,13 +17,13 @@ const Tournamentname = () => {
   const[stadium,setStadium]=useState([])
   const[city, setCity]=useState([])
 
-  const stadiumData = ['stadium 1','stadium 2','stadium 3','stadium 4']
-  const cityDropdownData = ['city 1','city 2','city 3','city 4','city 5']
+  const stadiumData = useMemo(() => ['stadium 1','stadium 2','stadium 3','stadium 4'], [])
+  const cityDropdownData = useMemo(() => ['city 1','city 2','city 3','city 4','city 5'], [])
 
   useEffect(()=>{
     setStadium(stadiumData)
     setCity(cityDropdownData)
-  },[])
+  },[stadiumData,cityDropdownData])
   return (
     <div className="container ">
       

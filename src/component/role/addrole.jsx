@@ -53,6 +53,7 @@ const Addrole = () => {
           <div className="mt-5 row">
             <div className="col-md-8 ">
             <label htmlFor="accesstable" className="fs-5">Access</label>
+            <div className="table-responsive">
             <table className="table table-bordered rounded-4 mt-2 mb-4  " id="accesstable">
               <thead className="table-header">
                 <tr>
@@ -96,6 +97,7 @@ const Addrole = () => {
                 </tr>
               </tbody>
             </table>
+            </div>
           </div>
           </div>
         </div>
@@ -103,14 +105,14 @@ const Addrole = () => {
           <div className="col-md-2 ">
             <Button
               text="Cancel"
-              className="btn btn-bordered btn-outline-dark  form-control mb-2 btn-sizing textbold"
+              className="btn secondary-btn form-control mb-2 btn-sizing textbold"
               onClick={() => navigate("/roles")}
             />
           </div>
           <div className="col-md-2 ">
             <Button
               text="Create Role"
-              className="btn btn-primary form-control btn-sizing textboldbtn "
+              className="btn primary-btn form-control btn-sizing textboldbtn "
             />
           </div>
         </div>

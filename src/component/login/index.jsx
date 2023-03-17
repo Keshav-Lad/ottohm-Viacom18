@@ -46,7 +46,8 @@ const Index=()=> {
                    
                 </div>
                 <div className='mt-3'>
-                    <a id="f-pass" className='text-wrap' href=''>Forget Password ?</a>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                    <a id="f-pass" className='text-wrap' href='#'>Forget Password ?</a>
                 </div>
                 <Button  id="btn-setting" className="btn w-75 text-light ms-5 mt-4" onClick={handleRequest} text="Login"></Button>
                 </form>

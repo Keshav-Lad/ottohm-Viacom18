@@ -80,7 +80,7 @@ const Index = () => {
       </div>
       <div className="col-md-4 "></div>
       <div className="col-md-2 pe-4">
-      <Button text="Add Location"className="form-control btn btn-secondary textboldbtn" onClick={() => navigate(constants.addlocation)}/>
+      <Button text="Add Location"className="form-control btn primary-btn textboldbtn" onClick={() => navigate(constants.addlocation)}/>
         
       </div>
     </div>
