@@ -31,3 +31,17 @@ span{
 /* p{
  font: normal normal medium 16px/19px Gotham;
 } */
+
+@media (max-width: 768px) {
+  .container-2 {
+    z-index: 1;
+    position: relative;
+  }
+  .sidebar {
+    z-index: 9999 !important;
+    position: absolute !important;
+    width: 35% !important;
+    height: -webkit-fill-available !important;
+  
+  }
+}

@@ -18,9 +18,12 @@ import Login from './pages/login';
 import constants from "./utils/constants.json";
 import { Fragment } from 'react';
 import PrivateRoute from './utils/privateroutes';
+import { Provider } from 'react-redux';
+import store from "./utils/reducer/store/sidebarstore"
 
 function App() {
   return (
+    <Provider store={store}>
     <BrowserRouter>
     <Routes>
       <Route path={constants.login} element={<Login />} />
@@ -50,7 +53,8 @@ function App() {
         />
       </Route>
     </Routes>
-  </BrowserRouter>      
+  </BrowserRouter> 
+  </Provider>     
   );
 }
 

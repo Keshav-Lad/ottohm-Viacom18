@@ -4,11 +4,16 @@ import { useNavigate } from "react-router";
 import "./Css/sidebar.css";
 import logo from "../../utils/images/logo.png";
 import constants from "../../utils/constants.json"
+import { useDispatch, useSelector } from "react-redux";
+import { hideSidebar } from "../../utils/reducer/sidebarreducer";
 
 const Sidebar = ({ children }) => {
  
   const navigate=useNavigate();
- 
+
+  const dispatch = useDispatch();
+  const sidebarStatus = useSelector((state) => state.sidebar.isOpen);
+  const isMobileView = window.innerWidth < 768;
   const [isOpen, setIsOpen] = useState(true);
   
   useEffect(() => {
@@ -20,6 +25,12 @@ const Sidebar = ({ children }) => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const closeSidebar = () => {
+    if(sidebarStatus){
+      dispatch(hideSidebar());
+    }
+  }
 
   const menuItem = [
     {
@@ -56,6 +67,28 @@ const Sidebar = ({ children }) => {
   ]
   return (
     <div className="container-2">
+       { isMobileView && sidebarStatus ?
+      <div className="sidebar"  style={{ width: isOpen ? "230px" : "80px" }} >
+        <div className="bg-body">
+         
+            <img className="w-100 mt-2 mb-2" src={logo} alt="Logo" onClick={() => navigate(constants.dashboard)} />
+          
+        </div>
+        {menuItem.map((item, index) => (
+          <div key={index}>
+            <NavLink
+              to={item.path}
+              className="link textnormal text-light"
+              activeclassname="active"
+            >
+              <div className="icon">{item.icon}</div>
+              <div className="link_text textnormal">{item.name}</div>
+            </NavLink>
+          </div>
+        ))}
+      </div>
+        :null}
+            { !isMobileView && isOpen ?
       <div className="sidebar" style={{ width: isOpen ? "230px" : "80px" }}>
         <div className="bg-body">
          
@@ -70,12 +103,15 @@ const Sidebar = ({ children }) => {
               activeclassname="active"
             >
               <div className="icon">{item.icon}</div>
-              <div className="link_text textnormal" style={{ display: isOpen ? "block" : "none" }}>{item.name}</div>
+              <div className="link_text textnormal text-light">{item.name}</div>
             </NavLink>
           </div>
         ))}
       </div>
-      <main>{children}</main>
+        :null}
+
+
+      <main onClick={closeSidebar}>{children}</main>
     </div>
   );
 };

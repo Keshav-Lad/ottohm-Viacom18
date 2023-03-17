@@ -6,23 +6,11 @@
     border: solid 2px;
     position: relative;
     transition: width 0.2s ease-in-out;
-    z-index:5;
-  }
-  .bars{
-    display: flex;
-    font-size: 25px;
     
-    margin-left: 50px;
   }
-  .close-icon{
-    display: flex;
-    font-size: 25px;
-    margin-left: 80%;
-    margin-bottom: 10px;
-  }
-  ul, .sub-menu{
-    text-decoration: none;
-  }
+
+ 
+ 
   .link{
     text-decoration: none;
     display: flex;
@@ -34,9 +22,11 @@
   .link:hover{
     background-color:#ec1c24;
     transition: all 0.5s;
+    color: #000;
   }
   .active{
     background-color:#ec1c24;
+    color: #ffffff;
   }
   .icon{
     size: 15px;
@@ -51,50 +41,14 @@
     opacity: 1;
    
   }
-.mobile-submenu {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #014296;
-  }
-  
-  .mobile-submenu .link {
-    display: flex;
-    justify-content: left;
-    margin-left: 25%;
-    margin-bottom: 10px;
-  }
+
   .textnormal{
     font: normal normal normal 15px/15px Gotham;
     color: #ffffff;
   }
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     .sidebar {
       width: 80px;
     }
-  
-    .sidebar .logo {
-      display: none;
-    }
-  
-    .bars {
-      display: block;
-    }
-  
-    .mobile-submenu {
-      position: static;
-      padding: 20px 0;
-    }
-  
-    .mobile-submenu .link {
-      justify-content: left;
-      padding-left: 7%;
-      margin-bottom: 20px;
-    }
-  } */
 
-  @media screen and (max-width: 799px) {
-    .sidebar {
-        display:none;
-    }
- }
+  }

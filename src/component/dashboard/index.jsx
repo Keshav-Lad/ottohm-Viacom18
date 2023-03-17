@@ -68,7 +68,7 @@ const Index =() => {
     },
   ];
   return (
-    <div className='container mt-3'>
+    <div className='container mt-3' >
 
       <p className='fs-6 textbold'>DashBoard</p>
       <div className='row'>

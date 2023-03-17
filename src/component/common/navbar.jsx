@@ -2,11 +2,17 @@ import React from "react";
 import "./Css/navbar.css";
 import Notification from "../../utils/icons/Notification.svg";
 import Newuser from "../../utils/images/Newuser.png";
+import { useDispatch, useSelector } from "react-redux";
+import { showSidebar, hideSidebar } from "../../utils/reducer/sidebarreducer"
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const sidebarStatus = useSelector((state) => state.sidebar.isOpen);
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm ">
       <button
+       onClick={()=>{dispatch(!sidebarStatus ? showSidebar() : hideSidebar())}} 
         className="navbar-toggler ms-auto"
         type="button"
         data-bs-toggle="collapse"
@@ -15,7 +21,7 @@ const Navbar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+      <span className="navbar-toggler-icon"></span>
       </button>
       <div
         className="collapse navbar-collapse me-2"
@@ -32,10 +38,10 @@ const Navbar = () => {
                   <span className="ms-2">
                     <img className="icon " src={Newuser} alt="User" />
                   </span>
-                  <a className="ps-2 navbar-brand fs-5">John Doe</a>
+                  <a className="ps-2 navbar-brand  fs-5" href="/">John Doe</a>
                   <br />
                   <span className="ms-5">
-                    <a className="navbar-brand  fs-6">Admin</a>
+                    <a className="navbar-brand  fs-6"  href="/">Admin</a>
                   </span>
                   <div className="btn-group ps-2">
                     <button
@@ -51,14 +57,14 @@ const Navbar = () => {
                       aria-labelledby="dropdownMenu2"
                     >
                       <li>
-                        <a className="dropdown-item">
+                        <button className="dropdown-item">
                           Change Password
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a className="dropdown-item" >
+                        <button className="dropdown-item" >
                           Logout
-                        </a>
+                        </button>
                       </li>
                     </ul>
                   </div>

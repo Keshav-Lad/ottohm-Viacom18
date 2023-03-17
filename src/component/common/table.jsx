@@ -3,7 +3,7 @@ import DataTable,{defaultThemes} from "react-data-table-component";
 import { FormCheck } from "react-bootstrap";
 import "./Css/table.css";
 import GetData from "../../utils/apicalls/get";
-import constants from "../../utils/constants.json";
+
 
 const DashBoardTable = (props) => {
 
