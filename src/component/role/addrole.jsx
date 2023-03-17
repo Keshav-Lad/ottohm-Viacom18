@@ -8,10 +8,14 @@ import constants from "../../utils/constants.json";
 
 
 const Addrole = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   return (
     <div className="container mt-3">
-      <Breadcrumbs title="Role" subtitle="AddRole" onClick={() => navigate(constants.roles)}/>
+      <Breadcrumbs
+        title="Role"
+        subtitle="AddRole"
+        onClick={() => navigate(constants.roles)}
+      />
       <form>
         <div>
           <div className="row mt-4">
@@ -36,13 +40,13 @@ const Addrole = () => {
           </div>
           <div className="row">
             <div className="col-md-8">
-            <label htmlFor="description">Description</label>
-          <textarea
-            className="form-control mt-2 mb-4 textnormal"
-            id="description"
-            rows="4"
-            placeholder="Enter Role Description"
-          ></textarea>
+              <label htmlFor="description">Description</label>
+              <textarea
+                className="form-control mt-2 mb-4 textnormal"
+                id="description"
+                rows="4"
+                placeholder="Enter Role Description"
+              ></textarea>
             </div>
           </div>
 
