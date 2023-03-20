@@ -9,6 +9,7 @@ import Calander from "../common/calander";
 import FormCard from "./formCard";
 import download from "../../utils/icons/download.svg";
 import Breadcrumbs from "../common/breadcrumb";
+import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
 import { useState, useEffect, useMemo } from "react";
@@ -219,65 +220,65 @@ const Addtournament = () => {
               <p className="textbold">Upload Team Details</p>
             </div>
 
-            <div className="col-md-7 sample-info-file-btn">
-              <Button
-                text="Sample Information Files "
-                className="btn sample-download-button textbold"
-              />
-              <span>
-                <img
-                  src={download}
-                  className="download-img mt-2"
-                  alt="download img"
-                />
-              </span>
-            </div>
-          </div>
-          {/* <label htmlFor="locationID">Upload Team Details</label> */}
-          <div className="row">
-            <div className="col-md-11">
-              <Dropzone />
-            </div>
-          </div>
-
-          <div className="col-md-2">
-            <Button
-              text="Create Schedule"
-              className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-for-tablet-view"
-            />
-          </div>
-          <div className="row">
-            <div className="col-md-11">
-              <Table />
-            </div>
-          </div>
-
-          <div className="container">
-            <div className="row mt-5 mb-1">
-              <div className="col-md-6  scrollable-div">
-                <FormCard options={city} />
-                <FormCard options={city} />
-                <FormCard options={city} />
-                <FormCard options={city} />
-              </div>
-
-              <div
-                className="col-md-5 border rounded-4 scrollable-calander mt-3"
-                id="calander-padding"
-              >
-                <Calander height="544px" />
-              </div>
-              <div className="col-md-3 mt-2">
+              <div className="col-md-7 sample-info-file-btn">
                 <Button
-                  text="Create Tournament"
-                  className="btn secondary-btn mt-4 mb-4 form-control btn-for-tablet-view textboldbtn"
+                  text="Sample Information Files "
+                  className="btn sample-download-button textbold"
                 />
+                <span>
+                  <img
+                    src={download}
+                    className="download-img mt-2"
+                    alt="download img"
+                  />
+                </span>
+              </div>
+            </div>
+            {/* <label htmlFor="locationID">Upload Team Details</label> */}
+            <div className="row">
+                <div className="col-md-11">
+                <Dropzone />
+                </div>
+            </div>
+
+
+            <div className="col-md-2">
+              <Button
+                text="Create Schedule"
+                className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-for-tablet-view"
+              />
+            </div>
+            <div className="row">
+              <div className="col-md-11">
+                <Table/>
+              </div>
+            </div>
+
+           
+            <div className="container">
+              <div className="row mt-5 mb-1">
+                <div className="col-md-6  scrollable-div">
+                  <FormCard options={city}/>
+                  <FormCard options={city}/>
+                  <FormCard options={city}/>
+                  <FormCard options={city}/>
+                </div>
+
+                <div className="col-md-5 border rounded-4 scrollable-calander mt-3" id="calander-padding">
+                  <Calander height="544px"/>
+                </div>
+                <div className="col-md-3 mt-2">
+                  <Button
+                    text="Create Tournament"
+                    className="btn secondary-btn mt-4 mb-4 form-control btn-for-tablet-view textboldbtn"
+                  />
+                </div>
               </div>
             </div>
           </div>
+          <div className="col-md-1"></div>
         </div>
-        <div className="col-md-1"></div>
-      </div>
+     
     </div>
   );
 };

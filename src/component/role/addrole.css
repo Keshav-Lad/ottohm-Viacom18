@@ -20,16 +20,14 @@ textarea {
   border: none;
   background-color:#ffffff;
 }
-.btn-sizing{
+/* .btn-sizing{
   min-width:160px;
 }
 
 .table-style{
   /* border: 1px black solid;
  border-radius: 100px !important; */
- border-top: 1px black solid;
- border-radius: 100px;
-}
+
 .table-header{
   background-color: #2e3192;
   color: #ffffff;

@@ -1,29 +1,43 @@
-import React from 'react'
+import React from "react";
 import Button from "../common/button";
 import Dropdown from "../common/dropdown";
 import Textarea from "../common/textbox";
-import "./addteam.css"
-import Breadcrumbs from '../common/breadcrumb';
-import { useNavigate } from 'react-router-dom';
+import "./addteam.css";
+import Breadcrumbs from "../common/breadcrumb";
+import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
-import { useState,useEffect,useMemo } from 'react';
+import { useState, useEffect, useMemo } from "react";
 
 const Addteam = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   //Created By
-  const[createdByData, setCreatedByData]=useState([])
-  const createdByDataDropdown = useMemo(() => ['option 1','option 2','option 3','option 4'], [])
-  useEffect(()=>{
+  const [createdByData, setCreatedByData] = useState([]);
+  const createdByDataDropdown = useMemo(
+    () => ["option 1", "option 2", "option 3", "option 4"],
+    []
+  );
+  useEffect(() => {
     setCreatedByData(createdByDataDropdown);
-  },[createdByDataDropdown])
+  }, [createdByDataDropdown]);
   return (
     <div className="container mt-3 ps-3">
-       
-        <Breadcrumbs  title="Teams" subtitle="AddTeam" onClick={() => navigate(constants.teams)}/>
+      <div className="row">
+        <div className="col-md-1"></div>
+        <div className="col-md-10">
+          {" "}
+          <Breadcrumbs
+            title="Teams"
+            subtitle="AddTeam"
+            onClick={() => navigate(constants.teams)}
+          />
+        </div>
+        <div className="col-md-1"></div>
+      </div>
       <form>
         <div>
           <div className="row mt-4">
-            <div className="col-md-4">
+            <div className="col-md-1"></div>
+            <div className="col-md-5">
               <label htmlFor="locationID">Team ID</label>
               <Textarea
                 text="text"
@@ -31,7 +45,7 @@ const Addteam = () => {
                 id="locationID"
               ></Textarea>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-5">
               <label htmlFor="locationName">Team Name</label>
               <Textarea
                 text="text"
@@ -39,9 +53,11 @@ const Addteam = () => {
                 id="locationName"
               ></Textarea>
             </div>
+            <div className="col-md-1"></div>
           </div>
           <div className="row mt-2">
-            <div className="col-md-4">
+            <div className="col-md-1"></div>
+            <div className="col-md-5">
               <label htmlFor="locationName">Team Manager</label>
               <Textarea
                 text="text"
@@ -49,7 +65,7 @@ const Addteam = () => {
                 id="locationName"
               ></Textarea>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-5">
               <label htmlFor="locationName">Created By</label>
               <Dropdown
                 className="form-control form-select mt-2 mb-4 textnormal"
@@ -57,27 +73,31 @@ const Addteam = () => {
                 options={createdByData}
               ></Dropdown>
             </div>
+            <div className="col-md-1"></div>
           </div>
           <div className="row mt-2">
-            <div className="col-md-4">
+            <div className="col-md-1"></div>
+            <div className="col-md-5">
               <label htmlFor="locationName">Created Date</label>
               <Textarea
-              text="text"
-              className="form-control mt-2 mb-4 textnormal"
-              id="locationName"
-            ></Textarea>
+                text="text"
+                className="form-control mt-2 mb-4 textnormal"
+                id="locationName"
+              ></Textarea>
             </div>
-            <div className="col-md-4">
-            <label htmlFor="locationName">Team Members</label>
-            <Textarea
-              text="text"
-              className="form-control mt-2 mb-4 textnormal"
-              id="locationName"
-            ></Textarea>
-          </div>
+            <div className="col-md-5">
+              <label htmlFor="locationName">Team Members</label>
+              <Textarea
+                text="text"
+                className="form-control mt-2 mb-4 textnormal"
+                id="locationName"
+              ></Textarea>
+            </div>
+            <div className="col-md-1"></div>
           </div>
         </div>
         <div className="row">
+          <div className="col-md-1"></div>
           <div className="col-md-2">
             <Button
               text="Add Team"
@@ -87,7 +107,7 @@ const Addteam = () => {
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default Addteam
+export default Addteam;
