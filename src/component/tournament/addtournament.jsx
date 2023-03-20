@@ -83,126 +83,119 @@ const Addtournament = () => {
     cityDropdownData,
   ]);
   return (
-    <div className="container ps-4  mt-3">
-      <Breadcrumbs
-        title="Tournaments"
-        subtitle="Add Tournamenet"
-        onClick={() => navigate(constants.tournaments)}
-      />
-
-      <form action="">
-        <div>
-          <div className="row mt-5">
+  <div className="container ps-4  mt-3">
+          
+      
+          <div className="row">
+          <div className="col-md-1"></div>
+          <div className="col-md-5">
+          <Breadcrumbs title="Tournaments" subtitle="Create Tournamenet" onClick={() => navigate(constants.tournaments)}/>
+          </div>
+          <div className="col-md-1"></div>
+        </div>
+       <div className="row mt-3">
+       
+        <div className="col-md-1"></div>
+        <div className="col-md-5">
+        <label id="inttextmedium" htmlFor="locationID">Tournament ID</label>
+                <Textarea
+                  text="text"
+                  className="form-control mt-2 mb-4  textnormal"
+                  id="locationID"
+                ></Textarea>
+        </div>
+        <div className="col-md-5">
+        <label id="inttextmedium" htmlFor="locationID">Tournament Name</label>
+                <Textarea
+                  text="text"
+                  className="form-control mt-2 mb-4 textnormal"
+                  id="locationID"
+                ></Textarea>
+        </div>
+        <div className="col-md-1"></div>  
+       </div>
+       <div className="row">
+        <div className="col-md-1"></div>
+        <div className="col-md-5">
+          <div className="row">
             <div className="col-md-6">
-              <div className="row">
-                <div className="col-md-10">
-                  <label id="inttextmedium" htmlFor="locationID">
-                    Tournament ID
-                  </label>
-                  <Textarea
-                    text="text"
-                    className="form-control mt-2 mb-4  textnormal"
-                    id="locationID"
-                  ></Textarea>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-5">
-                  <label id="inttextmedium" htmlFor="noOfTeams">
-                    No. of Team
-                  </label>
-                  <Dropdown
-                    className="form-control form-select mt-2 mb-4 textnormal"
-                    id="noOfTeams"
-                    options={noOfTeams}
-                  />
-                </div>
-                <div className="col-md-5">
-                  <label id="inttextmedium" htmlFor="noOfGroup">
-                    No. of Group
-                  </label>
-                  <Dropdown
-                    className="form-control form-select mt-2 mb-4 textnormal"
-                    id="noOfGroup"
-                    options={noOfGroup}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-10">
-                  <label id="inttextmedium" htmlFor="country">
-                    Country
-                  </label>
-                  <Dropdown
-                    className="form-control form-select mt-2 mb-4 textnormal"
-                    id="country"
-                    options={country}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-10">
-                  <label id="inttextmedium" htmlFor="typeOfLeagues">
-                    Type of Schedule
-                  </label>
-                  <Dropdown
-                    className="form-control form-select mt-2 mb-4 textnormal"
-                    id="typeOfLeagues"
-                    options={schedule}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6">
-              <div className="row">
-                <div className="col-md-10">
-                  <label id="inttextmedium" htmlFor="locationID">
-                    Tournament Name
-                  </label>
-                  <Textarea
-                    text="text"
-                    className="form-control mt-2 mb-4 textnormal"
-                    id="locationID"
-                  ></Textarea>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-5">
-                  <label id="inttextmedium" htmlFor="startDate">
-                    Start Date
-                  </label>
-                  <Dropdown
-                    className="form-control form-select mt-2 mb-4 textnormal"
-                    id="startDate"
-                    options={startDate}
-                  />
-                </div>
-                <div className="col-md-5">
-                  <label id="inttextmedium" htmlFor="endDate">
-                    End Date
-                  </label>
-                  <Dropdown
-                    className="form-control form-select mt-2 mb-4 textnormal"
-                    id="endDate"
-                    options={endDate}
-                  />
-                </div>
-              </div>
-              <div className="col-md-10">
-                <label id="inttextmedium" htmlFor="city">
-                  City
-                </label>
+            <label id="inttextmedium" htmlFor="noOfTeams">No. of Team</label>
                 <Dropdown
                   className="form-control form-select mt-2 mb-4 textnormal"
-                  id="city"
-                  options={city}
+                  id="noOfTeams"
+                  options={noOfTeams}
                 />
-              </div>
+            </div>
+            <div className="col-md-6">
+            <label id="inttextmedium" htmlFor="noOfGroup">No. of Group</label>
+                <Dropdown
+                  className="form-control form-select mt-2 mb-4 textnormal"
+                  id="noOfGroup"
+                  options={noOfGroup}
+                />
             </div>
           </div>
         </div>
+        <div className="col-md-5">
+          <div className="row">
+          <div className="col-md-6">
+
+          <label id="inttextmedium" htmlFor="startDate">Start Date</label>
+                <Dropdown
+                  className="form-control form-select mt-2 mb-4 textnormal"
+                  id="startDate"
+                  options={startDate}
+                />
+          </div>
+          <div className="col-md-6">
+          <label id="inttextmedium" htmlFor="endDate">End Date</label>
+                <Dropdown
+                  className="form-control form-select mt-2 mb-4 textnormal"
+                  id="endDate"
+                  options={endDate}
+                />
+          </div>
+          </div>
+        </div>
+        <div className="col-md-1"></div>
+       </div>
+       <div className="row">
+        <div className="col-md-1"></div>
+        <div className="col-md-5">
+        <label id="inttextmedium" htmlFor="country">Country</label>
+                <Dropdown
+                  className="form-control form-select mt-2 mb-4 textnormal"
+                  id="country"
+                  options={country}
+                />
+        </div>
+        <div className="col-md-5">
+        <label id="inttextmedium" htmlFor="city">City</label>
+              <Dropdown
+                className="form-control form-select mt-2 mb-4 textnormal"
+                id="city"
+                options={city}
+              />
+        </div>
+        <div className="col-md-1"></div>
+       </div>
+       <div className="row">
+        <div className="col-md-1"></div>
+        <div className="col-md-5">
+        <label id="inttextmedium" htmlFor="typeOfLeagues">Type of Schedule</label>
+                <Dropdown
+                  className="form-control form-select mt-2 mb-4 textnormal"
+                  id="typeOfLeagues"
+                  options={schedule}
+                />
+        </div>
+        <div className="col-md-5"></div>
+        <div className="col-md-1"></div>
+       </div>
+       
+        
         <div className="row mt-4 ">
-          <div className="col-md-12">
+          <div className="col-md-10">
             <div className="row">
               <div className="col-md-4" id="upload-team-text">
                 <p className="textbold">Upload Team Details</p>
@@ -265,8 +258,9 @@ const Addtournament = () => {
               </div>
             </div>
           </div>
+          <div className="col-md-1"></div>
         </div>
-      </form>
+     
     </div>
   );
 };

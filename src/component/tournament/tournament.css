@@ -1,18 +1,6 @@
-.textbold{
-    font: normal normal bold 16px Gotham;
-    color: #000000; 
-    
-}
-.textboldbtn{
-    font: normal normal bold 16px Gotham;
-    color: white; 
-    background-color: #2e3192;
-}
-.textboldbtn:hover{
-    background-color: #ffffff;
-    color: #2e3192;
-    
-}
-.primary-btn:hover{
-    border-color: #2e3192 !important; 
+
+
+@media screen and (width<=768px){
+
+   
 }
