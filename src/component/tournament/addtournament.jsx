@@ -95,6 +95,8 @@ const Addtournament = () => {
         </div>
        <div className="row mt-3">
        
+
+       
         <div className="col-md-1"></div>
         <div className="col-md-5">
         <label id="inttextmedium" htmlFor="locationID">Tournament ID</label>
