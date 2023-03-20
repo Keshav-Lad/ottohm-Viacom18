@@ -191,7 +191,7 @@ const Addtournament = () => {
                   <FormCard options={city}/>
                 </div>
 
-                <div className="col-md-5 border rounded-4 scrollable-calander" id="calander-padding">
+                <div className="col-md-5 border rounded-4 scrollable-calander mt-3" id="calander-padding">
                   <Calander height="544px"/>
                 </div>
                 <div className="col-md-3 mt-2">

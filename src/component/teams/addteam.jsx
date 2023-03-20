@@ -17,7 +17,7 @@ const Addteam = () => {
     setCreatedByData(createdByDataDropdown);
   },[createdByDataDropdown])
   return (
-    <div className="container mt-3">
+    <div className="container mt-3 ps-3">
        
         <Breadcrumbs  title="Teams" subtitle="AddTeam" onClick={() => navigate(constants.teams)}/>
       <form>
@@ -27,7 +27,7 @@ const Addteam = () => {
               <label htmlFor="locationID">Team ID</label>
               <Textarea
                 text="text"
-                className="form-control mt-2 mb-2 textnormal"
+                className="form-control mt-2 mb-4 textnormal"
                 id="locationID"
               ></Textarea>
             </div>
@@ -35,7 +35,7 @@ const Addteam = () => {
               <label htmlFor="locationName">Team Name</label>
               <Textarea
                 text="text"
-                className="form-control mt-2 mb-2 textnormal"
+                className="form-control mt-2 mb-4 textnormal"
                 id="locationName"
               ></Textarea>
             </div>
@@ -45,14 +45,14 @@ const Addteam = () => {
               <label htmlFor="locationName">Team Manager</label>
               <Textarea
                 text="text"
-                className="form-control mt-2 mb-2 textnormal"
+                className="form-control mt-2 mb-4 textnormal"
                 id="locationName"
               ></Textarea>
             </div>
             <div className="col-md-4">
               <label htmlFor="locationName">Created By</label>
               <Dropdown
-                className="form-control form-select mt-2 mb-2 textnormal"
+                className="form-control form-select mt-2 mb-4 textnormal"
                 id="locationName"
                 options={createdByData}
               ></Dropdown>
@@ -63,7 +63,7 @@ const Addteam = () => {
               <label htmlFor="locationName">Created Date</label>
               <Textarea
               text="text"
-              className="form-control mt-2 mb-2 textnormal"
+              className="form-control mt-2 mb-4 textnormal"
               id="locationName"
             ></Textarea>
             </div>
@@ -71,7 +71,7 @@ const Addteam = () => {
             <label htmlFor="locationName">Team Members</label>
             <Textarea
               text="text"
-              className="form-control mt-2 mb-2 textnormal"
+              className="form-control mt-2 mb-4 textnormal"
               id="locationName"
             ></Textarea>
           </div>
@@ -81,7 +81,7 @@ const Addteam = () => {
           <div className="col-md-2">
             <Button
               text="Add Team"
-              className="btn form-control secondary-btn  mt-3 textboldbtn"
+              className="btn form-control secondary-btn  mt-4 textboldbtn"
             />
           </div>
         </div>
