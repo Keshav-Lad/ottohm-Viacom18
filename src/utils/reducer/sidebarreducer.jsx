@@ -5,6 +5,7 @@ export const sidebarReducer = createSlice({
     initialState:{
         isOpen:false,
     },
+ 
     reducers:{
         hideSidebar:(state,action)=>{
             state.isOpen=false;

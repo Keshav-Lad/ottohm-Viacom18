@@ -26,7 +26,7 @@ function App() {
     <Provider store={store}>
     <BrowserRouter>
     <Routes>
-      <Route path={constants.login} element={<Login />} />
+      <Route path={constants.login} element={<Login/>} />
       <Route exact element={<PrivateRoute/>}>
         <Route path={constants.home}
           element={

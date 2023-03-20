@@ -9,7 +9,7 @@ const Index=()=> {
   const navigate=useNavigate();
 
   const handleRequest = () =>{
-      localStorage.setItem(constants.token,"Authorized");
+      sessionStorage.setItem(constants.token,"Authorized");
       navigate(constants.dashboard);
   }
   return (
@@ -23,7 +23,7 @@ const Index=()=> {
             
         
         </div>
-        <div className='col-md-4 border' id='right-part' >
+        <div className='col-sm-4' id='right-part' >
 
             <div className='container mt-5'>
                 <div className='mt-5'>
