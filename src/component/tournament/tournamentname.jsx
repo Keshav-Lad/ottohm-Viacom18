@@ -25,7 +25,7 @@ const Tournamentname = () => {
     setCity(cityDropdownData)
   },[stadiumData,cityDropdownData])
   return (
-    <div className="container ">
+    <div className="container">
       
       <Breadcrumbs title="Tournaments" subtitle="Tournament Name" onClick={()=> navigate(constants.tournaments)}/>
       
