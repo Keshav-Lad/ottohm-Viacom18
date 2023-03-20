@@ -5,6 +5,46 @@
 main{
   width: 100%;
 }
+.textnormal{
+  font: normal normal normal 14px/18px Gotham !important;
+  letter-spacing: 0px;
+  color: #000000; 
+}
+.textbold{
+  font: normal normal bold 16px/19px Gotham !important;
+  letter-spacing: 0px;
+  color: #000000; 
+}
+.textmedium{
+  font: normal normal medium 16px/19px Gotham !important;
+  letter-spacing: 0px;
+  color: #000000; 
+}
+.textboldbtn{
+  font: normal normal bold 16px/19px Gotham !important;
+  letter-spacing: 0px;
+  color: #ffffff; 
+  background-color: #2e3192;
+}
+.textboldbtn:hover{
+  background-color: #ffffff;
+  color: #2e3192;
+  
+}
+.primary-btn:hover{
+  border-color: #2e3192 !important; 
+}
+
+.secondary-btn{
+  color: #2e3192 !important;
+  border-color: #2e3192 !important;
+  background-color: #FFFFFF !important;
+  font: normal normal bold 16px Gotham !important;
+}
+.secondary-btn:hover{
+  
+  border-color: #2e3192 !important;
+}
 /* for create tournament page */
 label{
   font: normal normal normal 14px/18px Gotham;
@@ -28,9 +68,7 @@ span{
   color: #000000;
   font: normal normal normal 16px/19px Gotham;
 }
-/* p{
- font: normal normal medium 16px/19px Gotham;
-} */
+
 
 @media (max-width: 768px) {
   .container-2 {

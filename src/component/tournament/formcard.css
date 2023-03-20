@@ -1,8 +1,4 @@
-.textnormal{
-    font: normal normal normal 14px/18px Gotham !important;
-    letter-spacing: 0px;
-    color: #000000; 
-}
+
 .dropdown-input-sm{
     min-height: calc(1.5em + 0.5rem + 2px);
     padding: 0.25rem 0.5rem;

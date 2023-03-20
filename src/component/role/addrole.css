@@ -23,26 +23,7 @@ textarea {
 .btn-sizing{
   min-width:160px;
 }
-.textnormal{
-  font: normal normal normal 14px/18px Gotham !important;
-  letter-spacing: 0px;
-  color: #000000; 
-}
-.textboldbtn{
-  font: normal normal bold 16px/19px Gotham !important;
-  letter-spacing: 0px;
-  color: #FFFFFF; 
-}
-.textbold{
-  font: normal normal bold 16px/19px Gotham !important;
-  letter-spacing: 0px;
-  color: #000000; 
-}
-.textmedium{
-  font: normal normal medium 16px/19px Gotham !important;
-  letter-spacing: 0px;
-  color: #000000; 
-}
+
 .table-style{
   /* border: 1px black solid;
  border-radius: 100px !important; */
@@ -53,17 +34,4 @@ textarea {
   background-color: #2e3192;
   color: #ffffff;
   font: normal normal bold 14px Gotham;
-}
-.secondary-btn{
-  color: #2e3192 !important;
-  border-color: #2e3192 !important;
-  background-color: #FFFFFF !important;
-  font: normal normal bold 16px Gotham !important;
-}
-.secondary-btn:hover{
-  
-  border-color: #2e3192 !important;
-}
-.primary-btn:hover{
-  border-color: #2e3192 !important; 
 }

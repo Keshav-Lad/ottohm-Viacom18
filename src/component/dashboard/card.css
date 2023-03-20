@@ -1,15 +1,3 @@
 .card-style{
     min-height: 125px;
 }
-.textmedium{
-    font: normal normal medium 16px Gotham;
-    color: #000000; 
-}
-.textnormal{
-    font: normal normal normal 16px Gotham;
-    color: #000000; 
-}
-.textbold{
-    font: normal normal bold 16px Gotham;
-    color: #000000; 
-}

@@ -21,28 +21,8 @@
     width: 17px;
     height: 17px;
 }
-.textbold{
-    font: normal normal bold 16px/19px Gotham !important;
-    letter-spacing: 0px;
-    color: #000000; 
-}
-.textbtnbold{
-    font: normal normal bold 16px/19px Gotham !important;
-    letter-spacing: 0px;
-    color: #FFFFFF; 
-}
-.textmedium{
-    font: normal normal medium 16px/19px Gotham !important;
-    letter-spacing: 0px;
-    color: #000000; 
-}
 #inttextmedium{
     font: normal normal medium 14px/18px Gotham !important;
-    letter-spacing: 0px;
-    color: #000000; 
-}
-.textnormal{
-    font: normal normal normal 14px/18px Gotham !important;
     letter-spacing: 0px;
     color: #000000; 
 }
@@ -68,17 +48,14 @@
     display: flex;
     justify-content: flex-end;
 }
-
 @media screen and (width<768px) {
     .sample-info-file-btn{
         justify-content: start;
     }
 }
-
 #upload-team-text{
     justify-content: start;
 }
-
 @media screen and (width<768px){
     #upload-team-text{
         padding-left: 25px;
@@ -92,14 +69,3 @@
         width: 250px;
     }
 }
-.secondary-btn{
-    color: #2e3192 !important;
-    border-color: #2e3192 !important;
-    background-color: #FFFFFF !important;
-    font: normal normal bold 16px Gotham !important;
-  }
-  .secondary-btn:hover{
-    
-    border-color: #2e3192 !important;
-  }
-

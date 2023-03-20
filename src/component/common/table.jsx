@@ -31,12 +31,6 @@ const DashBoardTable = (props) => {
           console.error(error);
         });
         };
-    
-
-     
-  
-
-
     const customStyles = {
       table: {
         fontFamily: "Gotham",
