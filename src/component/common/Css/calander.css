@@ -35,7 +35,7 @@
 }
 .fc-toolbar-title {
   /* font-size: 20px !important; */
-  font: normal normal bold 16px/19px Gotham !important;
+  font-family: 'GothamBook' !important;
   letter-spacing: 0px;
   color: #000000; 
 }
@@ -64,7 +64,7 @@ a{
   margin-bottom: 5px !important;
 }
 .fc .fc-col-header-cell-cushion{
-  font: normal normal medium 16px/19px Gotham !important;
+  font-family: 'GothamMedium' !important;
   letter-spacing: 0px;
   color: #000000; 
 }

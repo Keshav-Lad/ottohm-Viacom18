@@ -1,3 +1,16 @@
+
+@font-face{
+  font-family: 'GothamBold';
+  src: url('./utils/fonts/GothamBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'GothamBook';
+  src: url('./utils/fonts/GothamBook.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'GothamMedium';
+  src: url('./utils/fonts/GothamMedium.ttf') format('truetype');
+}
 .container-2{
   display: flex;
   height: 100%;
@@ -6,22 +19,22 @@ main{
   width: 100%;
 }
 .textnormal{
-  font: normal normal normal 14px/18px Gotham !important;
+  font-family: 'GothamBook' !important;
   letter-spacing: 0px;
   color: #000000; 
 }
 .textbold{
-  font: normal normal bold 16px/19px Gotham !important;
+  font-family: 'GothamBold' !important;
   letter-spacing: 0px;
   color: #000000; 
 }
 .textmedium{
-  font: normal normal medium 16px/19px Gotham !important;
+  font-family: 'GothamMedium' !important;
   letter-spacing: 0px;
   color: #000000; 
 }
 .textboldbtn{
-  font: normal normal bold 16px/19px Gotham !important;
+  font-family: 'GothamMedium' !important;
   letter-spacing: 0px;
   color: #ffffff; 
   background-color: #2e3192;
@@ -47,7 +60,7 @@ main{
 }
 /* for create tournament page */
 label{
-  font: normal normal normal 14px/18px Gotham;
+  font-family: 'GothamMedium' !important;
   color: #000000;
 }
 a1{
@@ -78,7 +91,7 @@ span{
   .sidebar {
     z-index: 9999 !important;
     position: absolute !important;
-    width: 35% !important;
+    width: 50% !important;
     height: -webkit-fill-available !important;
   
   }
