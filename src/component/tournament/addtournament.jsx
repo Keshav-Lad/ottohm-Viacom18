@@ -197,7 +197,8 @@ const Addtournament = () => {
        
         
         <div className="row mt-4 ">
-          <div className="col-md-10">
+          <div className="col-md-1"></div>
+          <div className="col-md-11">
             <div className="row">
               <div className="col-md-4" id="upload-team-text">
                 <p className="textbold">Upload Team Details</p>
