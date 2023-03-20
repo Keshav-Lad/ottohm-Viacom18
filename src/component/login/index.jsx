@@ -23,7 +23,7 @@ const Index=()=> {
             
         
         </div>
-        <div className='col-md-4 border' id='right-part' >
+        <div className='col-sm-4' id='right-part' >
 
             <div className='container mt-5'>
                 <div className='mt-5'>
