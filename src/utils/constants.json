@@ -2,7 +2,7 @@
     "token":"token",
     "home":"/*",
     "login":"/login",
-    "dashboard":"/dashboard",
+    "dashboard":"/",
     "tournaments":"/tournaments",
     "addtournament":"/tournaments/createtournament",
     "tournamentname":"/tournaments/tournamentname",

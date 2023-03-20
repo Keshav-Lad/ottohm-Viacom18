@@ -13,7 +13,7 @@ const Sidebar = ({ children }) => {
 
   const dispatch = useDispatch();
   const sidebarStatus = useSelector((state) => state.sidebar.isOpen);
-  const isMobileView = window.innerWidth < 768;
+  const isMobileView = window.innerWidth <= 768;
   const [isOpen, setIsOpen] = useState(true);
   
   useEffect(() => {
@@ -31,7 +31,7 @@ const Sidebar = ({ children }) => {
       dispatch(hideSidebar());
     }
   }
-
+ 
   const menuItem = [
     {
       path: constants.dashboard,

@@ -9,7 +9,7 @@ const Index=()=> {
   const navigate=useNavigate();
 
   const handleRequest = () =>{
-      localStorage.setItem(constants.token,"Authorized");
+      sessionStorage.setItem(constants.token,"Authorized");
       navigate(constants.dashboard);
   }
   return (

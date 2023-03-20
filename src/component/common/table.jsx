@@ -12,6 +12,7 @@ const DashBoardTable = (props) => {
 
 
   useEffect(() => {
+    console.log("hello from use")
     getData();
     // putData();
     // postData();
