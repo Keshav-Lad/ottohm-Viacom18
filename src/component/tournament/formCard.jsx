@@ -14,7 +14,7 @@ const FormCard = (props) => {
 
   return (
     <div className="card mt-2">
-      <div className="card-body bg-info">
+      <div className="card-body ">
         <div className="container ">
         <div className="row">
             <div className="col-4 text-wrap textnormal">

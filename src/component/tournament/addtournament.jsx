@@ -247,7 +247,7 @@ const Addtournament = () => {
                 </div>
 
                 <div
-                  className="col-md-5 border rounded-4 scrollable-calander mt-3"
+                  className="col-md-5 border rounded-4 scrollable-calander mt-2"
                   id="calander-padding"
                 >
                   <Calander height="544px" />
