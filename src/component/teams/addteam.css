@@ -1,2 +1,15 @@
-
-
+@media screen and (width<=768px) and (width>540px){
+    .btn-tablet-view{
+        width: 250px;
+    }
+}
+@media screen and (width:820px){
+    .btn-tablet-view{
+        width: 250px;
+    }
+}
+@media screen and (width:912px) {
+    .btn-tablet-view{
+        width: 250px;
+    }
+}

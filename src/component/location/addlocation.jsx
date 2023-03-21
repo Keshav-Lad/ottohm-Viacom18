@@ -113,7 +113,7 @@ const Addlocation = () => {
           <div className="col-md-2">
             <Button
               text="Add Location"
-              className="btn secondary-btn mt-3 form-control textboldbtn"
+              className="btn secondary-btn mt-3 form-control textboldbtn btn-addlocation-tablet-view"
             />
           </div>
         </div>

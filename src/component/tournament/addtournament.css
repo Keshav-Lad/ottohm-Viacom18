@@ -48,7 +48,31 @@
     display: flex;
     justify-content: flex-end;
 }
-@media screen and (width<768px) {
+
+
+
+@media screen and (width<=768px) and (width>540px) {
+    .btn-createschedule-tablet-view{
+        width: 250px;
+    }
+}
+@media screen and (width:820px){
+    .btn-createschedule-tablet-view{
+        width: 250px;
+    }
+}
+@media screen and (width:912px) {
+    .btn-createschedule-tablet-view{
+        width: 250px;
+    }
+}
+@media screen and (width:1024px) {
+    .btn-createschedule-tablet-view{
+        width: 250px;
+    }
+}
+
+ @media screen and (width<768px) {
     .sample-info-file-btn{
         justify-content: start;
     }
@@ -61,11 +85,11 @@
         padding-left: 25px;
     }
 }
-.btn-for-tablet-view{
+/* .btn-for-tablet-view{
     white-space: nowrap;
 }
 @media screen and (width <= 768px) and (width >=415px) {
     .btn-for-tablet-view{
         width: 250px;
     }
-}
+}  */

@@ -1,1 +1,28 @@
-
+@media screen and (width<=768px) and (width>425px) {
+  .btn-tablet-index-btn-view {
+    margin-right: 5px;
+    white-space: nowrap;
+    width: 250px;
+  }
+}
+@media screen and (width: 820px) {
+  .btn-tablet-index-btn-view {
+    margin-right: 5px;
+    white-space: nowrap;
+    width: 250px;
+  }
+}
+@media screen and (width: 912px) {
+  .btn-tablet-index-btn-view {
+    margin-right: 5px;
+    white-space: nowrap;
+    width: 250px;
+  }
+}
+@media screen and (width: 1024px) {
+    .btn-tablet-index-btn-view {
+      margin-right: 5px;
+      white-space: nowrap;
+      width: 250px;
+    }
+  }

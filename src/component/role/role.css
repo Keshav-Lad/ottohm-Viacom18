@@ -9,3 +9,31 @@ opacity: 1;
 .primary-btn:hover{
   border-color: #2e3192 !important; 
 }
+@media screen and (width<=768px) and (width>540px) {
+  .btn-tablet-index-role-btn-view {
+    margin-right: 5px;
+    white-space: nowrap;
+    width: 250px;
+  }
+}
+@media screen and (width: 820px) {
+  .btn-tablet-index-role-btn-view {
+    margin-right: 5px;
+    white-space: nowrap;
+    width: 250px;
+  }
+}
+@media screen and (width: 912px) {
+  .btn-tablet-index-role-btn-view {
+    margin-right: 5px;
+    white-space: nowrap;
+    width: 250px;
+  }
+}
+@media screen and (width: 1024px) {
+    .btn-tablet-index-role-btn-view {
+      margin-right: 5px;
+      white-space: nowrap;
+      width: 250px;
+    }
+  }

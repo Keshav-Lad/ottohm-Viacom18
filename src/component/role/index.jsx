@@ -92,13 +92,14 @@ const Index = () => {
     <div className="container rounded-3 mt-3">
       <div className="row ms-2 me-2 ">
         
-        <div className="col-md-6  ps-3">
+        <div className="col-md-10  ps-3">
           <h5 className="textbold">Role</h5>
         </div>
-        <div className="col-md-4 "></div>
-        <div className="col-md-2 pe-3">
-        <Button text="Add Role"className="form-control primary-btn btn textboldbtn rounded-5" onClick={() => navigate(constants.addrole)}></Button>
-    
+        {/* <div className="col-md-4 "></div> */}
+        <div className="col-md-2 d-flex justify-content-end pe-4">
+        <Button text="Add Role"className="form-control primary-btn btn textboldbtn rounded-5 btn-tablet-index-role-btn-view" onClick={() => navigate(constants.addrole)}></Button>
+     
+          
         </div>
       </div>
       <div className="row">
