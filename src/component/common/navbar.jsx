@@ -43,14 +43,13 @@ const Navbar = () => {
       >
         <ul className="navbar-nav me-auto  mb-2 mb-lg-0"></ul>
         <form className="d-flex">
-          <div className="btn-group">
+          <div className="btn-group dropdown">
             <button
               className="notification-btn"
               type="button border-0"
               data-bs-toggle="dropdown"
-              data-bs-auto-close="true"
               aria-expanded="false"
-              aria-haspopup="true"
+              data-mdb-toggle="dropdown"
             >
               <img className="" src={Notification} alt="Notification" />
             </button>
