@@ -13,12 +13,12 @@ const Sidebar = ({ children }) => {
 
   const dispatch = useDispatch();
   const sidebarStatus = useSelector((state) => state.sidebar.isOpen);
-  const isMobileView = window.innerWidth < 768;
+  const isMobileView = window.innerWidth <= 768;
   const [isOpen, setIsOpen] = useState(true);
   
   useEffect(() => {
     const handleResize = () => {
-      setIsOpen(window.innerWidth >= 768);
+      setIsOpen(window.innerWidth > 768);
     };
     window.addEventListener('resize', handleResize);
     return () => {

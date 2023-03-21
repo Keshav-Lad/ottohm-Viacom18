@@ -176,7 +176,7 @@ const Addtournament = () => {
       },  
   ];
   return (
-    <div className="container ps-4  mt-3">
+    <div className="container ps-3  mt-3">
       <div className="row">
         <div className="col-md-1"></div>
         <div className="col-md-5">
@@ -341,7 +341,7 @@ const Addtournament = () => {
               />
             </div>
             <div className="row">
-              <p className="textbold ms-3">Standings</p>
+              <p className="textbold ps-4">Standings</p>
               <div className="col-md-11">
                 <Table columns={columns} filteredData={data}/>
               </div>
