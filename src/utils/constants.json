@@ -15,7 +15,7 @@
     "addrole":"/role/addrole",
     "users":"/users",
     "adduser":"/users/adduser",
-    "baseUrl":"https://9623df27-7586-4299-8433-8d98c101cecb.mock.pstmn.io/",
+    "baseUrl":"https://6cc42c39-c3e2-4886-8522-502e4d4b798a.mock.pstmn.io/",
     "getsuffix":"tabledata",
     "postsuffix":"posttdata",
     "putsuffix":"putdata",

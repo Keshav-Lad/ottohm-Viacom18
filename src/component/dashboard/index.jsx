@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
+import GetData from "../../utils/apicalls/get";
 import Card from './card';
 import Table from '../common/table';
 import "./dashboard.css";
 
 const Index =() => {
   
+  const [data,setData]=useState([])
+ 
+  useEffect(() => {
+    console.log("hello from use")
+    getData();
+   
+    },[]);
+
+    
+  const getData=()=>{
+   
+    GetData("dashboard")
+    .then((res) => {
+     
+      setData(res.data.Tabledata)
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+    };
   const columns = [
     {
       name: "Sr.No",
@@ -67,7 +89,9 @@ const Index =() => {
       },
     },
   ];
+
   return (
+    
     <div className='container mt-3' >
 
       <h5 className=' textbold'>DashBoard</h5>
@@ -88,10 +112,13 @@ const Index =() => {
       <div className='container border border-dark border-1 rounded-3 text-center mt-4'>
         <h1 className='mt-5 mb-5 pt-5 pb-5 textnormal'>Analytics</h1>
       </div>
+      
       <div className="mt-4 rounded-top ">
         <h5 className='pb-3 ms-4 textbold'>Ongoing Tournament</h5>
-        <Table columns={columns}/>
+        <div className="container">    
+        <Table columns={columns} filteredData={data}/>
       </div>
+    </div>
     </div>
   )
 }

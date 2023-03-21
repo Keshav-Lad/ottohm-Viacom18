@@ -32,7 +32,7 @@ const Calander = (props) => {
       initialView="dayGridMonth"
       height={props.height}
       headerToolbar={headerToolbarOptions}
-      headerToolbarClassNames="my-header-toolbar"
+      
       events={[
         { title: "event 1", date: "2023-03-12" },
         { title: "event 2", date: "2023-03-12" },

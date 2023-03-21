@@ -1,16 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Table from "../common/table";
 import "./users.css";
 import { useNavigate } from "react-router";
 import Button from "../common/button";
 import constants from "../../utils/constants.json";
+import GetData from "../../utils/apicalls/get";
+
 
 const Index=()=>{
   const navigate=useNavigate();
+
+  const [data,setData]=useState([]);
+
+  const[searchQuery,setSearchQuery]=("");
+  
+  const [isdata,setisData]=useState(false);
+
+  useEffect(()=>{
+      getData();
+      
+      console.log("hhhhhh");
+
+  },[])
+
+  // api function
+  const getData=()=>{
+
+    //calling common  GetData Function and passing url suffix as a parameter
+    GetData("users")
+    .then((res)=>{
+      setData(res.Tabledata);
+      
+      console.log(res.data.Tabledata)
+      if(data.length===0){
+        setisData(true);
+      }
+    })
+    .catch((err)=>{
+      console.log(err);
+    })
+  }
+
+  // Table headers
     const columns = [
         {
           name: "User ID",
-          selector: row => row.TournamentID,
+          selector: row => row.UserID,
           sortable: true,
           style: {
             width: "90px",
@@ -18,7 +53,7 @@ const Index=()=>{
         },
         {
           name: "User Name",
-          selector: row => row.TournamentID,
+          selector: row => row.UserName,
           sortable: true,
           style: {
             width: "90px",
@@ -26,7 +61,7 @@ const Index=()=>{
         },
         {
           name: "Added On",
-          selector: row => row.TournamentDate,
+          selector: row => row.AddedOn,
           sortable: true,
           style: {
             width: "90px",
@@ -34,18 +69,10 @@ const Index=()=>{
         },
         {
           name: "User Role",
-          selector: row => row.TournamentName,
+          selector: row => row.UserRole,
           sortable: true,
           style: {
             width: "120px",
-          },
-        },
-        {
-          name: "Created on",
-          selector: row => row.CreatedBy,
-          sortable: true,
-          style: {
-            width: "90px",
           },
         },
         {
@@ -75,7 +102,27 @@ const Index=()=>{
           
         </div>
       </div>
-      <Table columns={columns}/>
+    
+      <div className="row">
+        <div className="col-md-6"></div>
+        <div className="col-md-3 mt-2"></div>
+          <div className="col-md-3 pe-4 mt-2">
+            {/* loading input based on table data */}
+              {isdata?(
+                 <input
+                 type="text"
+                 className="form-control textnormal rounded-5"
+                 placeholder="Search"
+                 value={searchQuery}
+                 onChange={(e) => setSearchQuery(e.target.value)}
+             />
+              ):""}
+             
+              </div>
+        
+    </div>
+   
+      <Table columns={columns} filteredData={data}/>
     </div>
     )
 }
