@@ -101,7 +101,7 @@ const Addteam = () => {
           <div className="col-md-2">
             <Button
               text="Add Team"
-              className="btn form-control secondary-btn  mt-4 textboldbtn"
+              className="btn form-control secondary-btn btn-tablet-view mt-4 textboldbtn"
             />
           </div>
         </div>

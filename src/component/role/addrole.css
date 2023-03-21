@@ -16,9 +16,9 @@ textarea {
 .btn-bordered {
   border: 1px solid black;
 }
-.btn-style{
+.btn-style {
   border: none;
-  background-color:#ffffff;
+  background-color: #ffffff;
 }
 /* .btn-sizing{
   min-width:160px;
@@ -28,8 +28,53 @@ textarea {
   /* border: 1px black solid;
  border-radius: 100px !important; */
 
-.table-header{
+.table-header {
   background-color: #2e3192;
   color: #ffffff;
   font: normal normal bold 14px Gotham;
+}
+@media screen and (width<=768px) and (width>540px) {
+  .btn-addrole-createrole-tablet-view {
+    margin-left: 50px;
+    width: 150px;
+  }
+}
+@media screen and (width: 820px) {
+  .btn-addrole-createrole-tablet-view {
+    margin-left: 50px;
+    width: 150px;
+  }
+}
+@media screen and (width: 912px) {
+  .btn-addrole-createrole-tablet-view {
+    margin-left: 50px;
+    width: 150px;
+  }
+}
+@media screen and (width: 1024px) {
+  .btn-addrole-createrole-tablet-view {
+    margin-left: 50px;
+    width: 150px;
+  }
+}
+
+@media screen and (width<=768px) and (width>540px) {
+  .btn-addrole-cancel-tablet-view {
+    width: 150px;
+  }
+}
+@media screen and (width: 820px) {
+  .btn-addrole-cancel-tablet-view {
+    width: 150px;
+  }
+}
+@media screen and (width: 912px) {
+  .btn-addrole-cancel-tablet-view {
+    width: 150px;
+  }
+}
+@media screen and (width: 1024px) {
+  .btn-addrole-cancel-tablet-view {
+    width: 150px;
+  }
 }

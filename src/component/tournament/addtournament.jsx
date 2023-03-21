@@ -228,7 +228,7 @@ const Addtournament = () => {
             <div className="col-md-2">
               <Button
                 text="Create Schedule"
-                className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-for-tablet-view"
+                className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-createschedule-tablet-view"
               />
             </div>
             <div className="row">
@@ -255,7 +255,7 @@ const Addtournament = () => {
                 <div className="col-md-3 mt-2">
                   <Button
                     text="Create Tournament"
-                    className="btn secondary-btn mt-4 mb-4 form-control btn-for-tablet-view textboldbtn"
+                    className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-createschedule-tablet-view"
                   />
                 </div>
               </div>

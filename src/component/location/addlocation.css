@@ -1,1 +1,20 @@
-
+@media screen and (width<=768px) and (width>540px) {
+    .btn-addlocation-tablet-view{
+        width: 250px;
+    }
+}
+@media screen and (width:820px){
+    .btn-addlocation-tablet-view{
+        width: 250px;
+    }
+}
+@media screen and (width:912px) {
+    .btn-addlocation-tablet-view{
+        width: 250px;
+    }
+}
+@media screen and (width:1024px) {
+    .btn-addlocation-tablet-view{
+        width: 250px;
+    }
+}

@@ -70,9 +70,9 @@ const Index =() => {
   return (
     <div className='container mt-3' >
 
-      <p className='fs-6 textbold'>DashBoard</p>
+      <h5 className=' textbold'>DashBoard</h5>
       <div className='row'>
-        <div className="col-md-3 mb-2 ">
+        <div className="col-md-3 mb-2 mt-1">
           <Card title="Total Tournament" subtitle="80,000"/>
         </div>
         <div className="col-md-3 mb-2 ">

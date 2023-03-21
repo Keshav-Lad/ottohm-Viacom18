@@ -123,14 +123,14 @@ const Addrole = () => {
           <div className="col-md-2 ">
             <Button
               text="Cancel"
-              className="btn secondary-btn form-control mb-2 btn-sizing textbold"
+              className="btn secondary-btn form-control mb-2 btn-sizing textbold btn-addrole-cancel-tablet-view"
               onClick={() => navigate("/roles")}
             />
           </div>
           <div className="col-md-2">
             <Button
               text="Create Role"
-              className="btn primary-btn form-control mb-2 btn-sizing textboldbtn "
+              className="btn primary-btn form-control mb-2 btn-sizing textboldbtn btn-addrole-createrole-tablet-view"
             />
           </div>
         </div>

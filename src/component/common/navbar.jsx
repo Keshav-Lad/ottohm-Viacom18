@@ -55,9 +55,9 @@ const Navbar = () => {
               <img className="" src={Notification} alt="Notification" />
             </button>
             <div className="dropdown-menu notification-dropdown-menu dropdown-menu-end fade">
-              <p className="dropdown-item list-items-dropdown textnormal"><img className="me-2" src={GroupNotification} alt="notification"/>Job 10 has been terminated <span className="date-time-notification">{dateTimeString}</span></p>
-              <p className="dropdown-item list-items-dropdown textnormal"><img className="me-2" src={GroupNotification} alt="notification"/>Job 7 has been pushed <span className="date-time-notification">{dateTimeString}</span></p>
-              <p className="dropdown-item list-items-dropdown textnormal"><img className="me-2" src={GroupNotification} alt="notification"/>Created by Admin <span className="date-time-notification">{dateTimeString}</span></p>
+              <p className="dropdown-item list-items-dropdown textnormal"><img className="me-2" src={GroupNotification} alt="notification"/>Job 10 has been terminated <span className="date-time-notification textnormal">{dateTimeString}</span></p>
+              <p className="dropdown-item list-items-dropdown textnormal"><img className="me-2" src={GroupNotification} alt="notification"/>Job 7 has been pushed <span className="date-time-notification textnormal">{dateTimeString}</span></p>
+              <p className="dropdown-item list-items-dropdown textnormal"><img className="me-2" src={GroupNotification} alt="notification"/>Created by Admin <span className="date-time-notification textnormal">{dateTimeString}</span></p>
             </div>
 
           </div>

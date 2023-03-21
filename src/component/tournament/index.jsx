@@ -70,12 +70,12 @@ const Index=()=>{
       <div className="container rounded-3 mt-3">
       <div className="row ms-2 me-2 ">
         
-        <div className="col-md-6  ps-3">
-          <p className="textbold" >Tournaments</p>
+        <div className="col-md-10  ps-3">
+          <h5 className="textbold" >Tournaments</h5>
         </div>
-        <div className="col-md-4"></div>
-        <div className="col-md-2  pe-4 btn-handle">
-        <Button text="Create Tournament"className="form-control btn primary-btn textboldbtn" onClick={() => navigate(constants.addtournament)}></Button>
+        {/* <div className="col-md-2"></div> */}
+        <div className="col-md-2 d-flex justify-content-end btn-handle">
+        <Button text="Create Tournament"className="form-control btn primary-btn textboldbtn btn-tablet-index-tournaments-btn-view" onClick={() => navigate(constants.addtournament)}></Button>
           
         </div>
       </div>

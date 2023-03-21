@@ -29,27 +29,27 @@ const Index=()=> {
                 <div className='mt-5'>
                     <img src={""} alt="" />
                 </div>
-                <div className='mt-2'>
+                <div className='mt-2 textbold'>
                     <p id="login-title" className='ms-5'>Login</p>
-                    <p id="h5-text" className='ms-5 mb-1'>Welcome,</p>
-                    <p id="h5-text" className='ms-5 mb-3'>Please Login to your account</p>
+                    <p id="h5-text" className='ms-5 mb-1 textnormal'>Welcome,</p>
+                    <p id="h5-text" className='ms-5 mb-3 textnormal'>Please Login to your account</p>
                 </div>
                
                <form>
                 <div>
-                    <h3 id="text-style" className='mt-4 ms-5'>Email ID</h3>
+                    <h3 id="text-style" className='mt-4 ms-5 textnormal'>Email ID</h3>
                     <input type="email" id='input-fields' className='w-75 ps-3 ms-5 form-control' placeholder='Enter Email ID'></input>
                 </div>
                     <div>
-                    <h3 id="text-style" className='mt-4 ms-5'>Password</h3>
+                    <h3 id="text-style" className='mt-4 ms-5 textnormal'>Password</h3>
                     <input type="password" id='input-fields2' className='w-75 ps-3 ms-5 form-control' placeholder='Enter Password'></input>
                    
                 </div>
                 <div className='mt-3'>
                     {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                    <a id="f-pass" className='text-wrap' href='#'>Forget Password ?</a>
+                    <a id="f-pass" className='text-wrap textnormal' href='#'>Forget Password ?</a>
                 </div>
-                <Button  id="btn-setting" className="btn w-75 text-light ms-5 mt-4" onClick={handleRequest} text="Login"></Button>
+                <Button  id="btn-setting" className="btn w-75 text-light ms-5 mt-4 textboldbtn" onClick={handleRequest} text="Login"></Button>
                 </form>
             </div>
         </div>

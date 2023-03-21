@@ -13,7 +13,7 @@ const DashBoardTable = (props) => {
 
   useEffect(() => {
     console.log("hello from use")
-    getData();
+    // getData();
     // putData();
     // postData();
     // patchData();
@@ -89,7 +89,7 @@ const DashBoardTable = (props) => {
     <div className="row">
         <div className="col-md-8"></div>
         <div className="col-md-4 mt-2">
-          <div className="mb-3 pe-3">
+          <div className="mb-3 pe-2">
               
               <input
                   type="text"

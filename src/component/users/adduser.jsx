@@ -106,7 +106,7 @@ const Adduser = () => {
           <div className="col-md-2">
             <Button
               text="Add User"
-              className="btn form-control secondary-btn mt-4"
+              className="btn form-control secondary-btn mt-4 btn-tablet-adduser-view"
             />
           </div>
         </div>
