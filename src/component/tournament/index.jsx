@@ -1,13 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import Table from "../common/table";
 import "./tournament.css";
 import Button from "../common/button";
 import constants from "../../utils/constants.json";
+import GetData from "../../utils/apicalls/get";
 
 const Index=()=>{
   
   const navigate=useNavigate();
+  const [data,setData]=useState([]);
+  const [searchQuery,setSearchQuery]=useState("");
+  const [isdata,setisData]=useState(false);
+
+  useEffect(()=>{
+    getData();
+  },[])
+
+  const getData=()=>{
+   
+    GetData("tournament")
+    .then((res) => {
+     
+      setData(res.data.Tabledata)
+      if(data.length===0){
+        setisData(true);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+    };
+
+    const filteredData =data.filter((d) =>      
+    Object.values(d)
+        .join(" ")
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase())
+    ); 
+
+  
     const columns = [
         {
           name: "Sr.No",
@@ -73,13 +105,31 @@ const Index=()=>{
         <div className="col-md-6  ps-3">
           <p className="textbold" >Tournaments</p>
         </div>
-        <div className="col-md-4"></div>
-        <div className="col-md-2  pe-4 btn-handle">
+        <div className="col-md-3"></div>
+        <div className="col-md-3  pe-4 btn-handle">
         <Button text="Create Tournament"className="form-control btn primary-btn textboldbtn" onClick={() => navigate(constants.addtournament)}></Button>
           
         </div>
       </div>
-      <Table columns={columns} componentCall={TournamentComponentLoad}/>
+      <div className="row">
+        <div className="col-md-6"></div>
+        <div className="col-md-3 mt-2"></div>
+          <div className="col-md-3 pe-5 mt-2">
+              
+          {isdata?(
+                 <input
+                 type="text"
+                 className="form-control textnormal rounded-5"
+                 placeholder="Search"
+                 disabled={isdata}
+                 value={searchQuery}
+                 onChange={(e) => setSearchQuery(e.target.value)}
+             />
+              ):""}
+              </div>
+        
+    </div>
+      <Table columns={columns} componentCall={TournamentComponentLoad} filteredData={filteredData}/>
     </div>
     );
 

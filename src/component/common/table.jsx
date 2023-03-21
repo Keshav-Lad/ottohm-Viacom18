@@ -1,39 +1,17 @@
-import React, { useState, useEffect } from "react";
+
 import DataTable,{defaultThemes} from "react-data-table-component";
 import { FormCheck } from "react-bootstrap";
 import "./Css/table.css";
-import GetData from "../../utils/apicalls/get";
+
+import  '../../utils/fonts/GothamBold.ttf';
+import  '../../utils/fonts/GothamBook.ttf';
 
 
 const DashBoardTable = (props) => {
 
-  const [data, setData] = useState([]);
-  const [searchQuery, setSearchQuery] = useState("");
-
-
-  useEffect(() => {
-    console.log("hello from use")
-    getData();
-    // putData();
-    // postData();
-    // patchData();
-    // deleteData();
-    },[]);
-
-    const getData=()=>{
-        console.log("In Table Componenet")
-        GetData()
-        .then((res) => {
-          console.log(res.data.Tabledata);
-          setData(res.data.Tabledata)
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-        };
     const customStyles = {
       table: {
-        fontFamily: "Gotham",
+        fontFamily:'GothamBold',
       },
       headRow: {
         style: {
@@ -42,7 +20,7 @@ const DashBoardTable = (props) => {
           borderTopStyle: "solid",
           borderTopWidth: "1px",
           borderTopColor: defaultThemes.default.divider.default,
-          font: "normal normal bold 14px Gotham",
+          font: 'GothamBold'
         },
       },
       headCells: {
@@ -51,7 +29,7 @@ const DashBoardTable = (props) => {
             borderRightStyle: "solid",
             borderRightWidth: "1px",
             borderRightColor: defaultThemes.default.divider.default,
-            font: "normal normal bold 14px Gotham",
+            font: "GothamBold",
           },
         },
       },
@@ -76,35 +54,12 @@ const DashBoardTable = (props) => {
         },
       },
     ];
-    const filteredData =data.filter((d) =>
-      Object.values(d)
-        .join(" ")
-        .toLowerCase()
-        .includes(searchQuery.toLowerCase())
-    );
- 
   return (
        
-    <div className="container">
-    <div className="row">
-        <div className="col-md-8"></div>
-        <div className="col-md-4 mt-2">
-          <div className="mb-3 pe-3">
-              
-              <input
-                  type="text"
-                  className="form-control textnormal rounded-5"
-                  placeholder="Search"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              </div>
-        </div>
-    </div>
-<div className="container table-responsive rounded-top">
+<div className="container table-responsive rounded-top mt-2">
           <DataTable
             columns={props.columns}
-            data={filteredData}
+            data={props.filteredData}
             pagination
             paginationPerPage={10}
             paginationRowsPerPageOptions={[10, 20, 30]}
@@ -120,7 +75,7 @@ const DashBoardTable = (props) => {
             selectableRowsComponent={FormCheck}
             />
           </div>
-          </div>
+        
   );
 };
 

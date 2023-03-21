@@ -12,9 +12,11 @@ import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
 import { useState, useEffect, useMemo } from "react";
-
+import GetData from "../../utils/apicalls/get";
 const Addtournament = () => {
   const navigate = useNavigate();
+
+  const [data, setData]=useState([]);
 
   const [noOfTeams, setnoOfTeams] = useState([]);
   const [noOfGroup, setnoOfGroup] = useState([]);
@@ -24,6 +26,22 @@ const Addtournament = () => {
   const [endDate, setEndDate] = useState([]);
   const [city, setCity] = useState([]);
 
+  useEffect(() => {
+
+    getData();
+    console.log("hello")
+
+    },[]);
+    const getData=()=>{
+      GetData("standings")
+      .then((res) => {
+        setData(res.data.Tabledata)
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+    };
+   
   const noOfTeamsDropdownData = useMemo(
     () => ["team 1", "team 2", "team 3", "team 4", "team 5"],
     []
@@ -82,6 +100,81 @@ const Addtournament = () => {
     endDateDropdownData,
     cityDropdownData,
   ]);
+
+  const columns = [
+    {
+      name: "Teams",
+      selector: row => row.Teams,
+      sortable: true,
+      style: {
+        width: "90px",
+      },
+    },
+    {
+      name: "Groups",
+      selector: row => row.Groups,
+      sortable: true,
+      style: {
+        width: "90px",
+      },
+    },
+    {
+      name: "P",
+      selector: row => row.P,
+      sortable: true,
+      style: {
+        width: "90px",
+      },
+    },
+    {
+      name: "W",
+      selector: row => row.W,
+      sortable: true,
+      style: {
+        width: "90px",
+      },
+    },
+    {
+      name: "L",
+      selector: row => row.L,
+      sortable: true,
+      style: {
+        width: "90px",
+      },
+    },
+    {
+      name: "PCT",
+      selector: row => row.PCT,
+      sortable: true,
+      style: {
+        width: "90px",
+      },
+    },
+     {
+      name: "RF",
+      selector: row => row.Rf,
+      sortable: true,
+      style: {
+        width: "90px",
+      },
+    },
+      {
+        name: "RA",
+        selector: row => row.RA,
+        sortable: true,
+        style: {
+          width: "90px",
+        },
+      },
+      {
+        name: "RD",
+        selector: row => row.RD,
+        sortable: true,
+        style: {
+          width: "90px",
+        },
+      },  
+  ];
   return (
     <div className="container ps-4  mt-3">
       <div className="row">
@@ -233,7 +326,7 @@ const Addtournament = () => {
                 </span>
               </div>
             </div>
-            {/* <label htmlFor="locationID">Upload Team Details</label> */}
+            
             <div className="row">
                 <div className="col-md-11">
                 <Dropzone />
@@ -248,8 +341,9 @@ const Addtournament = () => {
               />
             </div>
             <div className="row">
+              <p className="textbold ms-3">Standings</p>
               <div className="col-md-11">
-                <Table/>
+                <Table columns={columns} filteredData={data}/>
               </div>
             </div>
 
