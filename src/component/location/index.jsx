@@ -106,7 +106,7 @@ const Index = () => {
         <h5 className="textbold">Location</h5>
       </div>
       {/* <div className="col-md-4 "></div> */}
-      <div className="col-md-2 d-flex justify-content-end pe-4">
+      <div className="col-md-2 d-flex justify-content-end pe-2">
       <Button text="Add Location"className="form-control btn primary-btn textboldbtn btn-tablet-index-location-btn-view" onClick={() => navigate(constants.addlocation)}/>
         
       </div>

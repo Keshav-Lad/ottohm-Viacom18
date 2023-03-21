@@ -114,7 +114,7 @@ const Index=()=>{
       <div className="row">
         <div className="col-md-6"></div>
         <div className="col-md-3 mt-2"></div>
-          <div className="col-md-3 pe-5 mt-2">
+          <div className="col-md-3 pe-4 mt-2">
               
           {isdata?(
                  <input

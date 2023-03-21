@@ -38,12 +38,7 @@ const Index=()=>{
       console.log(err);
     })
   }
-  const filteredData =data.filter((d) =>      
-  Object.values(d)
-      .join(" ")
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase())
-  ); 
+
   // Table headers
     const columns = [
         {
@@ -99,7 +94,7 @@ const Index=()=>{
           <h5 className="textbold">User</h5>
         </div>
         {/* <div className="col-md-4 "></div> */}
-        <div className="col-md-2 d-flex justify-content-end pe-4">
+        <div className="col-md-2 d-flex justify-content-end pe-2">
         <Button text="Add User"className="form-control btn primary-btn textboldbtn btn-tablet-index-user-btn-view" onClick={() => navigate(constants.adduser)}></Button>
      
           
