@@ -18,8 +18,6 @@ const Index=()=>{
 
   useEffect(()=>{
       getData();
-      
-      console.log("hhhhhh");
 
   },[])
 
@@ -29,7 +27,7 @@ const Index=()=>{
     //calling common  GetData Function and passing url suffix as a parameter
     GetData("users")
     .then((res)=>{
-      setData(res.Tabledata);
+      setData(res.data.Tabledata);
       
       console.log(res.data.Tabledata)
       if(data.length===0){
@@ -40,7 +38,12 @@ const Index=()=>{
       console.log(err);
     })
   }
-
+  const filteredData =data.filter((d) =>      
+  Object.values(d)
+      .join(" ")
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase())
+  ); 
   // Table headers
     const columns = [
         {
