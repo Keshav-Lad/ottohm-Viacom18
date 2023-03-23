@@ -11,6 +11,9 @@ import {
   refreshMessage,
   resetCounter,
 } from "../../utils/reducer/notificationreducer";
+import Arrow from "../../utils/icons/Arrow.svg";
+import { useState } from "react";
+import classnames from "classnames";
 
 const Navbar = () => {
   const messages = useSelector((state) => state.notification.message);
@@ -33,6 +36,13 @@ const Navbar = () => {
     dispatch(refreshMessage());
     dispatch(resetCounter());
   };
+
+  const [isDropdownOpen, setisDropdownOpen] = useState(false);
+
+  const toggleButtonViewer = () => {
+    setisDropdownOpen(!isDropdownOpen);
+  };
+
   // const isMobileView = window.innerWidth < 768;
   const currentDate = new Date();
   const dateTimeString = currentDate.toLocaleString("en-US", {
@@ -114,24 +124,28 @@ const Navbar = () => {
                   <span className="ms-2">
                     <img className="icon " src={Newuser} alt="User" />
                   </span>
-                  <label className="ps-2">
-                    John Doe
-                  </label>
+                  <label className="ps-2">John Doe</label>
                   <br />
                   <span className="ms-5">
-                    <label>
-                      Admin
-                    </label>
+                    <label className="user-name">Admin</label>
                   </span>
                   <div className="btn-group ps-2 ">
                     <button
-                      className="border-0 dropdown-toggle dropdown"
+                      className="border-0 dropdown"
                       type="button"
                       id="dropdownMenu2"
                       data-bs-toggle="dropdown"
                       data-bs-auto-close="true"
                       aria-expanded="false"
-                    ></button>
+                      onClick={toggleButtonViewer}
+                      //onBlurCapture={toggleButtonViewer}
+                    >
+                      <img
+                        src={Arrow}
+                        alt=""
+                        className={classnames({ "arrow-img": isDropdownOpen })}
+                      />
+                    </button>
                     <ul
                       className="dropdown-menu dropdown-menu-end"
                       aria-labelledby="dropdownMenu2"

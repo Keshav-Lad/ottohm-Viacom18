@@ -351,7 +351,7 @@ const Addtournament = () => {
             <div className="col-md-2">
               <Button
                 text="Create Schedule"
-                className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-createschedule-tablet-view"
+                className="btn secondary-btn mt-4 mb-4 form-control textSecondryBtn btn-createschedule-tablet-view"
                 onClick={handleNotificationForCreateSchedule}
               />
             </div>
@@ -381,7 +381,7 @@ const Addtournament = () => {
                 <div className="col-md-3 mt-2">
                   <Button
                     text="Create Tournament"
-                    className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-createschedule-tablet-view"
+                    className="btn secondary-btn mt-4 mb-4 form-control textSecondryBtn btn-createschedule-tablet-view"
                     onClick={handleNotificationForCreateTournament}
                   />
                 </div>

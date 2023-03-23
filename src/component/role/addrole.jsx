@@ -131,7 +131,7 @@ const Addrole = () => {
           <div className="col-md-2 ">
             <Button
               text="Cancel"
-              className="btn secondary-btn form-control mb-2 btn-sizing textbold btn-addrole-cancel-tablet-view"
+              className="btn secondary-btn form-control mb-2 btn-sizing textSecondryBtn btn-addrole-cancel-tablet-view"
               onClick={() => navigate("/roles")}
             />
           </div>

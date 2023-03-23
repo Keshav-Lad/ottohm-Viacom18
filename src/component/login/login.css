@@ -90,4 +90,8 @@ border-radius: 4px;
     opacity: 1;
 }
 
-
+@media screen and (width<768px) {
+    .forgot-pass{
+        padding-left: 52px;
+    }
+}

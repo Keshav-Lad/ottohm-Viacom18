@@ -40,7 +40,7 @@ const Index = () => {
           ""
         )}
         <div
-          className={isMobile ? "col-md-12  ms-2 pt-5" : "col-sm-6"}
+          className={isMobile ? "col-md-12  pt-5" : "col-sm-6"}
           id="right-part"
         >
           <div className="container mt-5">
@@ -88,8 +88,8 @@ const Index = () => {
               </div>
               <div className="row">
                 <div className="col-md-7"></div>
-                <div className="col-md-4 pt-2">
-                  <a id="f-pass" className="text-wrap textmedium" href="#">
+                <div className="col-md-4 pt-3 forget-pass-div">
+                  <a id="f-pass" className="text-wrap textmedium forgot-pass" href="#">
                     Forget Password ?
                   </a>
                 </div>
