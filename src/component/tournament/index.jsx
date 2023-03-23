@@ -121,7 +121,6 @@ const Index=()=>{
                  type="text"
                  className="form-control textnormal rounded-5"
                  placeholder="Search"
-                 disabled={isdata}
                  value={searchQuery}
                  onChange={(e) => setSearchQuery(e.target.value)}
              />

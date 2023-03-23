@@ -67,14 +67,14 @@ const Navbar = () => {
                   <span className="ms-2">
                     <img className="icon " src={Newuser} alt="User" />
                   </span>
-                  <a className="ps-2 navbar-brand  fs-5" href="/">
+                  <label className="ps-2">
                     John Doe
-                  </a>
+                  </label>
                   <br />
                   <span className="ms-5">
-                    <a className="navbar-brand  fs-6" href="/">
+                    <label>
                       Admin
-                    </a>
+                    </label>
                   </span>
                   <div className="btn-group ps-2">
                     <button

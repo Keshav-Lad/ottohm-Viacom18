@@ -12,7 +12,7 @@ const Index=()=>{
 
   const [data,setData]=useState([]);
 
-  const[searchQuery,setSearchQuery]=("");
+  const[searchQuery,setSearchQuery]=useState("");
   
   const [isdata,setisData]=useState(false);
 
@@ -38,6 +38,12 @@ const Index=()=>{
       console.log(err);
     })
   }
+  const filteredData=data.filter((d) =>      
+  Object.values(d)
+      .join(" ")
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase())
+  ); 
 
   // Table headers
     const columns = [
@@ -120,7 +126,7 @@ const Index=()=>{
         
     </div>
    
-      <Table columns={columns} filteredData={data}/>
+      <Table columns={columns} filteredData={filteredData}/>
     </div>
     )
 }

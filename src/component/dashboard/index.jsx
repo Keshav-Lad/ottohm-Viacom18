@@ -78,16 +78,18 @@ const Index =() => {
     },
     {
       name: "Action",
+      selector: row => row.CreatedOn,
+      sortable: true,
       cell: () => (
         <div>
-            {/* <button className="btn"><img src={Eye} alt="Eye"/></button>
-            <button className="btn"><img src={Edit} alt="Edit"/></button> */}
+           <h5>-</h5>
         </div>
       ),
       style: {
         width: "90px",
       },
     },
+
   ];
 
   return (

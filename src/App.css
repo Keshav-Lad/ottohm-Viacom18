@@ -19,22 +19,22 @@ main{
   width: 100%;
 }
 .textnormal{
-  font-family: 'GothamBook' !important;
+  font:15px'GothamBook' !important;
   letter-spacing: 0px;
   color: #000000; 
 }
 .textbold{
-  font-family: 'GothamBold' !important;
+  font:15px 'GothamBold' !important;
   letter-spacing: 0px;
-  color: #000000; 
+  color: #2e3192; 
 }
 .textmedium{
-  font-family: 'GothamMedium' !important;
+  font:15px 'GothamMedium' !important;
   letter-spacing: 0px;
   color: #000000; 
 }
 .textboldbtn{
-  font-family: 'GothamMedium' !important;
+  font:13px 'GothamMedium' !important;
   font-weight:100;
   letter-spacing: 0px;
   color: #ffffff; 
@@ -58,31 +58,10 @@ main{
   
   border-color: #2e3192 !important;
 }
-/* for create tournament page */
+
 label{
-  font-family: 'GothamMedium' !important;
-  color: #000000;
+  font:13px 'GothamBold';
 }
-a1{
-  color: #000000;
-  font: normal normal normal 16px/19px Gotham;
-  font-weight: 600;
-  /* text-align: left;
-  justify-content: left; */
-}
-a2{
-  color: #000000;
-  font: normal normal normal 12px/16px Gotham;
-  /* text-align: left;
-  justify-content: left; */
-}
-/* for breadcrumb */
-span{
-  color: #000000;
-  font: normal normal normal 16px/19px Gotham;
-}
-
-
 @media (max-width: 768px) {
   .container-2 {
     z-index: 1;
