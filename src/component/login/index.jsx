@@ -5,12 +5,14 @@ import "./login.css";
 import constants from "../../utils/constants.json";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Display } from "react-bootstrap-icons";
 
 
 const Index = () => {
   const navigate = useNavigate();
   //for mobile view
   const [isMobile, setisMobile] = useState(false);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
@@ -76,15 +78,13 @@ const Index = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        {!isMobile ? (
+        
           <div className="col-md-6" id="main-container">
             <div className="justify-content-center">
               {/* <img src={im} className='img-thumbnail mx-auto d-block' id='manage-img' alt='img-content' ></img> */}
             </div>
           </div>
-        ) : (
-          ""
-        )}
+        
         <div
           className={isMobile ? "col-md-12  pt-5" : "col-sm-6"}
           id="right-part"
@@ -93,14 +93,14 @@ const Index = () => {
             <div className="mt-5">
               <img src={""} alt="" />
             </div>
-            <div className="mt-5 textbold">
-              <p id="login-title" className="ms-5">
+            <div className="mt-5">
+              <p className="login-title ms-5">
                 Login
               </p>
-              <p id="h5-text" className="ms-5 mb-1 textnormal">
+              <p className="ms-5 mb-1 h5-text">
                 Welcome,
               </p>
-              <p id="h5-text" className="ms-5 mb-3 textnormal">
+              <p  className="ms-5 mb-1 h5-text">
                 Please Login to your account
               </p>
             </div>
@@ -108,13 +108,13 @@ const Index = () => {
             <form onSubmit={(e)=> e.preventDefault()}>
               <div className="row">
                 <div className="col-md-12">
-                  <h3 id="text-style" className="mt-4 ms-5 textnormal">
+                  <p className="mt-4 ms-5 text-style">
                     Email ID
-                  </h3>
+                  </p>
                   <input
                     type="email"
-                    id="input-fields"
-                    className="w-75 ps-3 ms-5 form-control"
+                  
+                    className="w-75 ps-3 ms-5 form-control input-fields"
                     placeholder="Enter Email ID"
                     onChange={(e)=>setEmail(e.target.value)}
                   ></input>
@@ -126,13 +126,12 @@ const Index = () => {
               </div>
               <div className="row">
                 <div className="col-md-12">
-                  <h3 id="text-style" className="mt-4 ms-5 textnormal">
+                  <p  className="mt-4 ms-5 text-style">
                     Password
-                  </h3>
+                  </p>
                   <input
                     type="password"
-                    id="input-fields2"
-                    className="w-75 ps-3 ms-5 form-control"
+                    className="w-75 ps-3 ms-5 form-control  input-fields"
                     placeholder="Enter Password"
                     onChange={(e)=>setPassword(e.target.value)}
                   ></input>
@@ -144,7 +143,7 @@ const Index = () => {
               <div className="row">
                 <div className="col-md-7"></div>
                 <div className="col-md-4 pt-3 forget-pass-div">
-                  <a id="f-pass" className="text-wrap textmedium forgot-pass" href="#">
+                  <a  className="text-wrap textmedium forgot-pass" href="#">
                     Forget Password ?
                   </a>
                 </div>

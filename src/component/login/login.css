@@ -1,3 +1,15 @@
+@font-face{
+    font-family: 'GothamBold';
+    src: url('../../utils/fonts/GothamBold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'GothamBook';
+    src: url('../../utils/fonts/GothamBook.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'GothamMedium';
+    src: url('../../utils/fonts/GothamMedium.ttf') format('truetype');
+  }
 #main-container {
     background:#2e3192;
     border: 1px solid #00000000;
@@ -18,24 +30,23 @@
     opacity: 1;
 }
 
-#login-title {
-/* font: normal normal bold 27px/70px Gotham; */
-font-size: 27px;
+.login-title {
+font: 27px 'GothamBold'!important;
 letter-spacing: 0px;
 color: #069DC5;
 opacity: 1;
 }
 
-#h5-text {
-    font: normal normal normal 18px/22px Gotham;
+.h5-text {
+    font:15px'GothamMedium';
     letter-spacing: 0px;
     color: #A7A7A7;
     opacity: 1;
     
 }
 
-#text-style {
-    font: normal normal 600 14px/21px Gotham;
+.text-style {
+font: 14px 'GothamBold';
 letter-spacing: 0px;
 color: #A7A7A7;
 opacity: 1;
@@ -59,9 +70,9 @@ border-radius: 4px;
 }
 
 #input-fields2 {
-    font: normal normal normal 14px/20px Gotham;
+    font: 14px 'GothamBook';
     letter-spacing: 0px;
-    color: #A7A7A7;
+    color: black;
     opacity: 1;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #DCDCDC;
@@ -95,3 +106,8 @@ border-radius: 4px;
         padding-left: 52px;
     }
 }
+@media screen and (max-width: 920px) {
+    #main-container{
+        display:none;
+    }
+  }
