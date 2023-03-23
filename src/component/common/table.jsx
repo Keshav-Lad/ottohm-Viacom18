@@ -41,6 +41,7 @@ const DashBoardTable = (props) => {
             borderRightWidth: "1px",
             borderRightColor: defaultThemes.default.divider.default,
             font:"12px GothamBook",
+            color:"#333333"
             
           },
         },
