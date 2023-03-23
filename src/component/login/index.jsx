@@ -3,11 +3,17 @@ import { useNavigate } from "react-router-dom";
 import Button from "../common/button";
 import "./login.css";
 import constants from "../../utils/constants.json";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Index = () => {
   const navigate = useNavigate();
   //for mobile view
   const [isMobile, setisMobile] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,9 +29,49 @@ const Index = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
+  const validateForm = () => {
+    const errors = {
+     
+    };
+    if (!email) {
+      errors.email = "Email is required";
+      console.log("in Email1");
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors.email = "Email is invalid";
+      console.log("in Email2");
+    }
+    if (!password) {
+      errors.password = "Password is required";
+      console.log("in password ");
+    }
+    setErrors(errors);
+    console.log("Ans "+Object.keys(errors).length === 0);
+    return Object.keys(errors).length === 0;
+  };
+
+
   const handleRequest = () => {
-    sessionStorage.setItem(constants.token, "Authorized");
-    navigate(constants.dashboard);
+    if (validateForm()) {
+        sessionStorage.setItem(constants.token, "Authorized");
+        
+        toast.success('Login Successfully !',{
+            position:toast.POSITION.TOP_RIGHT,
+            autoClose:3000,
+            
+            onClose:()=>setTimeout(()=>{navigate(constants.dashboard)},2000)
+        });
+      
+        
+
+      }
+      else{
+        toast.error('Login failed !',{
+            position:toast.POSITION.TOP_RIGHT,
+            autoClose:5000
+        });
+
+      }
   };
   return (
     <div className="container-fluid">
@@ -59,7 +105,7 @@ const Index = () => {
               </p>
             </div>
 
-            <form>
+            <form onSubmit={(e)=> e.preventDefault()}>
               <div className="row">
                 <div className="col-md-12">
                   <h3 id="text-style" className="mt-4 ms-5 textnormal">
@@ -70,7 +116,12 @@ const Index = () => {
                     id="input-fields"
                     className="w-75 ps-3 ms-5 form-control"
                     placeholder="Enter Email ID"
+                    onChange={(e)=>setEmail(e.target.value)}
                   ></input>
+                </div>
+                <div className="col-md-12">
+                {errors.email && <p className="text-danger ps-5">{errors.email}</p>}
+               
                 </div>
               </div>
               <div className="row">
@@ -83,7 +134,11 @@ const Index = () => {
                     id="input-fields2"
                     className="w-75 ps-3 ms-5 form-control"
                     placeholder="Enter Password"
+                    onChange={(e)=>setPassword(e.target.value)}
                   ></input>
+                </div>
+                <div className="col-md-12">
+                {errors.password && <p className="text-danger ps-5">{errors.password}</p>}
                 </div>
               </div>
               <div className="row">
@@ -102,6 +157,8 @@ const Index = () => {
                 onClick={handleRequest}
                 text="Login"
               ></Button>
+              <ToastContainer />
+
             </form>
           </div>
         </div>

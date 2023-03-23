@@ -11,6 +11,8 @@ import {
   refreshMessage,
   resetCounter,
 } from "../../utils/reducer/notificationreducer";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
   const messages = useSelector((state) => state.notification.message);
@@ -23,10 +25,9 @@ const Navbar = () => {
 
   const logout = () => {
     localStorage.setItem(constants.token, "");
-    alert("Logout Successfully");
-    navigate(constants.login);
     dispatch(refreshMessage());
     dispatch(resetCounter());
+    navigate(constants.login);
   };
 
   const resetNotifications = () => {
@@ -142,9 +143,10 @@ const Navbar = () => {
                         </button>
                       </li>
                       <li>
-                        <button className="dropdown-item" onClick={logout}>
+                        <button className="dropdown-item" onClick={logout} type="submit">
                           Logout
                         </button>
+                        <ToastContainer/>
                       </li>
                     </ul>
                   </div>
