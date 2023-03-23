@@ -7,8 +7,16 @@ import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
 import { useState, useEffect, useMemo } from "react";
+import { useDispatch } from "react-redux";
+import { newMessage, increaseNotificationCounter } from "../../utils/reducer/notificationreducer";
 
 const Adduser = () => {
+  const dispatch = useDispatch();
+  const message = 'User Created Succesfully  '
+  const handleNotification = ()=>{
+    dispatch(newMessage(message));
+    dispatch(increaseNotificationCounter());
+  }
   const navigate = useNavigate();
   //Created By
   const [createdByData, setCreatedByData] = useState([]);
@@ -46,7 +54,7 @@ const Adduser = () => {
         </div>
         <div className="col-md-1"></div>
       </div>
-      <form>
+      <form onSubmit={(e)=> e.preventDefault()}>
         <div>
           <div className="row mt-4">
             <div className="col-md-1"></div>
@@ -107,6 +115,7 @@ const Adduser = () => {
             <Button
               text="Add User"
               className="btn form-control secondary-btn mt-4 btn-tablet-adduser-view"
+              onClick={handleNotification}
             />
           </div>
         </div>

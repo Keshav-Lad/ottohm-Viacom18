@@ -13,9 +13,23 @@ import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
 import { useState, useEffect, useMemo } from "react";
 import GetData from "../../utils/apicalls/get";
+import { useDispatch } from "react-redux";
+import { increaseNotificationCounter, newMessage } from "../../utils/reducer/notificationreducer";
 const Addtournament = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const message1 = 'Schedule created Successfully  '
+  const message2 = 'Tournament created Successfully  '
 
+  const handleNotificationForCreateSchedule=()=>{
+    dispatch(newMessage(message1))
+    dispatch(increaseNotificationCounter())
+  }
+
+  const handleNotificationForCreateTournament=()=>{
+    dispatch(newMessage(message2));
+    dispatch(increaseNotificationCounter());
+  }
   const [data, setData]=useState([]);
 
   const [noOfTeams, setnoOfTeams] = useState([]);
@@ -338,6 +352,7 @@ const Addtournament = () => {
               <Button
                 text="Create Schedule"
                 className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-createschedule-tablet-view"
+                onClick={handleNotificationForCreateSchedule}
               />
             </div>
             <div className="row">
@@ -367,6 +382,7 @@ const Addtournament = () => {
                   <Button
                     text="Create Tournament"
                     className="btn secondary-btn mt-4 mb-4 form-control textboldbtn btn-createschedule-tablet-view"
+                    onClick={handleNotificationForCreateTournament}
                   />
                 </div>
               </div>

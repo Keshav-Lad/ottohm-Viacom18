@@ -7,30 +7,45 @@ import { PencilSquare } from "react-bootstrap-icons";
 import "./tournamentname.css";
 import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
-import constants from "../../utils/constants.json"
-import { useState,useEffect, useMemo } from "react";
+import constants from "../../utils/constants.json";
+import { useState, useEffect, useMemo } from "react";
 
 const Tournamentname = () => {
+  const navigate = useNavigate();
 
-  const navigate= useNavigate();
+  const [stadium, setStadium] = useState([]);
+  const [city, setCity] = useState([]);
 
-  const[stadium,setStadium]=useState([])
-  const[city, setCity]=useState([])
+  const stadiumData = useMemo(
+    () => ["stadium 1", "stadium 2", "stadium 3", "stadium 4"],
+    []
+  );
+  const cityDropdownData = useMemo(
+    () => ["city 1", "city 2", "city 3", "city 4", "city 5"],
+    []
+  );
 
-  const stadiumData = useMemo(() => ['stadium 1','stadium 2','stadium 3','stadium 4'], [])
-  const cityDropdownData = useMemo(() => ['city 1','city 2','city 3','city 4','city 5'], [])
-
-  useEffect(()=>{
-    setStadium(stadiumData)
-    setCity(cityDropdownData)
-  },[stadiumData,cityDropdownData])
+  useEffect(() => {
+    setStadium(stadiumData);
+    setCity(cityDropdownData);
+  }, [stadiumData, cityDropdownData]);
   return (
     <div className="container">
-      
-      <Breadcrumbs title="Tournaments" subtitle="Tournament Name" onClick={()=> navigate(constants.tournaments)}/>
-      
+      <div className="row">
+        <div className="col-md-1"></div>
+        <div className="col-md-10">
+          <Breadcrumbs
+            title="Tournaments"
+            subtitle="Tournament Name"
+            onClick={() => navigate(constants.tournaments)}
+          />
+        </div>
+        <div className="col-md-1"></div>
+      </div>
+
       <div className="row mt-4">
-        <div className="col-md-6">
+        <div className="col-md-1"></div>
+        <div className="col-md-5">
           <div className="row">
             <div className="col">
               <label htmlFor="locationID">Tournament ID</label>
@@ -51,124 +66,60 @@ const Tournamentname = () => {
               ></Textarea>
             </div>
           </div>
-
-          {/* <div className="row-md-5 tournament-details ">
-            <div className="col">
-              <div className="row">
-                <div className="col-md-2">
-                  <h6>Team 1</h6>
+          <div className="row-md-5 bg-info">
+            <div className="row">
+              <div className="col-md-6 ps-4">
+                <div className="row mt-2">
+                  <div className="col-md-4">
+                    <h6>Team 1</h6>
+                  </div>
+                  <div className="col-md-6">
+                    <Button
+                      className="btn btn-sm btn-primary view-button btn-tablet-tournamntname-view"
+                      text="View Team"
+                    />
+                  </div>
                 </div>
-                <div className="col-md-2">
-                  <Button
-                    className="btn btn-sm btn-primary view-button"
-                    text="View Team"
-                  />
+                <div className="row mt-2">
+                  <div className="col-md-4">
+                    <h6>Team 2</h6>
+                  </div>
+                  <div className="col-md-6">
+                    <Button
+                      className="btn btn-sm btn-primary view-button btn-tablet-tournamntname-view"
+                      text="View Team"
+                    />
+                  </div>
+                </div>
+                <div className="row mt-2 mb-2">
+                  <div className="col-md-4">
+                    <h6>Team 3</h6>
+                  </div>
+                  <div className="col-md-6">
+                    <Button
+                      className="btn btn-sm btn-primary view-button btn-tablet-tournamntname-view"
+                      text="View Team"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-2">
-                  <h6>Team 2</h6>
-                </div>
-                <div className="col-md-2">
-                  <Button
-                    className="btn btn-sm btn-primary view-button"
-                    text="View Team"
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-2">
-                  <h6>Match 1</h6>
-                </div>
-                <div className="col-md-2">
-                  <Button
-                    className="btn btn-sm btn-primary view-button"
-                    text="Details"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-md-2">
-              <div className="row mt-3">
-                <div className="col-md-2">
+              <div className="col-md-6 ps-4">
+                <div className="row mt-2">
                   <h6>Group A</h6>
                 </div>
-              </div>
-              <div className="row mt-3 mb-3">
-                <div className="col-md-4">
+                <div className="row mt-3">
                   <h6>Group B</h6>
                 </div>
-              </div>
-              <div className="row mt-4 mb-3">
-                <div className="col-md-4">
-                  <h6>Score</h6>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="row mt-5">
-                <div className="col-md-4">
-                  <h6>Note</h6>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-          <div className="row-md-5 bg-info">
-              <div className="row">
-                <div className="col-md-6 ps-4">
-                    <div className="row mt-2">
-                      <div className="col-md-4">
-                      <h6>Team 1</h6>
-                      </div>
-                      <div className="col-md-6">
-                      <Button
-                      className="btn btn-sm btn-primary view-button"
-                      text="View Team"
-                      />
-                      </div>
-                    </div>
-                    <div className="row mt-2">
-                      <div className="col-md-4">
-                      <h6>Team 2</h6>
-                      </div>
-                      <div className="col-md-6">
-                      <Button
-                    className="btn btn-sm btn-primary view-button"
-                    text="View Team"
-                  />
-                      </div>
-                    </div>
-                    <div className="row mt-2 mb-2">
-                      <div className="col-md-4">
-                      <h6>Team 3</h6>
-                      </div>
-                      <div className="col-md-6">
-                      <Button
-                    className="btn btn-sm btn-primary view-button"
-                    text="View Team"
-                  />
-                      </div>
-                    </div>
-                </div>
-                <div className="col-md-6 ps-4">
-                  <div className="row mt-2">
-                    <h6>Group A</h6>
+                <div className="row mt-3">
+                  <div className="col-md-6">
+                    <h6>Score</h6>
                   </div>
-                  <div className="row mt-3">
-                    <h6>Group B</h6>
-                  </div>
-                  <div className="row mt-3">
-                    <div className="col-md-6">
-                      <h6>Score</h6>
-                    </div>
-                    <div className="col-md-6">
+                  <div className="col-md-6">
                     <h6>Note</h6>
-                    </div>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
 
           <div className="row-md-5 bg-info mt-3 ">
@@ -231,9 +182,10 @@ const Tournamentname = () => {
           </div>
         </div>
 
-        <div className="col-md-6 mt-3 p-2 rounded-4  border mb-4 scrollable-calander">
-          <Calander height="650px"/>
+        <div className="col-md-5 mt-3 p-2 rounded-4  border mb-4 scrollable-calander">
+          <Calander height="650px" />
         </div>
+        <div className="col-md-1"></div>
       </div>
     </div>
   );
