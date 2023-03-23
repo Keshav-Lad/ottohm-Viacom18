@@ -7,9 +7,26 @@ import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
 import { useState, useEffect, useMemo } from "react";
-
+import { useDispatch, useSelector } from "react-redux";
+import { newMessage,increaseNotificationCounter } from "../../utils/reducer/notificationreducer";
 const Addteam = () => {
+
+  //add the new notification everytime clicked on add team button
+  const dispatch =useDispatch();
   const navigate = useNavigate();
+  const message = useSelector((state)=> state.notification.message)
+  const counterRedux = useSelector((state)=>state.notification.notificationCounter)
+  const notificationMessageView = 'Team Added Successfully '
+
+  const handleNotification = ()=>{
+    dispatch(newMessage(notificationMessageView));
+    dispatch(increaseNotificationCounter());
+  }
+
+  console.log(counterRedux);
+  console.log(message);
+
+  
   //Created By
   const [createdByData, setCreatedByData] = useState([]);
   const createdByDataDropdown = useMemo(
@@ -33,7 +50,7 @@ const Addteam = () => {
         </div>
         <div className="col-md-1"></div>
       </div>
-      <form>
+      <form onSubmit={(e)=> e.preventDefault()}>
         <div>
           <div className="row mt-4">
             <div className="col-md-1"></div>
@@ -102,6 +119,7 @@ const Addteam = () => {
             <Button
               text="Add Team"
               className="btn form-control secondary-btn btn-tablet-view mt-4 textboldbtn"
+              onClick={handleNotification}
             />
           </div>
         </div>

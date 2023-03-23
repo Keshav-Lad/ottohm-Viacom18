@@ -7,10 +7,18 @@ import Breadcrumbs from "../common/breadcrumb";
 import { useNavigate } from "react-router-dom";
 import constants from "../../utils/constants.json";
 import { useState, useEffect, useMemo } from "react";
+import { useDispatch } from "react-redux";
+import { newMessage, increaseNotificationCounter } from "../../utils/reducer/notificationreducer";
 
 const Addlocation = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const message = 'Location Added succesfully  '
 
+  const handleNotification = () =>{
+    dispatch(newMessage(message));
+    dispatch(increaseNotificationCounter());
+  }
   //location Id dropdown Data
   const [locationData, setLocationData] = useState([]);
   console.log(locationData);
@@ -45,7 +53,7 @@ const Addlocation = () => {
         </div>
         <div className="col-md-1"></div>
       </div>
-      <form>
+      <form onSubmit={(e)=> e.preventDefault()}>
         <div>
           <div className="row mt-4">
             <div className="col-md-1"></div>
@@ -114,6 +122,7 @@ const Addlocation = () => {
             <Button
               text="Add Location"
               className="btn secondary-btn mt-3 form-control textboldbtn btn-addlocation-tablet-view"
+              onClick={handleNotification}
             />
           </div>
         </div>

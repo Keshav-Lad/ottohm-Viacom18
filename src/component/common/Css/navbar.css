@@ -1,90 +1,122 @@
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    list-style: none;
-    transition: all 0.8s ease I !important;
-  }
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  li{
-    list-style: none;
-  }
-  /* .nav-link{
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  list-style: none;
+  transition: all 0.8s ease I !important;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+li {
+  list-style: none;
+}
+/* .nav-link{
     font-size: 15px;
   } */
-  .userimage{
-    position: absolute;
-    left: 0;
-  }
-  .name{
-    top: 20px;
-    left: 1239px;
-    width: 62px;
-    height: 15px;
-    text-align: left;
-    font: normal normal bold 12px Gotham;
-    letter-spacing: 0px;
-    color: #DC0500;
-    opacity: 1;
-    pointer-events: none;
-    text-decoration: none;
-  }
-  .role{
-    top: 37px;
-    left: 1239px;
-    width: 32px;
-    height: 12px;
-    text-align: left;
-    font: normal normal normal 10px Gotham;
-    letter-spacing: 0px;
-    color: #000000;
-    opacity: 1;
-    pointer-events: none;
-    text-decoration: none;
-  }
-  /* .arrow{
+.userimage {
+  position: absolute;
+  left: 0;
+}
+.name {
+  top: 20px;
+  left: 1239px;
+  width: 62px;
+  height: 15px;
+  text-align: left;
+  font: normal normal bold 12px Gotham;
+  letter-spacing: 0px;
+  color: #dc0500;
+  opacity: 1;
+  pointer-events: none;
+  text-decoration: none;
+}
+.role {
+  top: 37px;
+  left: 1239px;
+  width: 32px;
+  height: 12px;
+  text-align: left;
+  font: normal normal normal 10px Gotham;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  pointer-events: none;
+  text-decoration: none;
+}
+/* .arrow{
     top: 32px;
     left: 1314px;
     width: 11px;
     height: 6px;
     /* transform: matrix(0, -1, 1, 0, 0, 0);
     background: transparent url('/Users/acc01/Downloads/OTTOHM/ottohm-Viacom18/src/utils/icons/arrow.svg') 0% 0% no-repeat padding-box; */
-   /* opacity: 1;
+/* opacity: 1;
   } */
-  .notification-btn{
-    border: none;
-    
+.notification-btn {
+  border: none;
+  background-color: #ffffff;
+  margin-right: 10px;
+  margin-bottom: 17px;
+}
+.notification-btn .badge-img {
+  position: absolute;
+  top: 15px;
+
+  transform: translate(50%, -50%);
+  /* font-size: 0.75rem; */
+}
+
+.notification-btn .badge-img:before {
+  content: attr(data-count);
+}
+
+.list-items-dropdown {
+  border-bottom: 1px black solid;
+}
+.notification-dropdown-menu {
+  padding: 25px;
+}
+@media screen and (width<=912px) {
+  .notification-dropdown-menu {
+    width: 250px;
+    left: 10px !important;
   }
-  .list-items-dropdown{
-    border-bottom: 1px black solid;
+}
+
+.scrollable-dropdown {
+  overflow-x: hidden;
+}
+@media screen and (width <= 912px) {
+  .scrollable-dropdown {
+    overflow-x: scroll;
   }
-  .notification-dropdown-menu{
-    padding: 25px;
+  .list-items-dropdown {
+    white-space: normal !important;
   }
-  @media screen and (width<=912px){
-    .notification-dropdown-menu{
-      width: 250px;
-      left: 10px !important;
-    }
-  }
-  
-  .scrollable-dropdown{
-    overflow-x: hidden;
-  }
-  @media screen and (width <= 912px) {
-    .scrollable-dropdown{
-      overflow-x: scroll;
-    }
-    .list-items-dropdown{
-      white-space: normal!important;
-    }
-  }
-  .date-time-notification{
-    margin-left: auto;
-   margin-right: 10px;
-    font: normal normal normal 12px/24px Verdana;
-  }
-  
+}
+.date-time-notification {
+  margin-left: auto;
+  margin-right: 10px;
+  font: normal normal normal 12px/24px Verdana;
+}
+.triangle {
+  position: relative;
+  box-sizing: border-box;
+ 
+}
+.triangle::after{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-left: -1em;
+  top: -1.5em;
+  left: 120%;
+  box-sizing: border-box;
+  border: 1em solid black ;
+  border-color: transparent transparent black black;
+  transform-origin: 0 0;
+  transform: rotate(135deg);
+}
