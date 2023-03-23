@@ -75,7 +75,7 @@ const Navbar = () => {
               data-mdb-toggle="dropdown"
               onBlur={resetNotifications}
             >
-              <FaBell size={25} />
+              <FaBell size={20} className="rotate-on-hover-bell-icon" />
               <span className=" start-90  translate-middle badge rounded-pill bg-danger badge-img">
                 {counter ? counter : ""}
               </span>

@@ -120,3 +120,15 @@ li {
   transform-origin: 0 0;
   transform: rotate(135deg);
 }
+.rounded-pill{
+  border-radius: 10%;
+}
+.badge-img{
+  font-size: 0.6em;
+}
+.rotate-on-hover-bell-icon:hover{
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px red;
+  transform: rotate(30deg);
+  transition: transform 0.5s ease-in-out;
+}

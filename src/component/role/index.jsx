@@ -90,7 +90,7 @@ const Index = () => {
   ];
   return(
     <div className="container rounded-3 mt-3">
-      <div className="row ms-2 me-2 ">
+      <div className="row  me-1 ">
         
         <div className="col-md-10  ps-3">
           <h5 className="textbold">Role</h5>
@@ -110,7 +110,7 @@ const Index = () => {
           {isdata?(
                  <input
                  type="text"
-                 className="form-control textnormal rounded-5"
+                 className="form-control textnormal rounded-5 "
                  placeholder="Search"
                  value={searchQuery}
                  onChange={(e) => setSearchQuery(e.target.value)}

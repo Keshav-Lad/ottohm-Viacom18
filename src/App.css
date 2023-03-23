@@ -45,18 +45,33 @@ main{
   color: #2e3192;
   
 }
+.primary-btn{
+  transition: all 0.7s ease 0s;
+  position: relative; /* add a position property */
+  overflow: hidden; /* hide the overflow content */
+  box-shadow: 2px 2px 8px black!important; /* add a box-shadow property */
+}
 .primary-btn:hover{
-  border-color: #2e3192 !important; 
+  border-color: #2e3192 !important;
+  background-color: #2e3192 !important; 
+  color: #FFFFFF;
+  width: 95%;
+  box-shadow: 2px 2px 8px transparent !important;
 }
 
 .secondary-btn{
   color: #2e3192 !important;
   border-color: #2e3192 !important;
   background-color: #FFFFFF !important;
+  box-shadow: 2px 2px 8px black!important; /* add a box-shadow property */
+
+  transition: all 0.7s ease 0s;
 }
 .secondary-btn:hover{
   
   border-color: #2e3192 !important;
+  width: 95%;
+  box-shadow: 2px 2px 8px transparent !important;
 }
 
 label{

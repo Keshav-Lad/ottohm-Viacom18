@@ -100,7 +100,7 @@ const Index=()=>{
       }
     return(
       <div className="container rounded-3 mt-3">
-      <div className="row ms-2 me-2 ">
+      <div className="row me-1 ">
         
         <div className="col-md-10  ps-3">
           <h5 className="textbold" >Tournaments</h5>
