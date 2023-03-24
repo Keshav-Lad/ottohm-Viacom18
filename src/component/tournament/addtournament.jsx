@@ -196,7 +196,7 @@ const Addtournament = () => {
         <div className="col-md-5">
           <Breadcrumbs
             title="Tournaments"
-            subtitle="Create Tournamenet"
+            subtitle="Create Tournament"
             onClick={() => navigate(constants.tournaments)}
           />
         </div>
