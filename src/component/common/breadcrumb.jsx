@@ -5,11 +5,11 @@ const Breadcrumbs =(props)=>{
     
     return (
         <Breadcrumb>
-        <Breadcrumb.Item onClick={props.onClick}  className="mt-1">
+        <Breadcrumb.Item onClick={props.onClick}  className="mt">
           <span className="textmedium me-1 text-muted">{props.title}</span>
         </Breadcrumb.Item>
-        <span className="active-item me-2 ms-1 textbold pt-2 ">&gt;&gt;</span>
-        <Breadcrumb.Item className="active-item textbold mt-2">
+        <span className="active-item me-2 ms-1   ">&gt;&gt;</span>
+        <Breadcrumb.Item className="active-item textbold mt-1">
         <span className="textbold pt-2">{props.subtitle}</span>
         </Breadcrumb.Item>
       </Breadcrumb>
