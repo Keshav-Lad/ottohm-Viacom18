@@ -60,12 +60,8 @@ const Index = () => {
         toast.success('Login Successfully !',{
             position:toast.POSITION.TOP_RIGHT,
             autoClose:3000,
-            
             onClose:()=>setTimeout(()=>{navigate(constants.dashboard)},2000)
         });
-      
-        
-
       }
       else{
         toast.error('Login failed !',{
