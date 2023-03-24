@@ -7,13 +7,11 @@ export const sidebarReducer = createSlice({
     },
  
     reducers:{
-        hideSidebar:(state,action)=>{
+        hideSidebar:(state)=>{
             state.isOpen=false;
-            console.log("Helloo from hide")
         },
-        showSidebar:(state,action)=>{
+        showSidebar:(state)=>{
             state.isOpen=true;
-            console.log("Helloo from show")
         }
     }
 })

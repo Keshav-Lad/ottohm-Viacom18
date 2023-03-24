@@ -5,12 +5,13 @@
     height: auto;
     border: solid 2px;
     position: relative;
-    transition: width 0.2s ease-in-out;
-    
+    transition: all 0.9s ease-in-out;
+  }
+  .sidebar.open {
+    width: 230px;
+    transition: width 0.5s ease-in-out;
   }
 
- 
- 
   .link{
     text-decoration: none;
     display: flex;
@@ -27,7 +28,7 @@
     transition: all 0.5s;
     color: #000;
   }
-  .active{
+  .link.active{
     background-color:#ec1c24;
     color: #ffffff;
   }
@@ -44,11 +45,6 @@
     opacity: 1;
    
   }
-
-  /* .textnormal{
-    font: normal normal normal 15px/15px Gotham;
-    color: #ffffff;
-  } */
   @media (max-width: 768px) {
     .sidebar {
       width: 80px;
