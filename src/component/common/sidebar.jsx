@@ -71,7 +71,7 @@ const Sidebar = ({ children }) => {
       <div className="sidebar"  style={{ width: isOpen ? "230px" : "80px"}} >
         <div className="bg-body">
          
-            <img className="mt-2 mb-2" src={logo} alt="Logo" onClick={() => navigate(constants.dashboard)} />
+            <img className="w-100 mt-2 mb-2" src={logo} alt="Logo" onClick={() => navigate(constants.dashboard)} />
           
         </div>
         {menuItem.map((item, index) => (
