@@ -80,8 +80,9 @@ const Sidebar = ({ children }) => {
               to={item.path}
               className="link textnormal text-light"
               activeclassname="active"
+              onClick={closeSidebar}
             >
-              <div className="icon">{item.icon}</div>
+              <div className="icon" onClick={closeSidebar}>{item.icon}</div>
               <div className="link_text textnormal" onClick={closeSidebar}>{item.name}</div>
             </NavLink>
           </div>
