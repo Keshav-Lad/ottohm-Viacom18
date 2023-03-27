@@ -29,7 +29,6 @@
     border: 1px solid #00000000;
     opacity: 1;
 }
-
 .login-title {
 font: 27px 'GothamBold'!important;
 letter-spacing: 0px;
@@ -84,10 +83,7 @@ border-radius: 4px;
     background-position-x: 95%;
     background-position-y: 8px;
     background-size: 22px; */
-
 }
-
-
 #btn-setting {
     height: 2rem;
     height: 40px;

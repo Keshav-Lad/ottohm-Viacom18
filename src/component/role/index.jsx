@@ -16,6 +16,7 @@ const Index = () => {
   useEffect(()=>{
     getData();
   },[])
+
   const getData=()=>{
     GetData("roles")
     .then((res)=>{

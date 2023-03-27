@@ -59,7 +59,7 @@ const Index=()=>{
         },
         {
           name: "Tournament Name",
-          selector: row => row.TournamentDate,
+          selector: row => row.TournamentName,
           sortable: true,
           style: {
             width: "90px",
