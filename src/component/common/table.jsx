@@ -2,9 +2,9 @@
 import DataTable,{defaultThemes} from "react-data-table-component";
 import { FormCheck } from "react-bootstrap";
 import "./Css/table.css";
+import GothamBold from '../../utils/fonts/GothamBold.ttf';
+import '../../utils/fonts/GothamBook.ttf';
 
-import GothamBold from  '../../utils/fonts/GothamBold.ttf';
-import  '../../utils/fonts/GothamBook.ttf';
 
 
 const DashBoardTable = (props) => {
@@ -47,7 +47,6 @@ const DashBoardTable = (props) => {
         },
       },
     };
-  
     const conditionalRowStyles = [
       {
         when: (row) => row.id % 2 !== 0,
@@ -55,10 +54,19 @@ const DashBoardTable = (props) => {
           backgroundColor: "#ffffff",
         },
       },
+      {
+        when: (row,column) => {
+          const cellData = row[column.selector];
+          return {
+            className: 'hover-cell',
+            'data-tooltip': cellData,
+          };
+        }
+      }
     ];
+      
   return (
-       
-<div className="container table-responsive rounded-top mt-2">
+ <div className="container table-responsive rounded-top mt-2">
           <DataTable
             columns={props.columns}
             data={props.filteredData}
@@ -66,7 +74,7 @@ const DashBoardTable = (props) => {
             paginationPerPage={10}
             paginationRowsPerPageOptions={[10, 20, 30]}
             noHeader
-            highlightOnHover
+            highlightOnHover={true}
             pointerOnHover
             noDataComponent="Table is Empty"
             customStyles={customStyles}
@@ -75,10 +83,9 @@ const DashBoardTable = (props) => {
             selectableRowsHighlight
             conditionalRowStyles={conditionalRowStyles}
             selectableRowsComponent={FormCheck}
-            />
-          </div>
+             />
+        </div>
         
   );
 };
-
 export default DashBoardTable;

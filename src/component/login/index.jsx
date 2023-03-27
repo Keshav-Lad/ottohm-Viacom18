@@ -8,10 +8,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Index = () => {
+  
   const navigate = useNavigate();
   //for mobile view
   const [isMobile, setisMobile] = useState(false);
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
@@ -45,6 +45,8 @@ const Index = () => {
     if (!password) {
       errors.password = "Password is required";
       console.log("in password ");
+    }else if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm.test(password)){
+      errors.password = "Password is invalid";
     }
     setErrors(errors);
     console.log("Ans "+Object.keys(errors).length === 0);
@@ -56,16 +58,16 @@ const Index = () => {
     if (validateForm()) {
         sessionStorage.setItem(constants.token, "Authorized");
         
-        toast.success('Login Successfully !',{
+        toast.success('Login Successfull !',{
             position:toast.POSITION.TOP_RIGHT,
-            autoClose:3000,
-            onClose:()=>setTimeout(()=>{navigate(constants.dashboard)},2000)
+            autoClose:1000,
+            onClose:()=>setTimeout(()=>{navigate(constants.dashboard)},500)
         });
       }
       else{
         toast.error('Login failed !',{
             position:toast.POSITION.TOP_RIGHT,
-            autoClose:5000
+            autoClose:1000
         });
 
       }

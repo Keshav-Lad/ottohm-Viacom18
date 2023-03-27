@@ -19,7 +19,7 @@ import constants from "./utils/constants.json";
 import { Fragment } from 'react';
 import PrivateRoute from './utils/privateroutes';
 import { Provider } from 'react-redux';
-import store from "./utils/reducer/store/sidebarstore"
+import store from "./utils/reducer/store/store"
 
 function App() {
   return (

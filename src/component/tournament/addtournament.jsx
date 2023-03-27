@@ -126,7 +126,7 @@ const Addtournament = () => {
     },
     {
       name: "Groups",
-      selector: row => row.Groups,
+      selector: row => row.Group,
       sortable: true,
       style: {
         width: "90px",
