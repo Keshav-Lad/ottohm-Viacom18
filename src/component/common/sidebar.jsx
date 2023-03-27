@@ -67,8 +67,8 @@ const Sidebar = ({ children }) => {
   ]
   return (
     <div className="container-2">
-       { isMobileView && sidebarStatus ?
-      <div className="sidebar"  style={{ width: isOpen ? "230px" : "80px" }} >
+       { isMobileView && sidebarStatus ? 
+      <div className="sidebar"  style={{ width: isOpen ? "230px" : "80px"}} >
         <div className="bg-body">
          
             <img className="w-100 mt-2 mb-2" src={logo} alt="Logo" onClick={() => navigate(constants.dashboard)} />
@@ -80,15 +80,17 @@ const Sidebar = ({ children }) => {
               to={item.path}
               className="link textnormal text-light"
               activeclassname="active"
+              onClick={closeSidebar}
             >
-              <div className="icon">{item.icon}</div>
-              <div className="link_text textnormal">{item.name}</div>
+              <div className="icon" onClick={closeSidebar}>{item.icon}</div>
+              <div className="link_text textnormal" onClick={closeSidebar}>{item.name}</div>
             </NavLink>
           </div>
         ))}
       </div>
         :null}
-            { !isMobileView && isOpen ?
+        
+             { !isMobileView && isOpen ?
       <div className="sidebar" style={{ width: isOpen ? "230px" : "80px" }}>
         <div className="bg-body">
          
@@ -108,8 +110,12 @@ const Sidebar = ({ children }) => {
           </div>
         ))}
       </div>
-        :null}
+      
+        :null} 
 
+          {/* { sidebarStatus ?
+        <div className="overlay active" onClick={closeSidebar}></div>
+        : null} */}
 
       <main onClick={closeSidebar}>{children}</main>
     </div>

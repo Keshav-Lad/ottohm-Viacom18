@@ -1,109 +1,109 @@
-@font-face{
-    font-family: 'GothamBold';
-    src: url('../../utils/fonts/GothamBold.ttf') format('truetype');
-  }
-  @font-face {
-    font-family: 'GothamBook';
-    src: url('../../utils/fonts/GothamBook.ttf') format('truetype');
-  }
-  @font-face {
-    font-family: 'GothamMedium';
-    src: url('../../utils/fonts/GothamMedium.ttf') format('truetype');
-  }
+@font-face {
+  font-family: "GothamBold";
+  src: url("../../utils/fonts/GothamBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamBook";
+  src: url("../../utils/fonts/GothamBook.ttf") format("truetype");
+}
+@font-face {
+  font-family: "GothamMedium";
+  src: url("../../utils/fonts/GothamMedium.ttf") format("truetype");
+}
 #main-container {
-    background:#2e3192;
-    border: 1px solid #00000000;
-    opacity: 1;
-    min-height: 100vh;
-    height: auto;
+  background: #2e3192;
+  border: 1px solid #00000000;
+  opacity: 1;
+  min-height: 100vh;
+  height: auto;
 }
 
 #manage-img {
-    margin-top: 200px;
-    background: transparent linear-gradient(180deg, #F0F5FF 0%, #DBFFED 100%) 0% 0%;
-    border: none;
+  margin-top: 200px;
+  background: transparent linear-gradient(180deg, #f0f5ff 0%, #dbffed 100%) 0%
+    0%;
+  border: none;
 }
 
 #right-part {
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #00000000;
-    opacity: 1;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #00000000;
+  opacity: 1;
 }
 .login-title {
-font: 27px 'GothamBold'!important;
-letter-spacing: 0px;
-color: #069DC5;
-opacity: 1;
+  font: 27px "GothamBold" !important;
+  letter-spacing: 0px;
+  color: #069dc5;
+  opacity: 1;
 }
 
 .h5-text {
-    font:15px'GothamMedium';
-    letter-spacing: 0px;
-    color: #A7A7A7;
-    opacity: 1;
-    
+  font: 15px "GothamMedium";
+  letter-spacing: 0px;
+  color: #a7a7a7;
+  opacity: 1;
 }
 
 .text-style {
-font: 14px 'GothamBold';
-letter-spacing: 0px;
-color: #A7A7A7;
-opacity: 1;
+  font: 14px "GothamBold";
+  letter-spacing: 0px;
+  color: #a7a7a7;
+  opacity: 1;
 }
 
 #input-fields {
-    font: normal normal normal 14px/20px Gotham;
-letter-spacing: 0px;
-color: #A7A7A7;
-opacity: 1;
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border: 1px solid #DCDCDC;
-border-radius: 4px;
-    height: 40px;
-    /* background-image: url("utils/img/email-logo.svg");
+  font: normal normal normal 14px/20px Gotham;
+  letter-spacing: 0px;
+  color: #a7a7a7;
+  opacity: 1;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  height: 40px;
+  /* background-image: url("utils/img/email-logo.svg");
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: 8px;
     background-size: 22px; */
-
 }
 
 #input-fields2 {
-    font: 14px 'GothamBook';
-    letter-spacing: 0px;
-    color: black;
-    opacity: 1;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #DCDCDC;
-    border-radius: 4px;
-    height: 40px;
+  font: 14px "GothamBook";
+  letter-spacing: 0px;
+  color: black;
+  opacity: 1;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  height: 40px;
 
-    /* background-image: url("utils/img/password-logo.svg");
+  /* background-image: url("utils/img/password-logo.svg");
     background-repeat: no-repeat;
     background-position-x: 95%;
     background-position-y: 8px;
     background-size: 22px; */
 }
 #btn-setting {
-    height: 2rem;
-    height: 40px;
-    background: #014296 0% 0% no-repeat padding-box;
-    border-radius: 5px;
-    opacity: 1;
-    text-align: center;
-    font: normal normal bold 14px/18px Gotham;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
+  height: 2rem;
+  height: 40px;
+  background: #014296 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+  text-align: center;
+  font: 13px "GothamMedium" !important;
+  font-weight: 100 !important;
+  letter-spacing: 0px !important;
+  color: #ffffff !important;
+  opacity: 1;
 }
 
 @media screen and (width<768px) {
-    .forgot-pass{
-        padding-left: 52px;
-    }
+  .forgot-pass {
+    padding-left: 52px;
+  }
 }
 @media screen and (max-width: 920px) {
-    #main-container{
-        display:none;
-    }
+  #main-container {
+    display: none;
   }
+}

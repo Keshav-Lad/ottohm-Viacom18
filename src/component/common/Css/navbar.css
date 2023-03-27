@@ -45,15 +45,7 @@ li {
   pointer-events: none;
   text-decoration: none;
 }
-/* .arrow{
-    top: 32px;
-    left: 1314px;
-    width: 11px;
-    height: 6px;
-    /* transform: matrix(0, -1, 1, 0, 0, 0);
-    background: transparent url('/Users/acc01/Downloads/OTTOHM/ottohm-Viacom18/src/utils/icons/arrow.svg') 0% 0% no-repeat padding-box; */
-/* opacity: 1;
-  } */
+
 .notification-btn {
   border: none;
   background-color: #ffffff;
@@ -138,3 +130,14 @@ li {
 }.user-name{
   font-size: 10px;
 }
+.scrollable-div-dropdown-menu{
+  
+  max-height: 300px !important;
+  overflow-y: auto;
+  scrollbar-width: none;  /*Firefox*/    
+  -ms-overflow-style: none; /*Internet Explorer 10+ */
+}
+/* .scrollable-div-dropdown-menu::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+} */

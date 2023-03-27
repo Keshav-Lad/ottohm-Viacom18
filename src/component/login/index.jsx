@@ -140,12 +140,13 @@ const Index = () => {
               <div className="row">
                 <div className="col-md-7"></div>
                 <div className="col-md-4 pt-3 forget-pass-div">
+                  {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                   <a  className="text-wrap textmedium forgot-pass" href="#">
                     Forget Password ?
                   </a>
                 </div>
                 <div className="col-md-1"></div>
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                
               </div>
               <Button
                 id="btn-setting"
