@@ -5,11 +5,9 @@
     height: auto;
     border: solid 2px;
     position: relative;
-    transition: all 0.9s ease-in-out;
   }
   .sidebar.open {
     width: 230px;
-    transition: width 0.5s ease-in-out;
   }
 
   .link{

@@ -96,10 +96,12 @@
   color: #ffffff !important;
   opacity: 1;
 }
-
-@media screen and (width<768px) {
+.forgot-pass{
+  padding-left: 69px;
+}
+@media screen and (width <= 768px)  {
   .forgot-pass {
-    padding-left: 52px;
+    margin-left: 50px;
   }
 }
 @media screen and (max-width: 920px) {
@@ -107,3 +109,9 @@
     display: none;
   }
 }
+@media screen and (max-width: 1024px) {
+  .forgot-pass{
+    padding-left: 0;
+  }
+}
+

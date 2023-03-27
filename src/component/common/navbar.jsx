@@ -83,7 +83,7 @@ const Navbar = () => {
         id="navbarSupportedContent"
       >
         <ul className="navbar-nav me-auto  mb-2 mb-lg-0"></ul>
-        <form className="d-flex">
+        <form className="d-flex" onSubmit={(e) => e.preventDefault()}>
           <div className="btn-group dropdown">
             <button
               className="notification-btn"
@@ -92,6 +92,7 @@ const Navbar = () => {
               aria-expanded="false"
               data-mdb-toggle="dropdown"
               onBlur={resetNotifications}
+              onClick={() => dispatch(resetCounter())}
             >
               <FaBell size={20} className="rotate-on-hover-bell-icon" />
               <span className=" start-90  translate-middle badge rounded-pill bg-danger badge-img">
