@@ -30,7 +30,7 @@ const Navbar = () => {
     localStorage.setItem(constants.token, "");
     dispatch(refreshMessage());
     dispatch(resetCounter());
-    toast.success("Log out Successfully !", {
+    toast.success("Logout Successfully !", {
       position: toast.POSITION.TOP_RIGHT,
       autoClose: 3000,
       onClose: () =>
