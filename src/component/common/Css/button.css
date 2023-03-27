@@ -1,4 +1,3 @@
-.button-add-location{
-    min-width: 13vw;
-    width: auto;
+.btn{
+   cursor: pointer;
 }

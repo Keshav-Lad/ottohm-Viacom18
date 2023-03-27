@@ -14,8 +14,8 @@ import {
 import Arrow from "../../utils/icons/Arrow.svg";
 import { useState } from "react";
 import classnames from "classnames";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
   const messages = useSelector((state) => state.notification.message);
@@ -30,7 +30,14 @@ const Navbar = () => {
     localStorage.setItem(constants.token, "");
     dispatch(refreshMessage());
     dispatch(resetCounter());
-    navigate(constants.login);
+    toast.success("Log out Successfully !", {
+      position: toast.POSITION.TOP_RIGHT,
+      autoClose: 3000,
+      onClose: () =>
+        setTimeout(() => {
+          navigate(constants.login);
+        }, 2000),
+    });
   };
 
   const resetNotifications = () => {
@@ -88,11 +95,11 @@ const Navbar = () => {
             >
               <FaBell size={20} className="rotate-on-hover-bell-icon" />
               <span className=" start-90  translate-middle badge rounded-pill bg-danger badge-img">
-                {counter ? counter : ""}
+                {counter ? (counter > 9 ? `+9` : counter) : ""}
               </span>
             </button>
 
-            <div className="dropdown-menu notification-dropdown-menu dropdown-menu-end fade">
+            <div className="dropdown-menu notification-dropdown-menu dropdown-menu-end fade scrollable-div-dropdown-menu">
               {/* <span className="triangle"></span> */}
               {messages.length ? (
                 messages.map((message, index) => (
@@ -119,6 +126,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="icon ms-auto me-auto">
+            <ToastContainer />
             <label className="bg-body me-2 ">
               <div className="row ">
                 <div className="col-sm-12">
@@ -157,10 +165,13 @@ const Navbar = () => {
                         </button>
                       </li>
                       <li>
-                        <button className="dropdown-item" onClick={logout} type="submit">
+                        <button
+                          className="dropdown-item"
+                          onClick={logout}
+                          type="button"
+                        >
                           Logout
                         </button>
-                        <ToastContainer/>
                       </li>
                     </ul>
                   </div>
