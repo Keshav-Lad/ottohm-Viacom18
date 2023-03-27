@@ -20,8 +20,8 @@ const Index =() => {
    
     GetData("dashboard")
     .then((res) => {
-     
-      setData(res.data.Tabledata)
+      console.log(res.data)
+      setData(res.data)
     })
     .catch((error) => {
       console.error(error);
@@ -30,7 +30,7 @@ const Index =() => {
   const columns = [
     {
       name: "Sr.No",
-      selector: row => row.TournamentID,
+      selector: row => row.id,
       sortable: true,
       style: {
         width: "90px",
@@ -38,7 +38,7 @@ const Index =() => {
     },
     {
       name: "Tournament ID",
-      selector: row => row.TournamentID,
+      selector: row => row.id,
       sortable: true,
       style: {
         width: "90px",
@@ -62,7 +62,7 @@ const Index =() => {
     },
     {
       name: "Created By",
-      selector: row => row.CreatedBy,
+      selector: row => row.CreatedBy      ,
       sortable: true,
       style: {
         width: "90px",
@@ -70,7 +70,8 @@ const Index =() => {
     },
     {
       name: "Created On",
-      selector: row => row.CreatedOn,
+      selector: row => row.CreatedOn
+      ,
       sortable: true,
       style: {
         width: "90px",
@@ -78,8 +79,6 @@ const Index =() => {
     },
     {
       name: "Action",
-      selector: row => row.CreatedOn,
-      sortable: true,
       cell: () => (
         <div>
            <h5>-</h5>
@@ -98,7 +97,7 @@ const Index =() => {
 
       <h5 className=' textbold'>DashBoard</h5>
       <div className='row'>
-        <div className="col-md-3 mb-2 mt-1">
+        <div className="col-md-3 mb-2">
           <Card title="Total Tournament" subtitle="80,000"/>
         </div>
         <div className="col-md-3 mb-2 ">

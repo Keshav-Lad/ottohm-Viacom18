@@ -22,7 +22,7 @@ const Index=()=>{
     GetData("tournament")
     .then((res) => {
      
-      setData(res.data.Tabledata)
+      setData(res.data)
       if(data.length===0){
         setisData(true);
       }
@@ -43,7 +43,7 @@ const Index=()=>{
     const columns = [
         {
           name: "Sr.No",
-          selector: row => row.TournamentID,
+          selector: row => row.id,
           sortable: true,
           style: {
             width: "90px",
@@ -51,7 +51,7 @@ const Index=()=>{
         },
         {
           name: "Tournament ID",
-          selector: row => row.TournamentID,
+          selector: row => row.id,
           sortable: true,
           style: {
             width: "90px",
@@ -67,7 +67,7 @@ const Index=()=>{
         },
         {
           name: "Created By",
-          selector: row => row.TournamentName,
+          selector: row => row.CreatedBy,
           sortable: true,
           style: {
             width: "90px",
@@ -75,7 +75,7 @@ const Index=()=>{
         },
         {
           name: "Created on",
-          selector: row => row.CreatedBy,
+          selector: row => row.CreatedOn,
           sortable: true,
           style: {
             width: "90px",

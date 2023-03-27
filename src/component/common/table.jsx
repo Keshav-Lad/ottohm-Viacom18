@@ -54,15 +54,6 @@ const DashBoardTable = (props) => {
           backgroundColor: "#ffffff",
         },
       },
-      {
-        when: (row,column) => {
-          const cellData = row[column.selector];
-          return {
-            className: 'hover-cell',
-            'data-tooltip': cellData,
-          };
-        }
-      }
     ];
       
   return (
